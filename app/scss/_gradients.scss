@@ -8,6 +8,10 @@
 
 // .btn hover gradient transition parameters
 .btn[class^="grad-"] {
-    will-change: background-image;
-    transition: background-image 0.7s;
+    @include transition-duration($duration-exit);
+    @include transition-easing($easing-decel);
+    &:hover {
+        @include transition-duration($duration-entry);
+        @include transition-easing($easing-accel);
+    }
 }

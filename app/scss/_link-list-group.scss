@@ -26,7 +26,7 @@
             border-radius: 0;
             z-index: 0;
             @include transition-duration($duration-exit);
-            @include transition-easing($easing-standard);
+            @include transition-easing($easing-decel);
             &:first-child {
                 flex-grow: 1;
                 color: $gray-800;
@@ -42,7 +42,8 @@
                 &:hover, 
                 &:focus {
                     background-position: 0 0;
-                
+                }
+                &:focus {
                     background-color: $purple-700;
                     color: $white;
                 }
@@ -65,6 +66,7 @@
             }
             &:hover {
                 @include transition-duration($duration-entry);
+                @include transition-easing($easing-accel);
             }
         }
         // when the li is hovered, or when the pin links if focused, show the pin link

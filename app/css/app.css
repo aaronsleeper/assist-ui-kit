@@ -4733,8 +4733,23 @@ a.text-dark:focus, a.text-dark:hover {
     background-repeat: no-repeat; }
 
 .btn[class^="grad-"], .link-list-group li a[class^="grad-"] {
-  will-change: background-image;
-  transition: background-image 0.7s; }
+  -webkit-transition-duration: 0.195s;
+  -moz-transition-duration: 0.195s;
+  -o-transition-duration: 0.195s;
+  transition-duration: 0.195s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  .btn[class^="grad-"]:hover, .link-list-group li a[class^="grad-"]:hover {
+    -webkit-transition-duration: 0.225s;
+    -moz-transition-duration: 0.225s;
+    -o-transition-duration: 0.225s;
+    transition-duration: 0.225s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
 button:hover {
   cursor: pointer; }
@@ -4787,10 +4802,10 @@ svg[class^="icon-"] {
       -moz-transition-duration: 0.195s;
       -o-transition-duration: 0.195s;
       transition-duration: 0.195s;
-      -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
       .link-list-group li a:first-child {
         flex-grow: 1;
         color: #37474F;
@@ -4807,7 +4822,8 @@ svg[class^="icon-"] {
         transition-property: background-position, background-color, color;
         will-change: background-position, background-color, color; }
         .link-list-group li a:first-child:hover, .link-list-group li a:first-child:focus {
-          background-position: 0 0;
+          background-position: 0 0; }
+        .link-list-group li a:first-child:focus {
           background-color: #7B1FA2;
           color: #fff; }
       .link-list-group li a:focus {
@@ -4829,7 +4845,11 @@ svg[class^="icon-"] {
         -webkit-transition-duration: 0.225s;
         -moz-transition-duration: 0.225s;
         -o-transition-duration: 0.225s;
-        transition-duration: 0.225s; }
+        transition-duration: 0.225s;
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
     .link-list-group li:hover a.pin,
     .link-list-group li a.pin:focus {
       right: 0;

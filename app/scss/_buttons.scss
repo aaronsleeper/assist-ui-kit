@@ -15,13 +15,16 @@ button:hover {
 .btn {
     svg[class^="icon-"] {
         margin-right: 0.5em;
-        will-change: height;
-        @include transition(height 0.25s);
+        @include transition-properties(height);
+        @include transition-duration($duration-exit);
+        @include transition-easing($easing-decel);
     }
     &:hover, 
     &:focus {
         svg[class^="icon-"] {
             height: 1em;
+            @include transition-duration($duration-entry);
+            @include transition-easing($easing-accel);
         }
     }
 }
