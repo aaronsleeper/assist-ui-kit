@@ -1,0 +1,27 @@
+// Set cursor for button element
+button:hover {
+    cursor: pointer;
+}
+
+// Turn off border colors
+.btn {
+    display: flex;
+    align-items: center;
+    border-color: transparent;
+}
+
+// Buttons with icons
+// Icons should always appear before text in a button
+.btn {
+    svg[class^="icon-"] {
+        margin-right: 0.5em;
+        will-change: height;
+        @include transition(height 0.25s);
+    }
+    &:hover, 
+    &:focus {
+        svg[class^="icon-"] {
+            height: 1em;
+        }
+    }
+}

@@ -1,0 +1,4 @@
+// Gradients
+.grad-purple-blue {
+    @include gradient-x-three-colors($purple-800, $purple-600, 30%, $blue-a400);
+}

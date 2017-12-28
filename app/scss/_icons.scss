@@ -1,0 +1,10 @@
+// Icons
+svg[class^="icon-"] {
+    display: inline;
+    fill: currentColor;
+    height: 0.8em;
+    &.icon-pin {
+        transform: rotate(-45deg);
+        height: 0.7em;
+    }
+}

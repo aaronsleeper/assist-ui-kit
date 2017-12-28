@@ -1,0 +1,24 @@
+{
+  "name": "assistng-uikit",
+  "version": "0.0.0",
+  "description": "a separate repository to create a new theme for the Assist NG Public Site UI to be integrated later",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9",
+    "browser-sync": "^2.21.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaronsleeper/assist-ui-kit.git"
+  }
+}

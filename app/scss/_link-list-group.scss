@@ -1,0 +1,65 @@
+// Link list group
+// Extends Bootstrap's List Group component to have multiple links per row
+
+.link-list-group {
+    // limit z-index's scope
+    position: relative;
+    @extend .list-group;
+    li {
+        @extend .list-group-item;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0;
+        border-width: 0;
+        border-radius: 0;
+        overflow: hidden;
+        &:first-child { @include border-top-radius(0); }
+        &:last-child { @include border-bottom-radius(0); }
+        &:nth-child(2n) {
+            background-color: $gray-50;
+        }
+        a {
+            @extend .btn;
+            padding: $list-group-item-padding-y $list-group-item-padding-x;
+            border-width: 0;
+            border-radius: 0;
+            z-index: 0;
+            &:focus {
+                // bring to the front so the outline isn't cut off
+                z-index: 1;
+            }
+            &:first-child {
+                flex-grow: 1;
+                color: $gray-800;
+                text-align: left;
+                font-weight: 300;
+                @extend .pl-4;
+                will-change: background-image;
+                @include transition(background-image 0.7s);
+                &:hover, 
+                &:focus {
+                    @include gradient-x ($purple-700, transparent, 8px, 8px);
+                }
+            }
+            &.pin {
+                position: relative;
+                right:-20px;
+                color: $white;
+                background-color: $blue-500;
+                opacity: 0;
+                @include transition(opacity 0.7s, right 0.25s, background-color 0.25s);
+                will-change: right, opacity;
+                &:hover {
+                    background-color: $blue-600;
+                }
+            }
+        }
+        // when the li is hovered, or when the pin links if focused, show the pin link
+        &:hover a.pin, 
+        a.pin:focus {
+            right: 0;
+            opacity: 1;
+        }
+    }
+}
