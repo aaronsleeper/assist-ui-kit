@@ -14,6 +14,11 @@ $border-radius:     .125rem;
 $border-radius-lg:  .25rem;
 $border-radius-sm:  .063rem;
 
+// Focus Styles
+$input-btn-focus-width:         0.63rem;
+$input-btn-focus-color:         rgba($primary, .21);
+$input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
 /* ------------------------------ 
 Initialize Custom Variables
 ------------------------------ */

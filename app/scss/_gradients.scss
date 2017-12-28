@@ -1,16 +1,18 @@
 // Gradients
 .grad-purple-blue {
     @include gradient-x-three-colors($purple-800, $purple-600, 30%, $blue-a400);
-    &.btn:hover {
-        @include gradient-x-three-colors($blue-a400, $purple-600, 30%, $purple-800);
-    }
 }
 
 // .btn hover gradient transition parameters
-.btn[class^="grad-"] {
+.btn[class*="grad-"] {
+    background-size: 150%;
+    background-position: 0 0;
+    @include transition-property(background-position);
     @include transition-duration($duration-exit);
     @include transition-easing($easing-decel);
-    &:hover {
+    &:hover,
+    &:focus {
+        background-position: 100% 0;
         @include transition-duration($duration-entry);
         @include transition-easing($easing-accel);
     }
