@@ -25,25 +25,32 @@
             border-width: 0;
             border-radius: 0;
             z-index: 0;
+            @include transition-duration($duration-exit);
+            @include transition-easing($easing-standard);
             &:first-child {
                 flex-grow: 1;
                 color: $gray-800;
                 text-align: left;
                 font-weight: 300;
                 @extend .pl-4;
-                will-change: background-image;
-                @include transition(background-image 0.7s);
+                // include a transparent gradient so we have something to transition from
+                @include gradient-x ($purple-700, transparent, 8px, 8px);
+                background-repeat: no-repeat;
+                background-position: -8px 0;
+                background-color: transparent;
+                @include transition-property(background-position, background-color, color);
                 &:hover, 
                 &:focus {
-                    @include gradient-x ($purple-700, transparent, 8px, 8px);
+                    background-position: 0 0;
+                
+                    background-color: $purple-700;
+                    color: $white;
                 }
             }
             &:focus {
+                // removing the default focus style for these elements 
+                // since a new one has been created in this instance
                 box-shadow: none;
-                background-color: $purple-700;
-                color: $white;
-                // bring to the front so the outline isn't cut off
-                z-index: 1;
             }
             &.pin {
                 position: relative;
@@ -51,11 +58,13 @@
                 color: $white;
                 background-color: $blue-500;
                 opacity: 0;
-                @include transition(opacity 0.7s, right 0.25s, background-color 0.25s);
-                will-change: right, opacity;
+                @include transition-property(opacity, right, background-color);
                 &:hover {
                     background-color: $blue-600;
                 }
+            }
+            &:hover {
+                @include transition-duration($duration-entry);
             }
         }
         // when the li is hovered, or when the pin links if focused, show the pin link

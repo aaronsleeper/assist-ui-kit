@@ -1,12 +1,35 @@
 /* ------------------------------ 
-Overrides
+Override Bootstrap defaults
 ------------------------------ */
+// Colors
 $primary:           $purple-700;
 $info:              $blue-500;
 $body-color:        $gray-800;
 
+// Fonts
 $font-family-sans-serif:      'Source Sans Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
+// Border Radius
 $border-radius:     .125rem;
 $border-radius-lg:  .25rem;
 $border-radius-sm:  .063rem;
+
+/* ------------------------------ 
+Initialize Custom Variables
+------------------------------ */
+// Animation Variables
+// Transition Durations
+// Entry
+$duration-entry-short:  0.149s;
+$duration-entry:        0.225s;
+$duration-entry-long:   0.375s;
+// Exit
+$duration-exit-short:   0.129s;
+$duration-exit:         0.195s;
+$duration-exit-long:    0.324s;
+
+// Easing Curves
+$easing-standard:       cubic-bezier(0.4, 0.0, 0.2, 1);
+$easing-decel:          cubic-bezier(0.0, 0.0, 0.2, 1);
+$easing-accel:          cubic-bezier(0.4, 0.0, 1, 1);
+$easing-sharp:          cubic-bezier(0.4, 0.0, 0.6, 1);
