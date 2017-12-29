@@ -1,6 +1,28 @@
+// Logo
 .assist-logo {
+    max-width: 100%;
     fill: $gray-900;
     .logo-mark {
         fill: $purple-500;
+    }
+}
+
+// Logo Lockup
+.logo-lockup {
+    display: grid;
+    width: auto;
+    grid-template-columns: auto auto;
+    grid-gap: 0.8rem;
+    justify-content: start;
+    .assist-logo {
+        height: 5rem;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+    .caption{
+        display: flex;
+        align-items: flex-end;
+        padding-left: 0.8rem;
+        border-left: 1px solid rgba($gray-400, 0.42);
     }
 }
