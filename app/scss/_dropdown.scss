@@ -1,0 +1,14 @@
+.dropdown-toggle {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $gray-100;
+    svg.icon-chevron-down {
+        margin-right: 0;
+        margin-left: 0.5em;
+        fill: $primary;
+    }
+    // removing the default carat style
+    &:after {
+        display: none;
+    }
+}
