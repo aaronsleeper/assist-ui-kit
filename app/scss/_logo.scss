@@ -3,26 +3,28 @@
     max-width: 100%;
     fill: $gray-900;
     .logo-mark {
-        fill: $purple-500;
+        fill: $amber-900;
     }
 }
 
 // Logo Lockup
 .logo-lockup {
+    font-size: $small-font-size;
     display: grid;
     width: auto;
     grid-template-columns: auto auto;
-    grid-gap: 0.8rem;
+    grid-gap: 1em;
     justify-content: start;
     .assist-logo {
-        height: 5rem;
-        padding-top: 0.4rem;
-        padding-bottom: 0.4rem;
+        height: 6.1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
     .caption{
         display: flex;
         align-items: flex-end;
-        padding-left: 0.8rem;
-        border-left: 1px solid rgba($gray-400, 0.42);
+        padding-bottom: 0.25em;
+        padding-left: 1em;
+        border-left: 1px solid $hr-border-color;
     }
 }
