@@ -4822,6 +4822,11 @@ svg[class^="icon-"] {
     transform: rotate(-45deg);
     height: 0.7em; }
 
+.assist-logo {
+  fill: #263238; }
+  .assist-logo .logo-mark {
+    fill: #9C27B0; }
+
 .link-list-group {
   position: relative; }
   .link-list-group li {
