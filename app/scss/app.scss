@@ -1,12 +1,12 @@
 // set variables
 @import "colors";
-@import "type";
 @import "variables";
 
 // provide access to bootstrap and all its methods
 @import "bootstrap";
 
 // utilities
+@import "type";
 @import "utilities";
 
 // mixins
