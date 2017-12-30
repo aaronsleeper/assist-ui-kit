@@ -37,6 +37,20 @@ $border-radius:     .125rem;
 $border-radius-lg:  .25rem;
 $border-radius-sm:  .063rem;
 
+// Tables
+$table-cell-padding: 1rem 1.25rem;
+$table-cell-padding-sm: 0.5rem 0.625rem;
+
+$table-bg: transparent;
+$table-accent-bg: $gray-50;
+$table-hover-bg: $amber-100;
+$table-active-bg: $table-hover-bg;
+
+$table-border-color: rgba($gray-400, 0.42);
+
+$table-head-bg: $gray-200;
+$table-head-color: $gray-700;
+
 // Focus Styles
 $input-btn-focus-width:         0.63rem;
 $input-btn-focus-color:         rgba($primary, .21);

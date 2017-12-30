@@ -245,8 +245,8 @@ table {
   border-collapse: collapse; }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding-top: 1rem 1.25rem;
+  padding-bottom: 1rem 1.25rem;
   color: #546E7A;
   text-align: left;
   caption-side: bottom; }
@@ -529,35 +529,35 @@ pre {
   background-color: transparent; }
   .table th,
   .table td {
-    padding: 0.75rem;
+    padding: 1rem 1.25rem;
     vertical-align: top;
-    border-top: 1px solid #B0BEC5; }
+    border-top: 1px solid rgba(120, 144, 156, 0.42); }
   .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #B0BEC5; }
+    border-bottom: 2px solid rgba(120, 144, 156, 0.42); }
   .table tbody + tbody {
-    border-top: 2px solid #B0BEC5; }
+    border-top: 2px solid rgba(120, 144, 156, 0.42); }
   .table .table {
     background-color: #ECEFF1; }
 
 .table-sm th,
 .table-sm td {
-  padding: 0.3rem; }
+  padding: 0.5rem 0.625rem; }
 
 .table-bordered {
-  border: 1px solid #B0BEC5; }
+  border: 1px solid rgba(120, 144, 156, 0.42); }
   .table-bordered th,
   .table-bordered td {
-    border: 1px solid #B0BEC5; }
+    border: 1px solid rgba(120, 144, 156, 0.42); }
   .table-bordered thead th,
   .table-bordered thead td {
     border-bottom-width: 2px; }
 
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(0, 0, 0, 0.05); }
+  background-color: #ECEFF1; }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: #FFECB3; }
 
 .table-primary,
 .table-primary > th,
@@ -650,13 +650,13 @@ pre {
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: #FFECB3; }
 
 .table-hover .table-active:hover {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: #ffe69a; }
   .table-hover .table-active:hover > td,
   .table-hover .table-active:hover > th {
-    background-color: rgba(0, 0, 0, 0.075); }
+    background-color: #ffe69a; }
 
 .table .thead-dark th {
   color: #ECEFF1;
@@ -666,7 +666,7 @@ pre {
 .table .thead-light th {
   color: #455A64;
   background-color: #B0BEC5;
-  border-color: #B0BEC5; }
+  border-color: rgba(120, 144, 156, 0.42); }
 
 .table-dark {
   color: #ECEFF1;
@@ -4956,3 +4956,6 @@ svg[class^="icon-"] {
     .link-list-group li a.pin:focus {
       right: 0;
       opacity: 1; }
+
+.course-list td {
+  border-top: none; }
