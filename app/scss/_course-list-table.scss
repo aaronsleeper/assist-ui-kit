@@ -1,5 +1,12 @@
 .course-list {
     td {
         border-top: none;
+        &:first-child {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        small {
+            font-weight: 300;
+        }
     }
 }

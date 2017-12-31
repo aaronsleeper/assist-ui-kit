@@ -1,0 +1,18 @@
+.btn-group {
+    .btn {
+        background-color: $white;
+        color: $gray-700;
+        border-color: rgba($gray-500, 0.42);
+        &:hover {
+            background-color: $gray-50;
+            cursor: pointer;
+        }
+    }
+    .btn.active, 
+    .btn.active:hover {
+        background-color: $primary;
+        color: $white;
+        border-color: transparent;
+        cursor: default;
+    }
+}
