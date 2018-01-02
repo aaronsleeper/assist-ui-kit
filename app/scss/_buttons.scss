@@ -18,6 +18,7 @@ button:hover {
         @include transition-property(height);
         @include transition-duration($duration-exit);
         @include transition-easing($easing-decel);
+        transform-origin: 50% 50%;
     }
     &:hover, 
     &:focus {

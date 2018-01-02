@@ -4820,7 +4820,8 @@ button:hover {
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transform-origin: 50% 50%; }
 
 .btn:hover svg[class*="icon-"], .link-list-group li a:hover svg[class*="icon-"], .btn:focus svg[class*="icon-"], .link-list-group li a:focus svg[class*="icon-"] {
   height: 1em;
@@ -4832,6 +4833,17 @@ button:hover {
   -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
+
+.card {
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(96, 125, 139, 0.21); }
+  .card .remove-card {
+    position: absolute;
+    top: 0.75rem;
+    right: 1.25rem;
+    padding: 0; }
+    .card .remove-card svg.icon-close {
+      margin-right: 0; }
 
 .dropdown-toggle {
   border-width: 1px;
@@ -5013,3 +5025,8 @@ svg[class^="icon-"] {
     font-weight: 700; }
   .course-list td small {
     font-weight: 300; }
+
+.card-grid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, 15em); }

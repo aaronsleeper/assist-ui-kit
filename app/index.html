@@ -8,6 +8,95 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body class="my-3 mx-2">
+    <div class="pane">
+        <div class="pane-head">
+            <div class="pane-title">
+                <span class="h2">Pinboard</span>
+            </div>
+            <div class="pane-btns">
+                <button class="btn btn-default">
+                    <span class="sr-only">Close</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-close">
+                        <path d="M255 0C114.75 0 0 114.75 0 255s114.75 255 255 255 255-114.75 255-255S395.25 0 255 0zm127.5 346.8l-35.7 35.7-91.8-91.8-91.8 91.8-35.7-35.7 91.8-91.8-91.8-91.8 35.7-35.7 91.8 91.8 91.8-91.8 35.7 35.7-91.8 91.8 91.8 91.8z"
+                        />
+                    </svg>
+                </button>
+                <button class="btn btn-default">
+                    Download All
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
+                        <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
+                    </svg>
+                </button>
+                <button class="btn btn-default">
+                    Print All
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-print">
+                        <path d="M433.5 153h-357C33.15 153 0 186.15 0 229.5v153h102v102h306v-102h102v-153c0-43.35-33.15-76.5-76.5-76.5zM357 433.5H153V306h204v127.5zM433.5 255c-15.3 0-25.5-10.2-25.5-25.5s10.2-25.5 25.5-25.5 25.5 10.2 25.5 25.5-10.2 25.5-25.5 25.5zM408 25.5H102v102h306v-102z"
+                        />
+                    </svg>
+                </button>
+                <button class="btn btn-default">
+                    Email Pinboard
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
+                        <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-body">
+                    <button class="btn btn-default remove-card">
+                        <span class="sr-only">Remove</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-close">
+                            <path d="M255 0C114.75 0 0 114.75 0 255s114.75 255 255 255 255-114.75 255-255S395.25 0 255 0zm127.5 346.8l-35.7 35.7-91.8-91.8-91.8 91.8-35.7-35.7 91.8-91.8-91.8-91.8 35.7-35.7 91.8 91.8 91.8-91.8 35.7 35.7-91.8 91.8 91.8 91.8z"
+                            />
+                        </svg>
+                    </button>
+                    <h5 class="card-title">2017-2018 CSU Baccalaureate Level Course List<br>
+                    <small>All Departments</small></h5>
+                    <p><strong>Allan Hancock College</strong></p>
+                    download
+                    view
+                    remove
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">2017-2018 CSU Baccalaureate Level Course List<br>
+                    <small>Accounting Department</small></h5>
+                    <p class="card-text"><strong>Allan Hancock College</strong></p>
+                    <a href="#" class="card-link">Download</a>
+                    <a href="#" class="card-link">View</a>
+                    <a href="#" class="card-link">Remove</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pane-footer">
+            <button class="btn btn-default">
+                Save Pinboard
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
+                    <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
+                </svg>
+            </button>
+            <button class="btn btn-default">
+                Clear Pinboard
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
+                    <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
+                </svg>
+            </button>
+            <button class="btn btn-default">
+                Enter Key
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
+                    <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <hr>
+
     <section class="pane introduction">
         <div class="logo-lockup">
             <svg xmlns="http://www.w3.org/2000/svg" class="assist-logo" viewBox="0 0 120.7 54.4">

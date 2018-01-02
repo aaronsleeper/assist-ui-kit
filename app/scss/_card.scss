@@ -1,0 +1,13 @@
+.card {
+    position: relative;
+    box-shadow: 0 2px 2px 0 rgba($gray-500, 0.21);
+    .remove-card {
+        position: absolute;
+        top: $card-spacer-y;
+        right: $card-spacer-x;
+        padding: 0;
+        svg.icon-close {
+            margin-right: 0;
+        }
+    }
+}
