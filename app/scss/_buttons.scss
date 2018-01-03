@@ -7,7 +7,10 @@ button:hover {
 .btn {
     display: flex;
     align-items: center;
-    border-color: transparent;
+    &.btn-primary, 
+    &.btn-default {
+        border-color: transparent;
+    }
 }
 
 // Buttons with icons
@@ -27,5 +30,15 @@ button:hover {
             @include transition-duration($duration-entry);
             @include transition-easing($easing-accel);
         }
+    }
+}
+.btn-sm {
+    border-radius: $border-radius;
+}
+p .btn { 
+    display: inline;
+    padding: 0.15em 0.5em;
+    svg[class*="icon-"] {
+        margin-right: 0.25em;
     }
 }

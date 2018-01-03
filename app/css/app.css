@@ -1989,7 +1989,7 @@ tbody.collapse.show {
     border-bottom-right-radius: 0.125rem;
     border-bottom-left-radius: 0.125rem; }
 
-.card-body {
+.card-body, .card .card-head {
   flex: 1 1 auto;
   padding: 1.25rem; }
 
@@ -4803,8 +4803,9 @@ button:hover {
 
 .btn, .link-list-group li a {
   display: flex;
-  align-items: center;
-  border-color: transparent; }
+  align-items: center; }
+  .btn.btn-primary, .link-list-group li a.btn-primary, .btn.btn-default, .link-list-group li a.btn-default {
+    border-color: transparent; }
 
 .btn svg[class*="icon-"], .link-list-group li a svg[class*="icon-"] {
   margin-right: 0.5em;
@@ -4834,16 +4835,49 @@ button:hover {
   -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
+.btn-sm, .btn-group-sm > .btn, .link-list-group li .btn-group-sm > a {
+  border-radius: 0.125rem; }
+
+p .btn, p .link-list-group li a, .link-list-group li p a {
+  display: inline;
+  padding: 0.15em 0.5em; }
+  p .btn svg[class*="icon-"], p .link-list-group li a svg[class*="icon-"], .link-list-group li p a svg[class*="icon-"] {
+    margin-right: 0.25em; }
+
 .card {
   position: relative;
-  box-shadow: 0 2px 2px 0 rgba(96, 125, 139, 0.21); }
+  box-shadow: 0 2px 2px 0 rgba(96, 125, 139, 0.21);
+  -webkit-transition-property: transform;
+  -moz-transition-property: transform;
+  -o-transition-property: transform;
+  transition-property: transform;
+  will-change: transform;
+  -webkit-transition-duration: 0.195s;
+  -moz-transition-duration: 0.195s;
+  -o-transition-duration: 0.195s;
+  transition-duration: 0.195s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transform-origin: 50% 50%; }
   .card .remove-card {
     position: absolute;
     top: 0.75rem;
     right: 1.25rem;
     padding: 0; }
-    .card .remove-card svg.icon-close {
+    .card .remove-card svg[class^="icon-"] {
       margin-right: 0; }
+  .card:hover {
+    transform: translateZ(0) scale(1.1) translate3d(0, 0, 0);
+    -webkit-transition-duration: 0.225s;
+    -moz-transition-duration: 0.225s;
+    -o-transition-duration: 0.225s;
+    transition-duration: 0.225s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
 .dropdown-toggle {
   border-width: 1px;
