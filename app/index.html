@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body class="my-3 mx-2">
+    <section class="pane is-loading">
+        <div id="loader"></div>
+        <h3>Loader<br><small>with sample content below</small></h3>
+        <p>Lorem ipsum dolor amet kinfolk cold-pressed before they sold out jianbing banh mi. Succulents locavore tilde shaman. Truffaut lyft cornhole scenester viral art party, hoodie disrupt pug mumblecore. Waistcoat pork belly shabby chic twee beard.</p>
+        <p>Waistcoat selvage pour-over hammock, distillery hexagon shabby chic skateboard locavore readymade hot chicken. Bushwick celiac yuccie plaid locavore street art. IPhone actually fashion axe pabst raclette direct trade asymmetrical ethical. 3 wolf moon pok pok lo-fi, yuccie taiyaki sustainable cardigan VHS freegan beard venmo four dollar toast literally. Raw denim banh mi lomo sustainable echo park. Vice jianbing cliche stumptown. Cronut brooklyn hella, subway tile tote bag bespoke copper mug fixie messenger bag tofu palo santo kombucha.</p>
+        <p>Synth hoodie wayfarers quinoa lomo. Shoreditch disrupt shabby chic skateboard paleo. Forage beard enamel pin chartreuse irony, direct trade chicharrones selvage jean shorts. Master cleanse kogi messenger bag, chartreuse next level flexitarian biodiesel dreamcatcher pickled.</p>
+        <p>Vegan readymade tousled, ugh sriracha craft beer freegan cornhole williamsburg single-origin coffee hexagon. Banh mi coloring book yr franzen. Seitan man bun gastropub narwhal disrupt, vice banh mi stumptown selfies kitsch tacos plaid tousled. Actually palo santo subway tile man bun live-edge vexillologist food truck ramps ethical, cold-pressed dreamcatcher. Letterpress offal narwhal, viral fixie tilde sartorial everyday carry ennui lomo brunch godard vinyl migas.</p>
+        <p>Meh seitan fam narwhal pitchfork af PBR&B cray. Lomo bitters master cleanse hexagon cliche. Ethical hella activated charcoal mustache, copper mug offal gochujang chillwave VHS. Tacos beard bitters raclette ugh heirloom chambray letterpress health goth unicorn poke offal squid woke biodiesel. Prism affogato franzen ennui. Shabby chic pitchfork pop-up, forage street art neutra blog. Food truck vinyl polaroid kombucha sustainable gentrify microdosing.</p>
+    </section>
+
+    <hr>
+
     <div class="pane">
         <div class="pane-head">
             <div class="pane-title">
@@ -384,5 +396,18 @@
     <!-- Bootstrap 4 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
         crossorigin="anonymous"></script>
+    <!-- Lottie -->
+    <script src="js/lottie.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('loader'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'loader-animation-data.json'
+        })
+    </script>
+
 </body>
 </html>

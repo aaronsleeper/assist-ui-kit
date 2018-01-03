@@ -4972,6 +4972,41 @@ svg[class^="icon-"] {
       margin-right: 0;
       margin-left: 0.5em; }
 
+.is-loading {
+  position: relative; }
+  .is-loading #loader ~ * {
+    -webkit-filter: blur(0.5rem);
+    filter: blur(0.5rem); }
+
+#loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #loader svg {
+    position: relative;
+    z-index: 1;
+    width: 30vw !important;
+    height: auto !important; }
+  #loader path {
+    stroke-dasharray: 0.1em 0.3em;
+    stroke-linecap: square;
+    stroke: #FF6F00; }
+  #loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(236, 239, 241, 0.84); }
+
 .link-list-group {
   position: relative; }
   .link-list-group li {
