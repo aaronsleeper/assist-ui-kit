@@ -1,10 +1,11 @@
 .is-loading {
     position: relative;
     #loader ~ * {
-        -webkit-filter: blur(0.5rem);
-        filter: blur(0.5rem);
+        -webkit-filter: blur(0.15rem);
+        filter: blur(0.15rem);
     }
 }
+
 #loader {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -14,21 +15,35 @@
     justify-content: center;
     svg { 
         position: relative;
-        z-index: 1;
+        z-index: 2;
         // i hate doing this but the script inlines the width attr o_O
-        width: 30vw !important;
+        width: 20rem !important;
         height: auto !important;
+        max-width: 75%;
     }
     path {
         stroke-dasharray: 0.1em 0.3em;
         stroke-linecap: square;
-        stroke: $amber-900;
+        stroke: $gray-700;
+    }
+    &:before {
+        content: 'loading';
+        @extend .h6;
+        @extend .small;
+        position: absolute;
+        display: block;
+        align-self: center;
+        justify-self: center;
+        margin-top: $spacer * 2;
+        color: $gray-500;
+        z-index: 2;
     }
     &:after {
         content: '';
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
         display: block;
-        background-color: rgba($gray-50, 0.84);
+        background-color: rgba($white, 0.84);
+        z-index: 1;
     }
 }
