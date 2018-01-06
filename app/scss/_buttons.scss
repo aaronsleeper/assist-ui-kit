@@ -5,8 +5,6 @@ button:hover {
 
 // Turn off border colors
 .btn {
-    display: flex;
-    align-items: center;
     &.btn-primary, 
     &.btn-default {
         border-color: transparent;
@@ -16,8 +14,10 @@ button:hover {
 // Buttons with icons
 // Icons should always appear before text in a button
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     svg[class*="icon-"] {
-        margin-right: 0.5em;
         @include transition-property(height);
         @include transition-duration($duration-exit);
         @include transition-easing($easing-decel);
@@ -38,7 +38,4 @@ button:hover {
 p .btn { 
     display: inline;
     padding: 0.15em 0.5em;
-    svg[class*="icon-"] {
-        margin-right: 0.25em;
-    }
 }

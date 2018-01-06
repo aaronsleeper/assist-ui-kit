@@ -7,4 +7,7 @@ svg[class^="icon-"] {
         transform: rotate(-45deg);
         height: 0.7em;
     }
+    &.icon-heart {
+        fill: $pink;
+    }
 }
