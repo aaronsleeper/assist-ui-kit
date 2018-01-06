@@ -16,7 +16,7 @@ button:hover {
 .btn {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     svg[class*="icon-"] {
         @include transition-property(height);
         @include transition-duration($duration-exit);
@@ -34,6 +34,9 @@ button:hover {
 }
 .btn-sm {
     border-radius: $border-radius;
+}
+.img-btn {
+    padding: 0;
 }
 p .btn { 
     display: inline;

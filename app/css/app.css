@@ -4813,7 +4813,7 @@ button:hover {
 .btn, .link-list-group li a {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   .btn svg[class*="icon-"], .link-list-group li a svg[class*="icon-"] {
     -webkit-transition-property: height;
     -moz-transition-property: height;
@@ -4842,6 +4842,9 @@ button:hover {
 
 .btn-sm, .btn-group-sm > .btn, .link-list-group li .btn-group-sm > a {
   border-radius: 0.125rem; }
+
+.img-btn {
+  padding: 0; }
 
 p .btn, p .link-list-group li a, .link-list-group li p a {
   display: inline;
