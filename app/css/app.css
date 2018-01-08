@@ -5136,4 +5136,4 @@ svg[class^="icon-"] {
   grid-auto-flow: column;
   grid-auto-columns: auto; }
   .logo-grid img {
-    height: 2em; }
+    width: 100%; }
