@@ -24,8 +24,13 @@
     path {
         stroke-dasharray: 0.1em 0.3em;
         stroke-linecap: square;
-        stroke: $gray-700;
+        stroke: $amber-500;
     }
+    g g:nth-child(1) path { stroke: $amber-900; }
+    g g:nth-child(2) path { stroke: $amber-700; }
+    g g:nth-child(3) path { stroke: $amber-500; }
+    g g:nth-child(4) path { stroke: $amber-300; }
+    g g:nth-child(5) path { stroke: $amber-100; }
     &:before {
         content: 'loading';
         @extend .h6;

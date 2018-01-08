@@ -5002,7 +5002,17 @@ svg[class^="icon-"] {
   #loader path {
     stroke-dasharray: 0.1em 0.3em;
     stroke-linecap: square;
-    stroke: #455A64; }
+    stroke: #FFC107; }
+  #loader g g:nth-child(1) path {
+    stroke: #FF6F00; }
+  #loader g g:nth-child(2) path {
+    stroke: #FFA000; }
+  #loader g g:nth-child(3) path {
+    stroke: #FFC107; }
+  #loader g g:nth-child(4) path {
+    stroke: #FFD54F; }
+  #loader g g:nth-child(5) path {
+    stroke: #FFECB3; }
   #loader:before {
     content: 'loading';
     position: absolute;
