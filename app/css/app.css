@@ -4920,8 +4920,6 @@ svg[class^="icon-"] {
   svg[class^="icon-"].icon-pin {
     transform: rotate(-45deg);
     height: 0.7em; }
-  svg[class^="icon-"].icon-heart {
-    fill: #FF00A7; }
 
 .assist-logo {
   max-width: 100%;
@@ -5141,3 +5139,6 @@ svg[class^="icon-"] {
   .logo-grid img {
     width: 100%;
     max-height: 100%; }
+
+.crafted-by .icon-heart {
+  fill: #FF00A7; }

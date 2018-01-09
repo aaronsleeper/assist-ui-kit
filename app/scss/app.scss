@@ -34,3 +34,7 @@
 @import "course-list-table";
 @import "card-grid";
 @import "logo-grid";
+
+// context specific styles
+// not contributing to a component primitive
+@import "overrides";
