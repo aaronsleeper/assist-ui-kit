@@ -5131,9 +5131,13 @@ svg[class^="icon-"] {
 .logo-grid {
   display: grid;
   align-items: center;
+  align-content: start;
+  justify-items: start;
   justify-content: start;
   grid-gap: 1rem;
   grid-auto-flow: column;
+  grid-auto-rows: 2em;
   grid-auto-columns: auto; }
   .logo-grid img {
-    width: 100%; }
+    width: 100%;
+    max-height: 100%; }

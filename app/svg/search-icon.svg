@@ -1,23 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="1135 228 17 17">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #fff;
-      }
-
-      .cls-2 {
-        filter: url(#Path_31);
-      }
-    </style>
-    <filter id="Path_31" x="1135" y="228" width="17" height="17" filterUnits="userSpaceOnUse">
-      <feOffset dy="1" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="1" result="blur"/>
-      <feFlood flood-color="#263238" flood-opacity="0.212"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g class="cls-2" transform="matrix(1, 0, 0, 1, 0, 0)">
-    <path id="Path_31-2" data-name="Path 31" class="cls-1" d="M7.857,6.914h-.5l-.189-.189a3.934,3.934,0,0,0,1.006-2.64A4.086,4.086,0,1,0,4.086,8.171a3.934,3.934,0,0,0,2.64-1.006l.189.189v.5L10.057,11,11,10.057Zm-3.771,0A2.829,2.829,0,1,1,6.914,4.086,2.817,2.817,0,0,1,4.086,6.914Z" transform="translate(1138 230)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6439 125 18 18">
+  <g id="searching-magnifying-glass" transform="translate(6439 125)">
+    <g id="search">
+      <path id="Path_86" data-name="Path 86" d="M12.857,11.314h-.823l-.309-.309a6.438,6.438,0,0,0,1.646-4.32,6.686,6.686,0,1,0-6.686,6.686,6.438,6.438,0,0,0,4.32-1.646l.309.309v.823L16.457,18,18,16.457Zm-6.171,0a4.629,4.629,0,1,1,4.629-4.629A4.609,4.609,0,0,1,6.686,11.314Z"/>
+    </g>
   </g>
 </svg>
