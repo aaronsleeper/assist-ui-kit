@@ -1,0 +1,10 @@
+svg.icon-radio {
+    .circle-outer {
+        fill: transparent;
+        stroke: $blue-800;
+        stroke-width: 2;
+    }
+    .circle-inner {
+        fill: $blue-500;
+    }
+}

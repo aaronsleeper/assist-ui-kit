@@ -4885,6 +4885,14 @@ p .btn, p .link-list-group li a, .link-list-group li p a {
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
+svg.icon-radio .circle-outer {
+  fill: transparent;
+  stroke: #1565C0;
+  stroke-width: 2; }
+
+svg.icon-radio .circle-inner {
+  fill: #2196F3; }
+
 .dropdown-toggle {
   border-width: 1px;
   border-style: solid;
