@@ -5,6 +5,12 @@ svg.icon-radio {
         stroke-width: 2;
     }
     .circle-inner {
-        fill: $blue-500;
+        fill: rgba($blue-500, 0);
+    }
+    &.filled, 
+    .selected & {
+        .circle-inner{ 
+            fill: rgba($blue-500, 1);
+        }
     }
 }
