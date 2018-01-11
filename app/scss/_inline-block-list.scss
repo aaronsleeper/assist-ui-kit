@@ -1,0 +1,13 @@
+.inline-block-list {
+    a {
+        display: inline-block;
+        height: 2em;
+        width: auto;
+        @extend .mr-2;
+    }
+    svg {
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+}

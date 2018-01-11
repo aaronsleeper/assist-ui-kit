@@ -3,6 +3,9 @@
     right: 0;
     opacity: 1;
 }
+.hover-link {
+    background-position: 0 0;
+}
 
 // Link list group
 // Extends Bootstrap's List Group component to have multiple links per row
@@ -25,8 +28,14 @@
         &:nth-child(2n) {
             background-color: $gray-50;
         }
-        &:hover, 
+        &:hover a.pin { @extend .show-pin-btn; }
         &.selected {
+            a:first-child {
+                @extend .hover-link;
+                #icon-radio {
+                    @extend .radio-filled;
+                }
+            }
             a.pin {
                 @extend .show-pin-btn;
             }
@@ -54,7 +63,7 @@
             @include transition-property(background-position, background-color, color);
             &:hover, 
             &:focus {
-                background-position: 0 0;
+                @extend .hover-link;
             }
             &:focus {
                 font-weight: 500;

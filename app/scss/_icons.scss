@@ -8,3 +8,15 @@ svg[class^="icon-"] {
         height: 0.7em;
     }
 }
+
+// Defs only
+svg.defs-only {
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+}

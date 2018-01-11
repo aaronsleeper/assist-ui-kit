@@ -3649,7 +3649,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-2 {
   margin-top: 0.5rem !important; }
 
-.mr-2, .link-list-group svg,
+.mr-2, .link-list-group svg, .inline-block-list a,
 .mx-2 {
   margin-right: 0.5rem !important; }
 
@@ -4885,17 +4885,42 @@ p .btn, p .link-list-group a, .link-list-group p a {
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
-svg.icon-radio .circle-outer {
+.radio-empty .circle-inner, .icon-radio .circle-inner {
+  fill: rgba(33, 150, 243, 0);
+  -webkit-transition-duration: 0.195s;
+  -moz-transition-duration: 0.195s;
+  -o-transition-duration: 0.195s;
+  transition-duration: 0.195s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -webkit-transition-property: fill;
+  -moz-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  will-change: fill; }
+
+.radio-filled .circle-inner, .selected .icon-radio .circle-inner, .link-list-group li.selected a:first-child #icon-radio .circle-inner {
+  fill: #2196f3;
+  -webkit-transition-duration: 0.225s;
+  -moz-transition-duration: 0.225s;
+  -o-transition-duration: 0.225s;
+  transition-duration: 0.225s;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+  -webkit-transition-property: fill;
+  -moz-transition-property: fill;
+  -o-transition-property: fill;
+  transition-property: fill;
+  will-change: fill; }
+
+.icon-radio .circle-outer {
   fill: transparent;
   stroke: #1565C0;
   stroke-width: 2; }
-
-svg.icon-radio .circle-inner {
-  fill: rgba(33, 150, 243, 0); }
-
-svg.icon-radio.filled .circle-inner,
-.selected svg.icon-radio .circle-inner {
-  fill: #2196f3; }
 
 .dropdown-toggle {
   border-width: 1px;
@@ -4932,6 +4957,16 @@ svg[class^="icon-"] {
   svg[class^="icon-"].icon-pin {
     transform: rotate(-45deg);
     height: 0.7em; }
+
+svg.defs-only {
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  overflow: hidden; }
 
 .assist-logo {
   max-width: 100%;
@@ -5047,6 +5082,9 @@ svg[class^="icon-"] {
   right: 0;
   opacity: 1; }
 
+.hover-link, .link-list-group li.selected a:first-child, .link-list-group a:first-child:hover, .link-list-group a:first-child:focus {
+  background-position: 0 0; }
+
 .link-list-group {
   position: relative; }
   .link-list-group li {
@@ -5093,8 +5131,6 @@ svg[class^="icon-"] {
       -o-transition-property: background-position, background-color, color;
       transition-property: background-position, background-color, color;
       will-change: background-position, background-color, color; }
-      .link-list-group a:first-child:hover, .link-list-group a:first-child:focus {
-        background-position: 0 0; }
       .link-list-group a:first-child:focus {
         font-weight: 500; }
     .link-list-group a:focus {
@@ -5137,19 +5173,15 @@ svg[class^="icon-"] {
   .card-grid img {
     max-width: 100%; }
 
-.logo-grid {
-  display: grid;
-  align-items: center;
-  align-content: start;
-  justify-items: start;
-  justify-content: start;
-  grid-gap: 1rem;
-  grid-auto-flow: column;
-  grid-auto-rows: 2em;
-  grid-auto-columns: auto; }
-  .logo-grid img {
-    width: 100%;
-    max-height: 100%; }
+.inline-block-list a {
+  display: inline-block;
+  height: 2em;
+  width: auto; }
+
+.inline-block-list svg {
+  width: auto;
+  max-height: 100%;
+  max-width: 100%; }
 
 .crafted-by .icon-heart {
   fill: #FF00A7; }
