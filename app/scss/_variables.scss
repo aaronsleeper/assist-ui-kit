@@ -56,6 +56,12 @@ $input-btn-focus-width:         0.21rem;
 $input-btn-focus-color:         rgba($primary, .21);
 $input-btn-focus-box-shadow:    0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
+// Tooltips
+$tooltip-color: $white;
+$tooltip-bg: $primary;
+$tooltip-padding-y: 0.25em;
+$tooltip-padding-x: 0.5em;
+
 /* ------------------------------ 
 Initialize Custom Variables
 ------------------------------ */

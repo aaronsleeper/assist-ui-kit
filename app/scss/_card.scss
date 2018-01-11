@@ -42,7 +42,14 @@
         }
     }
     .card-footer {
-        .btn { display: inline-block; @extend .mr-2; }
+        .btn { 
+            display: inline-block; 
+            @extend .mr-2;
+            background-color: rgba($white, 0.5);
+            &:hover {
+                background-color: rgba($white, 1);
+            }
+        }
     }
     .remove-card {
         svg[class^="icon-"] {

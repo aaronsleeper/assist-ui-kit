@@ -2678,7 +2678,7 @@ button.close {
       margin-left: -3px;
       content: "";
       border-width: 5px 5px 0;
-      border-top-color: #000000; }
+      border-top-color: #7B1FA2; }
   .tooltip.bs-tooltip-right, .tooltip.bs-tooltip-auto[x-placement^="right"] {
     padding: 0 5px; }
     .tooltip.bs-tooltip-right .arrow, .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow {
@@ -2687,7 +2687,7 @@ button.close {
       margin-top: -3px;
       content: "";
       border-width: 5px 5px 5px 0;
-      border-right-color: #000000; }
+      border-right-color: #7B1FA2; }
   .tooltip.bs-tooltip-bottom, .tooltip.bs-tooltip-auto[x-placement^="bottom"] {
     padding: 5px 0; }
     .tooltip.bs-tooltip-bottom .arrow, .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow {
@@ -2696,7 +2696,7 @@ button.close {
       margin-left: -3px;
       content: "";
       border-width: 0 5px 5px;
-      border-bottom-color: #000000; }
+      border-bottom-color: #7B1FA2; }
   .tooltip.bs-tooltip-left, .tooltip.bs-tooltip-auto[x-placement^="left"] {
     padding: 0 5px; }
     .tooltip.bs-tooltip-left .arrow, .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow {
@@ -2706,14 +2706,14 @@ button.close {
       margin-top: -3px;
       content: "";
       border-width: 5px 0 5px 5px;
-      border-left-color: #000000; }
+      border-left-color: #7B1FA2; }
 
 .tooltip-inner {
   max-width: 200px;
-  padding: 3px 8px;
+  padding: 0.25em 0.5em;
   color: #FFFFFF;
   text-align: center;
-  background-color: #000000;
+  background-color: #7B1FA2;
   border-radius: 0.125rem; }
 
 .popover {
@@ -4968,7 +4968,10 @@ p .btn, p .link-list-group a, .link-list-group p a {
     .card .card-body .institution {
       font-weight: 700; }
   .card .card-footer .btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a {
-    display: inline-block; }
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .card .card-footer .btn:hover, .card .card-footer .link-list-group a:hover, .link-list-group .card .card-footer a:hover {
+      background-color: white; }
   .card .remove-card svg[class^="icon-"] {
     margin-right: 0; }
   .card:hover {
@@ -5019,6 +5022,13 @@ p .btn, p .link-list-group a, .link-list-group p a {
   fill: transparent;
   stroke: #1565C0;
   stroke-width: 2; }
+
+.tooltip {
+  -webkit-filter: drop-shadow(0 0.25rem 0.5rem white);
+  -moz-filter: drop-shadow(0 0.25rem 0.5rem white);
+  -ms-filter: drop-shadow(0 0.25rem 0.5rem white);
+  -o-filter: drop-shadow(0 0.25rem 0.5rem white);
+  filter: drop-shadow(0 0.25rem 0.5rem white); }
 
 .dropdown-toggle {
   border-width: 1px;
