@@ -364,7 +364,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, .pane-head .pane-title .list-type, .pane-head .pane-title .department, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6, #loader:before {
+.h1, .h2, .h3, .h4, .h5, .h6, .card .card-body span, #loader:before {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 700;
@@ -386,7 +386,7 @@ h4, .h4 {
 h5, .h5 {
   font-size: 1.2125rem; }
 
-h6, .h6, #loader:before {
+h6, .h6, .card .card-body span, #loader:before {
   font-size: 1rem; }
 
 .lead {
@@ -421,6 +421,8 @@ hr {
 
 small,
 .small,
+.card .card-body .academic-year,
+.card .card-body .list-type,
 #loader:before {
   font-size: 85.625%;
   font-weight: 400; }
@@ -1990,7 +1992,7 @@ tbody.collapse.show {
     border-bottom-right-radius: 0.125rem;
     border-bottom-left-radius: 0.125rem; }
 
-.card-body, .card .card-head {
+.card-body {
   flex: 1 1 auto;
   padding: 1.25rem; }
 
@@ -3626,7 +3628,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .m-1 {
   margin: 0.25rem !important; }
 
-.mt-1,
+.mt-1, .card .card-header .btn, .card .card-header .link-list-group a, .link-list-group .card .card-header a,
 .my-1 {
   margin-top: 0.25rem !important; }
 
@@ -3649,7 +3651,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-2 {
   margin-top: 0.5rem !important; }
 
-.mr-2, .link-list-group svg, .inline-block-list a,
+.mr-2, .card .card-footer .btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .link-list-group svg, .inline-block-list a,
 .mx-2 {
   margin-right: 0.5rem !important; }
 
@@ -4731,45 +4733,119 @@ h4, .h4,
 h5, .h5 {
   font-weight: 400; }
 
-h6, .h6, #loader:before {
+h6, .h6, .card .card-body span, #loader:before {
   font-weight: 300; }
 
 h4, .h4,
 h5, .h5,
-h6, .h6, #loader:before {
+h6, .h6, .card .card-body span, #loader:before {
   color: #37474F; }
 
-h1 small, h1 .small, h1 #loader:before, .h1 small, .h1 .small, .h1 #loader:before {
+h1 small, h1 .small, h1 .card .card-body .academic-year, .card .card-body h1 .academic-year, h1
+.card .card-body .list-type,
+.card .card-body h1 .list-type, h1 #loader:before, .h1 small, .h1 .small, .h1 .card .card-body .academic-year, .card .card-body .h1 .academic-year, .h1
+.card .card-body .list-type,
+.card .card-body .h1 .list-type, .h1 #loader:before {
   font-size: 2.8625rem; }
 
-h2 small, h2 .small, h2 #loader:before, .h2 small, .h2 .small, .h2 #loader:before {
+h2 small, h2 .small, h2 .card .card-body .academic-year, .card .card-body h2 .academic-year, h2
+.card .card-body .list-type,
+.card .card-body h2 .list-type, h2 #loader:before, .h2 small, .h2 .small, .h2 .card .card-body .academic-year, .card .card-body .h2 .academic-year, .h2
+.card .card-body .list-type,
+.card .card-body .h2 .list-type, .h2 #loader:before {
   font-size: 2.01875rem; }
 
-h3 small, .pane-head .pane-title .list-type small, .pane-head .pane-title .department small, h3 .small, .pane-head .pane-title .list-type .small, .pane-head .pane-title .department .small, h3 #loader:before, .pane-head .pane-title .list-type #loader:before, .pane-head .pane-title .department #loader:before, .h3 small, .h3 .small, .h3 #loader:before {
+h3 small, .pane-head .pane-title .list-type small, .pane-head .pane-title .department small, h3 .small, .pane-head .pane-title .list-type .small, .pane-head .pane-title .department .small, h3 .card .card-body .academic-year, .card .card-body h3 .academic-year, .pane-head .pane-title .list-type .card .card-body .academic-year, .card .card-body .pane-head .pane-title .list-type .academic-year, .pane-head .pane-title .department .card .card-body .academic-year, .card .card-body .pane-head .pane-title .department .academic-year, h3
+.card .card-body .list-type,
+.card .card-body h3 .list-type, .pane-head .pane-title .list-type
+.card .card-body .list-type,
+.card .card-body .pane-head .pane-title .list-type .list-type, .pane-head .pane-title .department
+.card .card-body .list-type,
+.card .card-body .pane-head .pane-title .department .list-type, h3 #loader:before, .pane-head .pane-title .list-type #loader:before, .pane-head .pane-title .department #loader:before, .h3 small, .h3 .small, .h3 .card .card-body .academic-year, .card .card-body .h3 .academic-year, .h3
+.card .card-body .list-type,
+.card .card-body .h3 .list-type, .h3 #loader:before {
   font-size: 1.41875rem; }
 
-h4 small, h4 .small, h4 #loader:before, .h4 small, .h4 .small, .h4 #loader:before {
+h4 small, h4 .small, h4 .card .card-body .academic-year, .card .card-body h4 .academic-year, h4
+.card .card-body .list-type,
+.card .card-body h4 .list-type, h4 #loader:before, .h4 small, .h4 .small, .h4 .card .card-body .academic-year, .card .card-body .h4 .academic-year, .h4
+.card .card-body .list-type,
+.card .card-body .h4 .list-type, .h4 #loader:before {
   font-size: 1.2125rem; }
 
-h5 small, h5 .small, h5 #loader:before, .h5 small, .h5 .small, .h5 #loader:before {
+h5 small, h5 .small, h5 .card .card-body .academic-year, .card .card-body h5 .academic-year, h5
+.card .card-body .list-type,
+.card .card-body h5 .list-type, h5 #loader:before, .h5 small, .h5 .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .h5
+.card .card-body .list-type,
+.card .card-body .h5 .list-type, .h5 #loader:before {
   font-size: 1rem; }
 
-h1 small, h1 .small, h1 #loader:before, .h1 small, .h1 .small, .h1 #loader:before,
+h1 small, h1 .small, h1 .card .card-body .academic-year, .card .card-body h1 .academic-year, h1
+.card .card-body .list-type,
+.card .card-body h1 .list-type, h1 #loader:before, .h1 small, .h1 .small, .h1 .card .card-body .academic-year, .card .card-body .h1 .academic-year, .h1
+.card .card-body .list-type,
+.card .card-body .h1 .list-type, .h1 #loader:before,
 h2 small,
 h2 .small,
-h2 #loader:before, .h2 small, .h2 .small, .h2 #loader:before,
+h2 .card .card-body .academic-year, .card .card-body
+h2 .academic-year,
+h2
+.card .card-body .list-type,
+.card .card-body
+h2 .list-type,
+h2 #loader:before, .h2 small, .h2 .small, .h2 .card .card-body .academic-year, .card .card-body .h2 .academic-year, .h2
+.card .card-body .list-type,
+.card .card-body .h2 .list-type, .h2 #loader:before,
 h3 small, .pane-head .pane-title .list-type small, .pane-head .pane-title .department small,
 h3 .small, .pane-head .pane-title .list-type .small, .pane-head .pane-title .department .small,
-h3 #loader:before, .pane-head .pane-title .list-type #loader:before, .pane-head .pane-title .department #loader:before, .h3 small, .h3 .small, .h3 #loader:before,
+h3 .card .card-body .academic-year, .card .card-body
+h3 .academic-year, .pane-head .pane-title .list-type .card .card-body .academic-year, .card .card-body .pane-head .pane-title .list-type .academic-year, .pane-head .pane-title .department .card .card-body .academic-year, .card .card-body .pane-head .pane-title .department .academic-year,
+h3
+.card .card-body .list-type,
+.card .card-body
+h3 .list-type, .pane-head .pane-title .list-type
+.card .card-body .list-type,
+.card .card-body .pane-head .pane-title .list-type .list-type, .pane-head .pane-title .department
+.card .card-body .list-type,
+.card .card-body .pane-head .pane-title .department .list-type,
+h3 #loader:before, .pane-head .pane-title .list-type #loader:before, .pane-head .pane-title .department #loader:before, .h3 small, .h3 .small, .h3 .card .card-body .academic-year, .card .card-body .h3 .academic-year, .h3
+.card .card-body .list-type,
+.card .card-body .h3 .list-type, .h3 #loader:before,
 h4 small,
 h4 .small,
-h4 #loader:before, .h4 small, .h4 .small, .h4 #loader:before,
+h4 .card .card-body .academic-year, .card .card-body
+h4 .academic-year,
+h4
+.card .card-body .list-type,
+.card .card-body
+h4 .list-type,
+h4 #loader:before, .h4 small, .h4 .small, .h4 .card .card-body .academic-year, .card .card-body .h4 .academic-year, .h4
+.card .card-body .list-type,
+.card .card-body .h4 .list-type, .h4 #loader:before,
 h5 small,
 h5 .small,
-h5 #loader:before, .h5 small, .h5 .small, .h5 #loader:before,
+h5 .card .card-body .academic-year, .card .card-body
+h5 .academic-year,
+h5
+.card .card-body .list-type,
+.card .card-body
+h5 .list-type,
+h5 #loader:before, .h5 small, .h5 .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .h5
+.card .card-body .list-type,
+.card .card-body .h5 .list-type, .h5 #loader:before,
 h6 small,
 h6 .small,
-h6 #loader:before, .h6 small, #loader:before small, .h6 .small, #loader:before .small, .h6 #loader:before, #loader:before #loader:before {
+h6 .card .card-body .academic-year, .card .card-body
+h6 .academic-year,
+h6
+.card .card-body .list-type,
+.card .card-body
+h6 .list-type,
+h6 #loader:before, .h6 small, .card .card-body span small, #loader:before small, .h6 .small, .card .card-body span .small, #loader:before .small, .h6 .card .card-body .academic-year, .card .card-body .h6 .academic-year, .card .card-body span .academic-year, #loader:before .card .card-body .academic-year, .card .card-body #loader:before .academic-year, .h6
+.card .card-body .list-type,
+.card .card-body .h6 .list-type, .card .card-body span .list-type, #loader:before
+.card .card-body .list-type,
+.card .card-body #loader:before .list-type, .h6 #loader:before, .card .card-body span #loader:before, #loader:before #loader:before {
   font-weight: 300;
   color: #607D8B; }
 
@@ -4853,11 +4929,11 @@ p .btn, p .link-list-group a, .link-list-group p a {
 .card {
   position: relative;
   box-shadow: 0 2px 2px 0 rgba(96, 125, 139, 0.21);
-  -webkit-transition-property: transform;
-  -moz-transition-property: transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  will-change: transform;
+  -webkit-transition-property: transform, box-shadow;
+  -moz-transition-property: transform, box-shadow;
+  -o-transition-property: transform, box-shadow;
+  transition-property: transform, box-shadow;
+  will-change: transform, box-shadow;
   -webkit-transition-duration: 0.195s;
   -moz-transition-duration: 0.195s;
   -o-transition-duration: 0.195s;
@@ -4867,15 +4943,37 @@ p .btn, p .link-list-group a, .link-list-group p a {
   -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transform-origin: 50% 50%; }
-  .card .remove-card {
-    position: absolute;
-    top: 0.75rem;
-    right: 1.25rem;
-    padding: 0; }
-    .card .remove-card svg[class^="icon-"] {
-      margin-right: 0; }
+  .card .card-header {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    justify-items: space-between; }
+  .card .card-body {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start; }
+    .card .card-body .btn, .card .card-body .link-list-group a, .link-list-group .card .card-body a {
+      grid-column: -2 / -1;
+      grid-row: 1 / 2; }
+    .card .card-body span {
+      display: block;
+      grid-column: 1 / 2; }
+    .card .card-body .institution,
+    .card .card-body .department {
+      font-weight: 500; }
+    .card .card-body .academic-year,
+    .card .card-body .list-type {
+      font-weight: 300; }
+    .card .card-body .institution {
+      font-weight: 700; }
+  .card .card-footer .btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a {
+    display: inline-block; }
+  .card .remove-card svg[class^="icon-"] {
+    margin-right: 0; }
   .card:hover {
-    transform: translateZ(0) scale(1.1) translate3d(0, 0, 0);
+    box-shadow: 0 8px 8px 0 rgba(96, 125, 139, 0.21);
+    transform: translateY(-0.25rem);
     -webkit-transition-duration: 0.225s;
     -moz-transition-duration: 0.225s;
     -o-transition-duration: 0.225s;
@@ -5168,8 +5266,8 @@ svg.defs-only {
 
 .card-grid {
   display: grid;
-  grid-gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, 15em); }
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, 17rem); }
   .card-grid img {
     max-width: 100%; }
 

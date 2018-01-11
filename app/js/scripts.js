@@ -28,3 +28,8 @@ $('.link-list-group li').click(function() {
     // toggle .selected on the clicked list item
     $(this).toggleClass('selected');
 });
+
+// Tooltips
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})

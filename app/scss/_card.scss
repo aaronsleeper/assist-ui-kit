@@ -1,24 +1,57 @@
 .card {
     position: relative;
     box-shadow: 0 2px 2px 0 rgba($gray-500, 0.21);
-    @include transition-property(transform);
+    @include transition-property(transform, box-shadow);
     @include transition-duration($duration-exit);
     @include transition-easing($easing-decel);
     transform-origin: 50% 50%;
-    .card-head {
-        @extend .card-body;
+    .card-header {
+        display: grid;
+        grid-gap: $spacer;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+        justify-items: space-between;
+        .btn {
+            @extend .mt-1;
+        }
+    }
+    .card-body {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: start;
+        .btn {
+            grid-column: -2 / -1;
+            grid-row: 1 / 2;
+        }
+        span {
+            display: block;
+            @extend .h6;
+            grid-column: 1 / 2;
+        }
+        .institution, 
+        .department {
+            font-weight: 500;
+        }
+        .academic-year, 
+        .list-type {
+            font-weight: 300;
+            @extend .small;
+        }
+        .institution {
+            font-weight: 700;
+        }
+    }
+    .card-footer {
+        .btn { display: inline-block; @extend .mr-2; }
     }
     .remove-card {
-        position: absolute;
-        top: $card-spacer-y;
-        right: $card-spacer-x;
-        padding: 0;
         svg[class^="icon-"] {
             margin-right: 0;
         }
     }
     &:hover {
-        transform: translateZ(0) scale(1.1) translate3d(0,0,0);
+        box-shadow: 0 8px 8px 0 rgba($gray-500, 0.21);
+        transform: translateY($spacer / -4);
         @include transition-duration($duration-entry);
         @include transition-easing($easing-accel);
     }
