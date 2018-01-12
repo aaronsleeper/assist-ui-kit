@@ -3651,7 +3651,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-2 {
   margin-top: 0.5rem !important; }
 
-.mr-2, .card .card-footer .btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .link-list-group svg, .inline-block-list a,
+.mr-2, .card .card-footer .btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .pane-footer .pane-btns .btn, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a,
 .mx-2 {
   margin-right: 0.5rem !important; }
 
@@ -4851,26 +4851,28 @@ h6 #loader:before, .h6 small, .card .card-body span small, #loader:before small,
 
 .grad-purple-blue {
   background-image: linear-gradient(to right, #6A1B9A, #8E24AA 30%, #2979FF);
+  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #6A1B9A, #8E24AA 30%, #2979FF);
   background-repeat: no-repeat; }
 
 .btn[class*="grad-"], .link-list-group a[class*="grad-"] {
-  background-size: 150%;
-  background-position: 0 0;
+  background-size: 200%;
+  background-position: 2% 2%;
   -webkit-transition-property: background-position;
   -moz-transition-property: background-position;
   -o-transition-property: background-position;
   transition-property: background-position;
   will-change: background-position;
-  -webkit-transition-duration: 0.195s;
-  -moz-transition-duration: 0.195s;
-  -o-transition-duration: 0.195s;
-  transition-duration: 0.195s;
+  -webkit-transition-duration: 0.324s;
+  -moz-transition-duration: 0.324s;
+  -o-transition-duration: 0.324s;
+  transition-duration: 0.324s;
   -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
   .btn[class*="grad-"]:hover, .link-list-group a[class*="grad-"]:hover, .btn[class*="grad-"]:focus, .link-list-group a[class*="grad-"]:focus {
-    background-position: 100% 0;
+    background-position: 98% 2%;
     -webkit-transition-duration: 0.225s;
     -moz-transition-duration: 0.225s;
     -o-transition-duration: 0.225s;
@@ -5105,6 +5107,13 @@ svg.defs-only {
   background-color: rgba(255, 255, 255, 0.94);
   box-shadow: 0 0.25rem 2rem 0 rgba(96, 125, 139, 0.42); }
 
+.pane-btns .btn-default {
+  color: #263238;
+  border-color: rgba(236, 239, 241, 0); }
+  .pane-btns .btn-default:hover {
+    color: #7B1FA2;
+    border-color: #eceff1; }
+
 .pane-head {
   display: grid;
   grid-template-columns: auto auto; }
@@ -5123,12 +5132,14 @@ svg.defs-only {
   .pane-head .pane-btns {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    /*.icon-close { margin: 0; }
-        .icon-print, 
-        .icon-pin { margin-right: 0; margin-left: 0.5em; } */ }
-    .pane-head .pane-btns .btn, .pane-head .pane-btns .link-list-group a, .link-list-group .pane-head .pane-btns a, .pane-head .pane-btns .btn:hover, .pane-head .pane-btns .link-list-group a:hover, .link-list-group .pane-head .pane-btns a:hover {
-      background-color: transparent; }
+    align-items: flex-end; }
+
+.pane-footer {
+  margin-top: 2rem; }
+  .pane-footer .pane-btns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; }
 
 .is-loading {
   position: relative; }

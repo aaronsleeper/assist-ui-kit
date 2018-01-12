@@ -87,7 +87,7 @@
                     Pin
                 </a>
             </li>
-            <li class="selected">
+            <li>
                 <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" class="icon-radio">
                         <circle class="circle-outer" cx="7.5" cy="7.5" r="6.5" />
@@ -243,11 +243,7 @@
             <div class="pane-title">
                 <span class="h2">Pinboard</span>
                 <p class="lead">Your pinboard will help you collect, review, and save links to credit transfer information documents for easy future reference.</p>
-                <p>Documents saved to you pinboard can be viewed, printed, or downloaded. The contents of your pinboard will be cleared when you close your browser. So make sure you <a href="#" class="btn btn-sm btn-outline-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459" class="icon-save mr-1">
-                    <path d="M357 0H51C22.95 0 0 22.95 0 51v357c0 28.05 22.95 51 51 51h357c28.05 0 51-22.95 51-51V102L357 0zM229.5 408c-43.35 0-76.5-33.15-76.5-76.5s33.15-76.5 76.5-76.5 76.5 33.15 76.5 76.5-33.15 76.5-76.5 76.5zM306 153H51V51h255v102z" />
-                </svg>
-                Save</a> your pinboard.</p>
+                <p>Documents saved to you pinboard can be viewed, printed, or downloaded. The contents of your pinboard will be cleared when you close your browser. So make sure you <a href="#" class="btn btn-sm btn-outline-primary">Save<svg viewBox="0 0 459 459" class="icon-save ml-1"><use xlink:href="#icon-save" /></svg></a> your pinboard.</p>
             </div>
             <div class="pane-btns">
                 <a href="#" class="btn btn-default">
@@ -258,14 +254,14 @@
                     Download All
                     <svg viewBox="0 0 612 612" class="icon-download ml-2"><use xlink:href="#icon-download" /></svg>
                 </a>
-                <button class="btn btn-default">
+                <a href="#" class="btn btn-default">
                     Print All
                     <svg viewBox="0 0 510 510" class="icon-print ml-2"><use xlink:href="#icon-print" /></svg>
-                </button>
-                <button class="btn btn-default">
+                </a>
+                <a href="#" class="btn btn-default">
                     Email Pinboard
                     <svg viewBox="0 0 535.5 535.5" class="icon-send ml-2"><use xlink:href="#icon-send" /></svg>
-                </button>
+                </a>
             </div>
         </div>
 
@@ -288,24 +284,18 @@
         </div>
 
         <div class="pane-footer">
-            <button class="btn btn-default">
-                Save Pinboard
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
-                    <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
-                </svg>
-            </button>
-            <button class="btn btn-default">
-                Clear Pinboard
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
-                    <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
-                </svg>
-            </button>
-            <button class="btn btn-default">
-                Enter Key
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
-                    <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
-                </svg>
-            </button>
+            <div class="pane-btns">
+                <a href="#" class="btn btn-primary">
+                    Save Pinboard
+                    <svg viewBox="0 0 459 459" class="icon-save ml-2"><use xlink:href="#icon-save" /></svg>
+                </a>
+                <a href="#" class="btn btn-default">
+                    Clear Pinboard
+                </a>
+                <a href="#" class="btn btn-default">
+                    Enter Key
+                </a>
+            </div>
         </div>
     </div>
 
@@ -380,24 +370,17 @@
                 <span class="year">Academic Year 2016-2017</span>
             </div>
             <div class="pane-btns">
-                <button class="btn btn-default">
-                    <span class="sr-only">Close</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-close">
-                        <path d="M255 0C114.75 0 0 114.75 0 255s114.75 255 255 255 255-114.75 255-255S395.25 0 255 0zm127.5 346.8l-35.7 35.7-91.8-91.8-91.8 91.8-35.7-35.7 91.8-91.8-91.8-91.8 35.7-35.7 91.8 91.8 91.8-91.8 35.7 35.7-91.8 91.8 91.8 91.8z" />
-                    </svg>
-                </button>
-                <button class="btn btn-default">
+                <a href="#" class="btn btn-default" aria-label="Close">
+                    <svg viewBox="0 0 510 510" class="icon-close"><use xlink:href="#icon-close" /></svg>
+                </a>
+                <a href="#" class="btn btn-default">
                     Print
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-print">
-                        <path d="M433.5 153h-357C33.15 153 0 186.15 0 229.5v153h102v102h306v-102h102v-153c0-43.35-33.15-76.5-76.5-76.5zM357 433.5H153V306h204v127.5zM433.5 255c-15.3 0-25.5-10.2-25.5-25.5s10.2-25.5 25.5-25.5 25.5 10.2 25.5 25.5-10.2 25.5-25.5 25.5zM408 25.5H102v102h306v-102z" />
-                    </svg>
-                </button>
-                <button class="btn btn-default">
+                    <svg viewBox="0 0 510 510" class="icon-print ml-2"><use xlink:href="#icon-print" /></svg>
+                </a>
+                <a href="#" class="btn btn-default">
                     Pin
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510" class="icon-pin">
-                        <path d="M357 255V51h25.5V0h-255v51H153v204l-51 51v51h132.6v153h40.8V357H408v-51l-51-51z" />
-                    </svg>
-                </button>
+                    <svg viewBox="0 0 510 510" class="icon-pin ml-2"><use xlink:href="#icon-pin" /></svg>
+                </a>
             </div>
         </div>
         <table class="table table-striped course-list">
@@ -469,8 +452,7 @@
     <!-- Buttons -->
     <section class="pane">
         <h3>Buttons</h3>
-        <button type="button" class="btn btn-primary grad-purple-blue">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 446.25 446.25" class="icon-search"><path d="M318.75 280.5h-20.4l-7.649-7.65c25.5-28.05 40.8-66.3 40.8-107.1C331.5 73.95 257.55 0 165.75 0S0 73.95 0 165.75 73.95 331.5 165.75 331.5c40.8 0 79.05-15.3 107.1-40.8l7.65 7.649v20.4L408 446.25 446.25 408l-127.5-127.5zm-153 0C102 280.5 51 229.5 51 165.75S102 51 165.75 51 280.5 102 280.5 165.75s-51 114.75-114.75 114.75z" /></svg>
+        <button type="button" class="btn btn-primary grad-purple-blue btn-lg">
             Gradient
         </button>
         <hr>

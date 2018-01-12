@@ -3,6 +3,16 @@
     background-color: rgba(255, 255, 255, 0.94);
     box-shadow: 0 0.25rem 2rem 0 rgba($gray-500, 0.42);
 }
+.pane-btns {
+    .btn-default {
+        color: $gray-900;
+        border-color: rgba($gray-50, 0);
+        &:hover {
+            color: $primary;
+            border-color: rgba($gray-50, 1);
+        }
+    }
+}
 .pane-head {
     display: grid;
     grid-template-columns: auto auto;
@@ -18,9 +28,16 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        .btn, .btn:hover { background-color: transparent; }
-        /*.icon-close { margin: 0; }
-        .icon-print, 
-        .icon-pin { margin-right: 0; margin-left: 0.5em; } */
+    }
+}
+.pane-footer {
+    margin-top: $spacer * 2;
+    .pane-btns {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        .btn {
+            @extend .mr-2;
+        }
     }
 }
