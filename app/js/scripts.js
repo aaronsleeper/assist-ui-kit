@@ -33,3 +33,17 @@ $('.link-list-group li').click(function() {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
+
+// Dropdown as Select / Option control
+$('.dropdown-item').click(function(event) {
+    var thisValue = $(this).text();
+    var dropdownValue = $(this).parents('.dropdown').find('.dropdown-toggle .value');
+    // if this isn't the selected list item
+    if (!$(this).hasClass('selected')) {
+        // remove .selected from the currently selected list item
+        $(this).siblings('.selected').removeClass('selected');
+        $(this).toggleClass('selected');
+    }
+    dropdownValue.text(thisValue);
+    event.preventDefault();
+})
