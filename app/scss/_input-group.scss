@@ -1,0 +1,7 @@
+.input-group {
+    svg[class^='icon-']:first-child {
+        @extend .mt-2, .mr-2;
+        width: 1.4em;
+        height: 1.4em;
+    }
+}

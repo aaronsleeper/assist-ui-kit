@@ -32,6 +32,7 @@
         &.selected {
             a:first-child {
                 @extend .hover-link;
+                font-weight: 500;
                 #icon-radio {
                     @extend .radio-filled;
                 }
