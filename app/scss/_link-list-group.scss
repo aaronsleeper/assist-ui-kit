@@ -34,7 +34,17 @@
                 @extend .hover-link;
                 font-weight: 500;
                 #icon-radio {
-                    @extend .radio-filled;
+                    #circle-outer {
+                        stroke: $blue-700;
+                        fill: transparent;
+                        stroke-width: 2;
+                    }
+                    #circle-inner {
+                        fill: rgba($blue-500, 1);
+                        @include transition-duration($duration-entry);
+                        @include transition-easing($easing-accel);
+                        @include transition-property(fill);
+                    }
                 }
             }
             a.pin {
@@ -75,6 +85,19 @@
                 width: 1em;
                 @extend .mr-1;
                 font-weight: 700;
+            }
+            #icon-radio {
+                #circle-outer {
+                    stroke: $gray-700;
+                    fill: transparent;
+                    stroke-width: 2;
+                }
+                #circle-inner {
+                    fill: rgba($blue-500, 0);
+                    @include transition-duration($duration-entry);
+                    @include transition-easing($easing-accel);
+                    @include transition-property(fill);
+                }
             }
         }
         &:focus {

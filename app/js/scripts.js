@@ -23,10 +23,12 @@ $('.link-list-group li').click(function() {
     // if this isn't the selected list item
     if(!$(this).hasClass('selected')) {
         // remove .selected from the currently selected list item
-        $('.link-list-group li.selected').removeClass('selected');
+        $('li.selected svg.icon-radio use').attr('xlink:href', '#icon-radio-empty')
+        $('li.selected').removeClass('selected');
+        $(this).toggleClass('selected');
     }
-    // toggle .selected on the clicked list item
-    $(this).toggleClass('selected');
+    $(this).find('svg.icon-radio use').attr('xlink:href', '#icon-radio');
+    event.preventDefault();
 });
 
 // Tooltips

@@ -3659,7 +3659,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-2 {
   margin-bottom: 0.5rem !important; }
 
-.ml-2,
+.ml-2, .tab-nav-main .tab-header, .tab-nav-main .tab-content,
 .mx-2 {
   margin-left: 0.5rem !important; }
 
@@ -3777,7 +3777,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .px-2 {
   padding-left: 0.5rem !important; }
 
-.p-3 {
+.p-3, .tab-nav-main .tab-content {
   padding: 1rem !important; }
 
 .pt-3,
@@ -4994,31 +4994,17 @@ p .btn, p .link-list-group a, .link-list-group p a {
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
-.radio-empty .circle-outer, .icon-radio .circle-outer {
+#icon-radio-empty #circle-outer {
   fill: transparent;
   stroke: #37474F;
   stroke-width: 2; }
 
-.radio-empty .circle-inner, .icon-radio .circle-inner {
-  fill: rgba(33, 150, 243, 0);
-  -webkit-transition-duration: 0.195s;
-  -moz-transition-duration: 0.195s;
-  -o-transition-duration: 0.195s;
-  transition-duration: 0.195s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  -webkit-transition-property: fill;
-  -moz-transition-property: fill;
-  -o-transition-property: fill;
-  transition-property: fill;
-  will-change: fill; }
+#icon-radio #circle-outer {
+  stroke: #1976D2;
+  fill: transparent;
+  stroke-width: 2; }
 
-.radio-filled .circle-outer, .selected .icon-radio .circle-outer, .link-list-group li.selected a:first-child #icon-radio .circle-outer {
-  stroke: #1976D2; }
-
-.radio-filled .circle-inner, .selected .icon-radio .circle-inner, .link-list-group li.selected a:first-child #icon-radio .circle-inner {
+#icon-radio #circle-inner {
   fill: #2196f3;
   -webkit-transition-duration: 0.225s;
   -moz-transition-duration: 0.225s;
@@ -5292,6 +5278,25 @@ svg.defs-only {
       background-color: #ECEFF1; }
     .link-list-group li.selected a:first-child {
       font-weight: 500; }
+      .link-list-group li.selected a:first-child #icon-radio #circle-outer {
+        stroke: #1976D2;
+        fill: transparent;
+        stroke-width: 2; }
+      .link-list-group li.selected a:first-child #icon-radio #circle-inner {
+        fill: #2196f3;
+        -webkit-transition-duration: 0.225s;
+        -moz-transition-duration: 0.225s;
+        -o-transition-duration: 0.225s;
+        transition-duration: 0.225s;
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -webkit-transition-property: fill;
+        -moz-transition-property: fill;
+        -o-transition-property: fill;
+        transition-property: fill;
+        will-change: fill; }
   .link-list-group a {
     padding: 0.75rem 1.25rem;
     border-width: 0;
@@ -5327,6 +5332,25 @@ svg.defs-only {
         display: block;
         width: 1em;
         font-weight: 700; }
+      .link-list-group a:first-child #icon-radio #circle-outer {
+        stroke: #455A64;
+        fill: transparent;
+        stroke-width: 2; }
+      .link-list-group a:first-child #icon-radio #circle-inner {
+        fill: rgba(33, 150, 243, 0);
+        -webkit-transition-duration: 0.225s;
+        -moz-transition-duration: 0.225s;
+        -o-transition-duration: 0.225s;
+        transition-duration: 0.225s;
+        -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+        -webkit-transition-property: fill;
+        -moz-transition-property: fill;
+        -o-transition-property: fill;
+        transition-property: fill;
+        will-change: fill; }
     .link-list-group a:focus {
       box-shadow: none; }
     .link-list-group a.pin {
@@ -5381,5 +5405,22 @@ svg.defs-only {
 Tab nav main
 *Application specific 
 ------------------------------ */
+.tab-nav-main {
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #6A1B9A, #8E24AA 30%, #2979FF); }
+  .tab-nav-main .tab-header {
+    display: block;
+    color: inherit;
+    text-align: left;
+    font-weight: 300; }
+    .tab-nav-main .tab-header .caption {
+      display: block;
+      font-size: 0.875rem; }
+  .tab-nav-main svg {
+    fill: currentColor; }
+  .tab-nav-main .tab-content {
+    color: #37474F;
+    background-color: rgba(255, 255, 255, 0.94); }
+
 .crafted-by .icon-heart {
   fill: #FF00A7; }

@@ -3,3 +3,30 @@ Tab nav main
 *Application specific 
 ------------------------------ */
 
+.tab-nav-main {
+    color: $white;
+    background: linear-gradient(180deg, $purple-800, $purple-600 30%, $blue-a400);
+    .tab-header {
+        display: block;
+        @extend .ml-2;
+        color: inherit;
+        text-align: left;
+        font-weight: 300;
+        .badge {
+
+        }
+        .caption {
+            display: block;
+            font-size: $font-size-sm;
+        }
+    }
+    svg {
+        fill: currentColor;
+    }
+    .tab-content {
+        @extend .ml-2,
+                .p-3;
+        color: $gray-800;
+        background-color: rgba($white, 0.94);
+    }
+}
