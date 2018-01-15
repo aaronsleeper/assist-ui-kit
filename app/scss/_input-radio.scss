@@ -1,6 +1,11 @@
 // Initialize the pieces that will change
 // Default State
 .radio-empty {
+    .circle-outer {
+        fill: transparent;
+        stroke: $gray-800;
+        stroke-width: 2;
+    }
     .circle-inner {
         fill: rgba($blue-500, 0);
         @include transition-duration($duration-exit);
@@ -10,6 +15,9 @@
 }
 // Filled State
 .radio-filled {
+    .circle-outer {
+        stroke: $blue-700;
+    }
     .circle-inner {
         fill: rgba($blue-500, 1);
         @include transition-duration($duration-entry);
@@ -20,11 +28,6 @@
 // Initialize the pieces that will not change
 // And apply change states
 .icon-radio {
-    .circle-outer {
-        fill: transparent;
-        stroke: $blue-800;
-        stroke-width: 2;
-    }
     @extend .radio-empty;
 }
 .selected .icon-radio {

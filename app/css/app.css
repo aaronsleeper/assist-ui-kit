@@ -3632,7 +3632,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-1 {
   margin-top: 0.25rem !important; }
 
-.mr-1, .dropdown-menu a.selected:before,
+.mr-1, .dropdown-menu a.selected:before, .link-list-group a:first-child:before,
 .mx-1 {
   margin-right: 0.25rem !important; }
 
@@ -4994,6 +4994,11 @@ p .btn, p .link-list-group a, .link-list-group p a {
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
+.radio-empty .circle-outer, .icon-radio .circle-outer {
+  fill: transparent;
+  stroke: #37474F;
+  stroke-width: 2; }
+
 .radio-empty .circle-inner, .icon-radio .circle-inner {
   fill: rgba(33, 150, 243, 0);
   -webkit-transition-duration: 0.195s;
@@ -5010,6 +5015,9 @@ p .btn, p .link-list-group a, .link-list-group p a {
   transition-property: fill;
   will-change: fill; }
 
+.radio-filled .circle-outer, .selected .icon-radio .circle-outer, .link-list-group li.selected a:first-child #icon-radio .circle-outer {
+  stroke: #1976D2; }
+
 .radio-filled .circle-inner, .selected .icon-radio .circle-inner, .link-list-group li.selected a:first-child #icon-radio .circle-inner {
   fill: #2196f3;
   -webkit-transition-duration: 0.225s;
@@ -5025,11 +5033,6 @@ p .btn, p .link-list-group a, .link-list-group p a {
   -o-transition-property: fill;
   transition-property: fill;
   will-change: fill; }
-
-.icon-radio .circle-outer {
-  fill: transparent;
-  stroke: #1565C0;
-  stroke-width: 2; }
 
 .tooltip {
   -webkit-filter: drop-shadow(0 0.25rem 0.5rem white);
@@ -5319,6 +5322,11 @@ svg.defs-only {
       will-change: background-position, background-color, color; }
       .link-list-group a:first-child:focus {
         font-weight: 500; }
+      .link-list-group a:first-child:before {
+        content: attr(data-initial);
+        display: block;
+        width: 1em;
+        font-weight: 700; }
     .link-list-group a:focus {
       box-shadow: none; }
     .link-list-group a.pin {

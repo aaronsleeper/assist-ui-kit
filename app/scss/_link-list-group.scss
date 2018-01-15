@@ -69,6 +69,13 @@
             &:focus {
                 font-weight: 500;
             }
+            &:before {
+                content: attr(data-initial);
+                display: block;
+                width: 1em;
+                @extend .mr-1;
+                font-weight: 700;
+            }
         }
         &:focus {
             // removing the default focus style for these elements 
