@@ -27,9 +27,9 @@ gulp.task('sass', function () {
 gulp.task('pack-vendor-js', function () {
     return gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/popper.js/dist/popper.min.js',
+        'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/lottie-web/build/player/lottie.min.js'
+        'node_modules/lottie-web/build/player/lottie.js'
     ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('app/js'));
@@ -38,6 +38,10 @@ gulp.task('pack-vendor-js', function () {
 // Compile custom js into JS & auto-inject into browsers
 gulp.task('pack-js', function () {
     return gulp.src([
+        'app/scripts/dropdown-select.js',
+        'app/scripts/tooltips.js',
+        'app/scripts/loader.js',
+        'app/scripts/radio-icon.js',
         'app/scripts/scripts.js'
     ])
         .pipe(concat('app.js'))
