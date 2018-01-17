@@ -29,7 +29,8 @@ gulp.task('pack-vendor-js', function () {
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/lottie-web/build/player/lottie.js'
+        'node_modules/lottie-web/build/player/lottie.js',
+        'node-modules/mark.js/dist/mark.min.js'
     ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('app/js'));

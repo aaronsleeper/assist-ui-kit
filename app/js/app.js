@@ -16,7 +16,7 @@ $('.dropdown-item').click(function (event) {
     event.preventDefault();
 })
 
-// Focus the first matching item on keypress 
+// Focus the first matching item on keypress
 /* if (event.keyCode >= 48 && event.keyCode <= 57) {
     // Number
 } else if (event.keyCode >= 65 && event.keyCode <= 90) {
