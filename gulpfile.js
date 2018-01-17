@@ -4,14 +4,14 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', ['sass', 'pack-vendor-js', 'pack-js'], function () {
 
     browserSync.init({
         server: './app'
     });
 
     gulp.watch('app/scss/*.scss', ['sass']);
-    gulp.watch('app/scripts/*.js', ['scripts']);
+    gulp.watch('app/scripts/*.js', ['pack-js']);
     gulp.watch('app/*.html').on('change', browserSync.reload);
 });
 
@@ -23,9 +23,23 @@ gulp.task('sass', function () {
         .pipe(browserSync.stream());
 });
 
-// Compile js into JS & auto-inject into browsers
-gulp.task('scripts', function () {
-    return gulp.src('app/js/*.js')
+// Compile vendor js
+gulp.task('pack-vendor-js', function () {
+    return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/popper.js/dist/popper.min.js',
+        'node_modules/bootstrap/dist/js/bootstrap.min.js',
+        'node_modules/lottie-web/build/player/lottie.min.js'
+    ])
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('app/js'));
+});
+
+// Compile custom js into JS & auto-inject into browsers
+gulp.task('pack-js', function () {
+    return gulp.src([
+        'app/scripts/scripts.js'
+    ])
         .pipe(concat('app.js'))
         .pipe(gulp.dest('app/js'))
         .pipe(browserSync.stream());
