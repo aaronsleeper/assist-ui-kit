@@ -5114,6 +5114,38 @@ p .btn, p .link-list-group a, .link-list-group p a {
   width: 1.4em;
   height: 1.4em; }
 
+.select-extend {
+  display: none; }
+
+.select-last-element .btn, .select-last-element .link-list-group a, .link-list-group .select-last-element a {
+  border-top-right-radius: .25rem !important;
+  border-bottom-right-radius: .25rem !important; }
+
+.select-extended-element {
+  text-overflow: ellipsis;
+  position: relative; }
+  .select-extended-element.input-group-prepend {
+    margin-bottom: initial; }
+  .select-extended-element .btn, .select-extended-element .link-list-group a, .link-list-group .select-extended-element a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; }
+  .select-extended-element .dropdown-menu .select-search {
+    border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0; }
+  .select-extended-element .dropdown-menu .select-extend-alert {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: 0;
+    display: none; }
+  .select-extended-element .dropdown-menu .dropdown-item {
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
 svg[class^="icon-"] {
   display: inline-block;
   fill: currentColor;

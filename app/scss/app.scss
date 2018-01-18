@@ -26,6 +26,10 @@
 @import "button-group";
 @import "input-group";
 
+// vendor components
+// -not bootstrap
+@import "../../node_modules/bootstrap-hardskilled-extend-select/scss/select";
+
 // create new components
 // atoms
 @import "icons";
