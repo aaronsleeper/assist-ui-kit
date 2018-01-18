@@ -1,7 +1,7 @@
 /* -- -- -- -- -- -- -- -- -- --
 Dropdown as Select Control
 -- -- -- -- -- -- -- -- -- -- */
-$(".chosen-select").chosen();
+$(".chosen-select").chosen({ width: "100%" });
 
 // Change the value of the dropdown button on select
 /* $('.dropdown-item').click(function (event) {

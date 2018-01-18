@@ -62,7 +62,22 @@ $tooltip-bg: $primary;
 $tooltip-padding-y: 0.25em;
 $tooltip-padding-x: 0.5em;
 
-/* ------------------------------ 
+// Forms
+$input-bg:                  $white;
+$input-disabled-bg:         $gray-200;
+$input-color:               $gray-700;
+$input-border-color:        $gray-100;
+$input-box-shadow:          inset 0 1px 1px rgba($gray-800, .075);
+$input-border-radius:       $border-radius;
+$input-border-radius-lg:    $border-radius-lg;
+$input-border-radius-sm:    $border-radius-sm;
+$input-focus-bg:            $input-bg;
+$input-focus-border-color:  $primary;
+$input-focus-color:         $input-color;
+$input-placeholder-color:   $gray-600;
+$input-transition:          border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+/* ------------------------------
 Initialize Custom Variables
 ------------------------------ */
 // Animation Variables

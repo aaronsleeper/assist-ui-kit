@@ -1,23 +1,243 @@
-.dropdown {
-    width: 100%;
+/* ------------------------------
+
+Chosen's Rendered Markup
+-Map
+
+div.chosen-container
+    ul.chosen-choices
+        li.search-field
+            input.default
+    div.chosen-drop
+        ul.chosen-result
+            li.active-result
+
+Chosen's SCSS file structure used as a base
+to avoid specificity issues.
+
+------------------------------ */
+
+
+/* @group Base */
+
+.chosen-container {
+    @extend .form-group;
+    font-size: $font-size-base;
+    * {
+    }
+    .chosen-drop {}
+    &.chosen-with-drop .chosen-drop {}
+    a {}
+    .search-choice,
+    .chosen-single {
+        .group-name {
+            &:after {}
+        }
+    }
 }
 
-.dropdown-toggle {
-    width: 100%;
-    justify-content: space-between;
-    border-width: 1px;
-    border-style: solid;
-    border-color: $gray-100;
-    svg.icon-chevron-down {
-        margin-right: 0;
-        margin-left: 0.5em;
-        fill: $primary;
+
+/* @end */
+
+
+/* @group Single Chosen */
+
+.chosen-container-single {
+    .chosen-single {
     }
-    // removing the default carat style
-    &:after {
-        display: none;
+    .chosen-default {}
+    .chosen-single span {}
+    .chosen-single-with-deselect span {}
+    .chosen-single abbr {
+        &:hover {}
+    }
+    &.chosen-disabled .chosen-single abbr:hover {}
+    .chosen-single div {
+        b {}
+    }
+    .chosen-search {
+        input[type="text"] {
+        }
+    }
+    .chosen-drop {}
+    &.chosen-container-single-nosearch .chosen-search {}
+}
+
+
+/* @end */
+
+
+/* @group Results */
+
+.chosen-container .chosen-results {
+    li {
+        &.active-result {}
+        &.disabled-result {}
+        &.highlighted {
+        }
+        &.no-results {}
+        &.group-result {}
+        &.group-option {}
+        em {}
     }
 }
+
+
+/* @end */
+
+
+/* @group Multi Chosen */
+
+.chosen-container-multi {
+    .chosen-choices {
+        @extend .form-control;
+        width: 100%;
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $gray-100;
+        border-radius: $border-radius;
+        cursor: pointer;
+    }
+    .chosen-choices li {
+        &.search-field {
+            input[type="text"] {}
+        }
+        &.search-choice {
+            span {}
+            .search-choice-close {
+                &:hover {}
+            }
+        }
+        &.search-choice-disabled {
+        }
+        &.search-choice-focus {
+            .search-choice-close {}
+        }
+    }
+    .chosen-results {}
+    .chosen-drop .result-selected {}
+}
+
+
+/* @end */
+
+
+/* @group Active  */
+
+.chosen-container-active {
+    .chosen-single {}
+    &.chosen-with-drop {
+        .chosen-single {
+        }
+        .chosen-single div {
+            b {}
+        }
+    }
+    .chosen-choices {
+        li.search-field input[type="text"] {}
+    }
+}
+
+
+/* @end */
+
+
+/* @group Disabled Support */
+
+.chosen-disabled {
+    .chosen-single {}
+    .chosen-choices .search-choice .search-choice-close {}
+}
+
+
+/* @end */
+
+
+/* @group Right to Left */
+
+.chosen-rtl {
+    .chosen-single {}
+    .chosen-single span {}
+    .chosen-single-with-deselect span {}
+    .chosen-single div {}
+    .chosen-single abbr {}
+    .chosen-choices li {
+        &.search-field input[type="text"] {}
+        &.search-choice {
+            .search-choice-close {}
+        }
+    }
+    &.chosen-container-single-nosearch .chosen-search,
+    .chosen-drop {}
+    &.chosen-container-single .chosen-results {}
+    .chosen-results li.group-option {}
+    &.chosen-container-active.chosen-with-drop .chosen-single div {}
+    .chosen-search input[type="text"] {
+    }
+    &.chosen-container-single {
+        .chosen-single div b {}
+        &.chosen-with-drop {
+            .chosen-single div b {}
+        }
+    }
+}
+
+
+/* @end */
+
+
+/* @group Retina compatibility */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+.chosen-rtl .chosen-search input[type="text"],
+.chosen-container-single .chosen-single abbr,
+.chosen-container-single .chosen-single div b,
+.chosen-container-single .chosen-search input[type="text"],
+.chosen-container-multi .chosen-choices .search-choice .search-choice-close,
+.chosen-container .chosen-results-scroll-down span,
+.chosen-container .chosen-results-scroll-up span {}
+
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .dropdown-menu {
     width: 100%;
     @extend .pb-4;
@@ -39,7 +259,7 @@
         @include transition-easing($easing-decel);
         @include transition-property(background-position, background-color, color);
         &:hover,
-        &:focus, 
+        &:focus,
         &.selected {
             background-color: rgba($gray-50, 0.42);
             background-position: 0 0;
@@ -56,7 +276,9 @@
                 display: block;
                 width: 0.7em;
                 height: 0.7em;
-                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18'><path fill='#{$blue-500}' d='M4.9 7.1L3.5 8.5 8 13 18 3l-1.4-1.4L8 10.2 4.9 7.1zM16 16H2V2h10V0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8h-2v8z' /></svg>") no-repeat;
+                background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18'>
+                <path fill='#{$blue-500}' d='M4.9 7.1L3.5 8.5 8 13 18 3l-1.4-1.4L8 10.2 4.9 7.1zM16 16H2V2h10V0H2C.9 0 0 .9 0 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8h-2v8z' />
+                </svg>") no-repeat;
                 background-size: 0.7em;
                 @extend .mr-1;
             }
