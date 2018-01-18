@@ -15,22 +15,31 @@
 // utilize mixins
 @import "gradients";
 
-// customize existing components
+// customize existing Bootstrap 4 components
 // atoms
 @import "buttons";
 @import "card";
 @import "input-radio";
 @import "tooltip";
 // molecules
-@import "dropdown";
 @import "button-group";
 @import "input-group";
 
 // vendor components
 // -not bootstrap
-@import "../../node_modules/bootstrap-hardskilled-extend-select/scss/select";
 
-// create new components
+// Chosen - Extending the <select> element
+/* ------------------------------
+Chosen's SASS requires Compas CSS3 mixins
+Compas is no longer actively maintained
+We are starting with chosen's SASS and custom writing all styles
+We will support styling going forward and the library will provide JS
+-AS 1/2018
+------------------------------ */
+@import "chosen";
+@import "chosen-overrides";
+
+// create new custom components
 // atoms
 @import "icons";
 @import "logo";

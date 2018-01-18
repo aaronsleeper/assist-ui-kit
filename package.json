@@ -6,8 +6,8 @@
   "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.0.0-beta.2",
-    "bootstrap-hardskilled-extend-select": "^1.1.4",
     "browser-sync": "^2.21.0",
+    "chosen-npm": "^1.4.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",

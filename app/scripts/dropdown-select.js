@@ -1,32 +1,7 @@
 /* -- -- -- -- -- -- -- -- -- --
 Dropdown as Select Control
 -- -- -- -- -- -- -- -- -- -- */
-$('select').extendSelect({
-    // Search input placeholder:
-    search: 'Find',
-    // Title if option not selected:
-    notSelectedTitle: 'Pls select',
-    // Message if select list empty:
-    empty: 'Empty',
-    // Class to active element
-    activeClass: 'active',
-    // Class to disabled element
-    disabledClass: 'disabled',
-    // Custom error message for all selects (use placeholder %items)
-    maxOptionMessage: 'Max %items elements',
-    // Delay to hide message
-    maxOptionMessageDelay: 2000,
-    // Popover logic (resize or save height)
-    popoverResize: true,
-    // Auto resize dropdown by button width
-    dropdownResize: true
-});
-
-// When the dropdown is clicked
-/* $('.dropdown').click(function (event) {
-    var value = $(this).find('.value');
-    value.html('');
-}); */
+$(".chosen-select").chosen();
 
 // Change the value of the dropdown button on select
 /* $('.dropdown-item').click(function (event) {
