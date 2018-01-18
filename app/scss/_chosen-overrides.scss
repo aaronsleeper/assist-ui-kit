@@ -24,7 +24,11 @@ to avoid specificity issues.
     font-size: $font-size-base;
     * {
     }
-    .chosen-drop {}
+    .chosen-drop {
+        @extend .pt-2, .pb-2;
+        border-color: $gray-100;
+        background-image: linear-gradient(180deg, rgba($gray-200, 0.42), rgba($gray-50, 0) 0.5rem);
+    }
     &.chosen-with-drop .chosen-drop {}
     a {}
     .search-choice,
@@ -70,14 +74,46 @@ to avoid specificity issues.
 
 .chosen-container .chosen-results {
     li {
-        &.active-result {}
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+        font-size: $font-size-base;
+        font-weight: 300;
+        color: $gray-800;
+        text-align: left;
+        font-weight: 300;
+        @extend .pl-4; // include a transparent gradient so we have something to transition from
+        @include gradient-x ($purple-700, transparent, 8px, 8px);
+        background-repeat: no-repeat;
+        background-position: -8px 0;
+        background-color: transparent;
+        @include transition-duration($duration-exit);
+        @include transition-easing($easing-decel);
+        @include transition-property(background-position, background-color, color);
+        &.active-result {
+            // not selected list item
+            color: $gray-800;
+        }
         &.disabled-result {}
         &.highlighted {
+            // hover if not selected
+            color: $gray-800;
+            background-color: rgba($gray-50, 0.42);
+            background-position: 0 0;
+            font-weight: 500;
         }
         &.no-results {}
         &.group-result {}
         &.group-option {}
-        em {}
+        em {
+            display: inline-block;
+            padding: ($input-btn-padding-y / 3) ($input-btn-padding-x / 5) ($input-btn-padding-y / 3) ($input-btn-padding-x / 3);
+            background-color: rgba($purple-50, 1);
+            color: $gray-900;
+            font-weight: 500;
+            text-decoration: none;
+        }
     }
 }
 
@@ -90,6 +126,7 @@ to avoid specificity issues.
 .chosen-container-multi {
     .chosen-choices {
         @extend .form-control;
+        display: flex;
         width: 100%;
         padding: $input-btn-padding-y $input-btn-padding-x;
         border-width: 1px;
@@ -99,13 +136,43 @@ to avoid specificity issues.
         cursor: pointer;
     }
     .chosen-choices li {
+        float: initial;
         &.search-field {
             input[type="text"] {}
         }
         &.search-choice {
+            float: initial;
+            display: flex;
+            align-items: bottom;
+            padding: $badge-padding-y $badge-padding-x;
+            font-size: $font-size-sm;
+            font-weight: 500;
+            color: $white;
+            background-color: $primary;
+            border-color: transparent;
+            box-shadow: initial;
             span {}
             .search-choice-close {
-                &:hover {}
+                position: initial;
+                top: initial; right: initial; bottom: initial; left: initial;
+                margin-left: $spacer / 2;
+                background-image: url('../svg/icons/close.svg');
+                background-size: 75%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                opacity: 0.42;
+                @include transition-property(opacity);
+                @include transition-duration($duration-exit);
+                @include transition-easing($easing-decel);
+                &:hover {
+                    opacity: 0.95;
+                    background-position: center center;
+                    @include transition-duration($duration-entry);
+                    @include transition-easing($easing-accel);
+                }
+            }
+            &:hover .search-choice-close {
+                opacity: 0.95;
             }
         }
         &.search-choice-disabled {
@@ -151,36 +218,6 @@ to avoid specificity issues.
 
 
 /* @end */
-
-
-/* @group Right to Left */
-
-.chosen-rtl {
-    .chosen-single {}
-    .chosen-single span {}
-    .chosen-single-with-deselect span {}
-    .chosen-single div {}
-    .chosen-single abbr {}
-    .chosen-choices li {
-        &.search-field input[type="text"] {}
-        &.search-choice {
-            .search-choice-close {}
-        }
-    }
-    &.chosen-container-single-nosearch .chosen-search,
-    .chosen-drop {}
-    &.chosen-container-single .chosen-results {}
-    .chosen-results li.group-option {}
-    &.chosen-container-active.chosen-with-drop .chosen-single div {}
-    .chosen-search input[type="text"] {
-    }
-    &.chosen-container-single {
-        .chosen-single div b {}
-        &.chosen-with-drop {
-            .chosen-single div b {}
-        }
-    }
-}
 
 
 /* @end */
@@ -239,11 +276,11 @@ to avoid specificity issues.
 
 
 .dropdown-menu {
-    width: 100%;
+    /* width: 100%;
     @extend .pb-4;
-    overflow: hidden;
+    overflow: hidden; */
     a {
-        display: flex;
+        /* display: flex;
         align-items: center;
         justify-content: flex-start;
         font-weight: 300;
@@ -257,15 +294,15 @@ to avoid specificity issues.
         background-color: transparent;
         @include transition-duration($duration-exit);
         @include transition-easing($easing-decel);
-        @include transition-property(background-position, background-color, color);
+        @include transition-property(background-position, background-color, color); */
         &:hover,
         &:focus,
         &.selected {
-            background-color: rgba($gray-50, 0.42);
-            background-position: 0 0;
+            /* background-color: rgba($gray-50, 0.42);
+            background-position: 0 0; */
         }
         &:focus {
-            font-weight: 500;
+            /* font-weight: 500; */
         }
         &.selected {
             font-weight: 500;

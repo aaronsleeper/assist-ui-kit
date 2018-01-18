@@ -170,9 +170,9 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   li {
     display: none;
     margin: 0;
-    padding: 5px 6px;
+    //padding: 5px 6px;
     list-style: none;
-    line-height: 15px;
+    //line-height: 15px;
     word-wrap: break-word;
     -webkit-touch-callout: none;
     &.active-result {
