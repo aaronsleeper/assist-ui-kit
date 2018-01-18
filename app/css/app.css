@@ -364,7 +364,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, .pane-head .pane-title .list-type, .pane-head .pane-title .department, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .dropdown-menu .section-title, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
+.h1, .h2, .h3, .h4, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 700;
@@ -383,7 +383,7 @@ h3, .pane-head .pane-title .list-type, .pane-head .pane-title .department, .h3 {
 h4, .h4 {
   font-size: 1.41875rem; }
 
-h5, .h5, .dropdown-menu .section-title {
+h5, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title {
   font-size: 1.2125rem; }
 
 h6, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
@@ -3655,7 +3655,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .m-2 {
   margin: 0.5rem !important; }
 
-.mt-2, .input-group svg[class^='icon-']:first-child,
+.mt-2, .input-group svg[class^='icon-']:first-child, .chosen-container .chosen-results li.group-result,
 .my-2 {
   margin-top: 0.5rem !important; }
 
@@ -4738,14 +4738,14 @@ a.text-dark:focus, a.text-dark:hover {
   visibility: hidden !important; }
 
 h4, .h4,
-h5, .h5, .dropdown-menu .section-title {
+h5, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title {
   font-weight: 400; }
 
 h6, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
   font-weight: 300; }
 
 h4, .h4,
-h5, .h5, .dropdown-menu .section-title,
+h5, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title,
 h6, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
   color: #37474F; }
 
@@ -4783,11 +4783,13 @@ h4 small, h4 .small, h4 .card .card-body .academic-year, .card .card-body h4 .ac
 
 h5 small, h5 .small, h5 .card .card-body .academic-year, .card .card-body h5 .academic-year, h5
 .card .card-body .list-type,
-.card .card-body h5 .list-type, h5 #loader:before, .h5 small, .dropdown-menu .section-title small, .h5 .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
+.card .card-body h5 .list-type, h5 #loader:before, .h5 small, .chosen-container .chosen-results li.group-result small, .dropdown-menu .section-title small, .h5 .small, .chosen-container .chosen-results li.group-result .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .chosen-container .chosen-results li.group-result .card .card-body .academic-year, .card .card-body .chosen-container .chosen-results li.group-result .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
 .card .card-body .list-type,
-.card .card-body .h5 .list-type, .dropdown-menu .section-title
+.card .card-body .h5 .list-type, .chosen-container .chosen-results li.group-result
 .card .card-body .list-type,
-.card .card-body .dropdown-menu .section-title .list-type, .h5 #loader:before, .dropdown-menu .section-title #loader:before {
+.card .card-body .chosen-container .chosen-results li.group-result .list-type, .dropdown-menu .section-title
+.card .card-body .list-type,
+.card .card-body .dropdown-menu .section-title .list-type, .h5 #loader:before, .chosen-container .chosen-results li.group-result #loader:before, .dropdown-menu .section-title #loader:before {
   font-size: 1rem; }
 
 h1 small, h1 .small, h1 .card .card-body .academic-year, .card .card-body h1 .academic-year, h1
@@ -4840,11 +4842,13 @@ h5
 .card .card-body .list-type,
 .card .card-body
 h5 .list-type,
-h5 #loader:before, .h5 small, .dropdown-menu .section-title small, .h5 .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
+h5 #loader:before, .h5 small, .chosen-container .chosen-results li.group-result small, .dropdown-menu .section-title small, .h5 .small, .chosen-container .chosen-results li.group-result .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .chosen-container .chosen-results li.group-result .card .card-body .academic-year, .card .card-body .chosen-container .chosen-results li.group-result .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
 .card .card-body .list-type,
-.card .card-body .h5 .list-type, .dropdown-menu .section-title
+.card .card-body .h5 .list-type, .chosen-container .chosen-results li.group-result
 .card .card-body .list-type,
-.card .card-body .dropdown-menu .section-title .list-type, .h5 #loader:before, .dropdown-menu .section-title #loader:before,
+.card .card-body .chosen-container .chosen-results li.group-result .list-type, .dropdown-menu .section-title
+.card .card-body .list-type,
+.card .card-body .dropdown-menu .section-title .list-type, .h5 #loader:before, .chosen-container .chosen-results li.group-result #loader:before, .dropdown-menu .section-title #loader:before,
 h6 small,
 h6 .small,
 h6 .card .card-body .academic-year, .card .card-body
@@ -5480,6 +5484,13 @@ to avoid specificity issues.
     background-color: rgba(236, 239, 241, 0.42);
     background-position: 0 0;
     font-weight: 500; }
+  .chosen-container .chosen-results li.group-result {
+    white-space: nowrap;
+    width: min-content;
+    color: #FFFFFF;
+    background-color: #7B1FA2;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(96, 125, 139, 0.21); }
   .chosen-container .chosen-results li em {
     display: inline-block;
     padding: 0.125rem 0.15rem 0.125rem 0.25rem;
