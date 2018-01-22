@@ -57,7 +57,6 @@
         padding: $list-group-item-padding-y $list-group-item-padding-x;
         border-width: 0;
         border-radius: 0;
-        z-index: 0;
         @include transition-duration($duration-exit);
         @include transition-easing($easing-decel);
         &:first-child {

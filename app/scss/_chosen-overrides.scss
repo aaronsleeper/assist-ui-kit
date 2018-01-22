@@ -22,7 +22,28 @@ to avoid specificity issues.
 .chosen-container {
     @extend .form-group;
     font-size: $font-size-base;
+    background-color: $white;
+    background-image: url('../svg/icons/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-size: 1rem auto;
+    background-position: bottom 50% right 1rem;
     * {
+    }
+    .chosen-choices {
+        @extend .form-control;
+        display: flex;
+        width: 100%;
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        background-color: transparent;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $gray-100;
+        border-radius: $border-radius;
+        cursor: pointer;
+    }
+    &.chosen-container-single .chosen-single {
+        padding-right: 3rem; // make sure tags don't overlap arrow
+        background-color: transparent;
     }
     .chosen-drop {
         @extend .pt-2, .pb-2;
@@ -47,6 +68,16 @@ to avoid specificity issues.
 
 .chosen-container-single {
     .chosen-single {
+        @extend .form-control;
+        display: flex;
+        width: 100%;
+        padding: $input-btn-padding-y $input-btn-padding-x;
+        color: $gray-800;
+        border-width: 1px;
+        border-style: solid;
+        border-color: $gray-100;
+        border-radius: $border-radius;
+        cursor: pointer;
     }
     .chosen-default {}
     .chosen-single span {}
@@ -60,6 +91,15 @@ to avoid specificity issues.
     }
     .chosen-search {
         input[type="text"] {
+            @extend .form-control;
+            display: flex;
+            width: 100%;
+            padding: $input-btn-padding-y $input-btn-padding-x;
+            color: $gray-800;
+            border-width: 1px;
+            border-style: solid;
+            border-color: $gray-100;
+            border-radius: $border-radius;
         }
     }
     .chosen-drop {}
@@ -73,6 +113,8 @@ to avoid specificity issues.
 /* @group Results */
 
 .chosen-container .chosen-results {
+    display: flex;
+    flex-direction: column;
     li {
         display: flex;
         align-items: center;
@@ -106,12 +148,13 @@ to avoid specificity issues.
         &.no-results {}
         &.group-result {
             @extend .h5, .mt-2;
-            white-space: nowrap;
-            width: min-content;
-            color: $white;
-            background-color: $primary;
-            font-weight: 300;
-            border-bottom: 1px solid rgba($gray-500, 0.21);
+            width: max-content;
+            color: $gray-800;
+            background-color: $gray-50;
+            @include gradient-x ($gray-100, transparent, 8px, 8px);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            font-weight: 400;
         }
         &.group-option {}
         em {
@@ -133,15 +176,6 @@ to avoid specificity issues.
 
 .chosen-container-multi {
     .chosen-choices {
-        @extend .form-control;
-        display: flex;
-        width: 100%;
-        padding: $input-btn-padding-y $input-btn-padding-x;
-        border-width: 1px;
-        border-style: solid;
-        border-color: $gray-100;
-        border-radius: $border-radius;
-        cursor: pointer;
     }
     .chosen-choices li {
         float: initial;

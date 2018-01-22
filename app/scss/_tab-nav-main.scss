@@ -8,12 +8,22 @@ Tab nav main
     background: linear-gradient(180deg, $purple-800, $purple-600 30%, $blue-a400);
     .tab-header {
         display: block;
-        @extend .ml-2;
+        @extend .mx-2;
         color: inherit;
         text-align: left;
         font-weight: 300;
+        svg {
+            @extend .mr-2;
+            width: 0.8em;
+            height: auto;
+            fill: $white;
+            &.icon-dotted-arrow {
+                stroke-width: 2;
+            }
+        }
         .badge {
-
+            background-color: rgba($gray-800, 0.42);
+            color: $white;
         }
         .caption {
             display: block;
@@ -24,9 +34,25 @@ Tab nav main
         fill: currentColor;
     }
     .tab-content {
-        @extend .ml-2,
+        @extend .mx-2,
                 .p-3;
         color: $gray-800;
         background-color: rgba($white, 0.94);
+        // look up clip path prop syntax
+        // add chevron down under header to see through tab-content bg
+        clip-path: path(0, 0, 10, 10, 10, 0, 0, 0);
+        svg {
+            width: 1em;
+            height: auto;
+        }
+    }
+    .transfer-information {
+        .tab-header {
+            svg {
+                @extend .mr-1;
+                width: 1.5em;
+                align-self: center;
+            }
+        }
     }
 }

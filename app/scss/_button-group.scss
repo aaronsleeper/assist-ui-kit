@@ -1,7 +1,12 @@
 .btn-group {
+    display: flex;
+    width: 100%;
     .btn {
+        flex-grow: 1;
+        // padding: $input-btn-padding-y $input-btn-padding-x;
         background-color: $white;
         color: $gray-700;
+        justify-content: center;
         border-color: rgba($gray-500, 0.42);
         &:hover {
             background-color: $gray-50;

@@ -1,5 +1,6 @@
 // set variables
 @import "colors";
+@import "z-index";
 @import "variables";
 
 // provide access to bootstrap and all its methods
@@ -52,6 +53,7 @@ We will support styling going forward and the library will provide JS
 @import "inline-block-list";
 @import "control-panel";
 @import "tab-nav-main";
+@import "form-layouts";
 
 // context specific styles
 // not contributing to a component primitive

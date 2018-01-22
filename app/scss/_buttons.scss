@@ -42,3 +42,36 @@ p .btn {
     display: inline;
     padding: 0.15em 0.5em;
 }
+
+// Off-screen content buttons
+.top-btn, 
+.bottom-btn {
+    @extend .btn, .btn-primary;
+    position: fixed;
+    left: 50%;
+    font-size: $font-size-sm;
+    font-weight: 300;
+    transform: translateX(-50%);
+    border-radius: $border-radius-lg;
+    box-shadow: 0 0.25rem 1rem 0 rgba($gray-500, 0.84);
+    strong {
+        @extend .ml-1;
+        font-weight: 700;
+    }
+}
+// Top button
+// shows when there is content off-screen above the current position
+.top-btn {
+    top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    z-index: $z-index-top-btn;
+}
+// Bottom button
+// shows when there is content off-screen below the current position
+.bottom-btn {
+    bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: $z-index-bottom-btn;
+}
