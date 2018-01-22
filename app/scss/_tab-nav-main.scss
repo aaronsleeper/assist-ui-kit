@@ -38,9 +38,7 @@ Tab nav main
                 .p-3;
         color: $gray-800;
         background-color: rgba($white, 0.94);
-        // look up clip path prop syntax
-        // add chevron down under header to see through tab-content bg
-        clip-path: path(0, 0, 10, 10, 10, 0, 0, 0);
+        clip-path: polygon(0% 0%, 2.5em 0%, 3em 0.5em, 3.5em 0%, 100% 0%, 100% 100%, 0% 100%);
         svg {
             width: 1em;
             height: auto;
