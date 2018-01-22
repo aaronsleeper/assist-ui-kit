@@ -1,6 +1,14 @@
 /* ------------------------------ 
 Colors
 ------------------------------ */
+/* ------------------------------
+Z-index master list
+
+Important Note:
+If you are having overlap issues,
+try setting scope with position: relative; first
+-AS
+------------------------------ */
 /* ------------------------------ 
 Override Bootstrap defaults
 ------------------------------ */
@@ -5373,7 +5381,7 @@ our custom SASS will be in _chosen-overrides.scss
     position: absolute;
     top: 100%;
     left: -9999px;
-    z-index: 1010;
+    z-index: 1;
     width: 100%;
     border: 1px solid #aaa;
     border-top: 0;
@@ -5449,7 +5457,7 @@ our custom SASS will be in _chosen-overrides.scss
 
 .chosen-container-single .chosen-search {
   position: relative;
-  z-index: 1010;
+  z-index: 1;
   margin: 0;
   padding: 3px 4px;
   white-space: nowrap; }

@@ -1,4 +1,21 @@
-// z-index master list
+/* ------------------------------
+Z-index master list
 
+Important Note:
+If you are having overlap issues,
+try setting scope with position: relative; first
+-AS
+------------------------------ */
+
+// hidden content indicator buttons
 $z-index-top-btn:       1;
 $z-index-bottom-btn:    1;
+
+// Chosen select
+$z-index-chosen-drop:   1;
+$z-index-chosen-search: 1;
+
+// Loader animation
+$z-index-loader-svg:        2;
+$z-index-loader-svg-before: 2;
+$z-index-loader-svg-after:  1;

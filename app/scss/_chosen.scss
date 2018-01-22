@@ -30,7 +30,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
     position: absolute;
     top: 100%;
     left: -9999px;
-    z-index: 1010;
+    z-index: $z-index-chosen-drop;
     width: 100%;
     border: 1px solid #aaa;
     border-top: 0;
@@ -126,7 +126,7 @@ $chosen-sprite-retina: image-url('chosen-sprite@2x.png') !default;
   }
   .chosen-search {
     position: relative;
-    z-index: 1010;
+    z-index: $z-index-chosen-search;
     margin: 0;
     padding: 3px 4px;
     white-space: nowrap;
