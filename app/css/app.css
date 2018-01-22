@@ -3890,7 +3890,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .m-2 {
   margin: 0.5rem !important; }
 
-.mt-2, .input-group svg[class^='icon-']:first-child, .chosen-container .chosen-results li.group-result,
+.mt-2, .btn-help, .input-group svg[class^='icon-']:first-child, .chosen-container .chosen-results li.group-result,
 .my-2 {
   margin-top: 0.5rem !important; }
 
@@ -5224,6 +5224,13 @@ p .btn, p .top-btn, p
   border-bottom-left-radius: 0;
   z-index: 1; }
 
+.btn-help {
+  display: inline-block;
+  color: #37474F; }
+  .btn-help:hover {
+    text-decoration: none;
+    background: rgba(236, 239, 241, 0.9); }
+
 .card {
   position: relative;
   box-shadow: 0 2px 2px 0 rgba(96, 125, 139, 0.21);
@@ -5947,6 +5954,12 @@ svg.defs-only {
   padding: 0;
   border: none;
   overflow: hidden; }
+
+#icon-question #icon-question-background {
+  fill: #FF6F00; }
+
+#icon-question #icon-question-question-mark {
+  fill: #FFFFFF; }
 
 .assist-logo {
   max-width: 100%;

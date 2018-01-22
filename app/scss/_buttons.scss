@@ -75,3 +75,14 @@ p .btn {
     border-bottom-left-radius: 0;
     z-index: $z-index-bottom-btn;
 }
+
+// Help button
+.btn-help {
+    @extend .mt-2;
+    display: inline-block;
+    color: $gray-800;
+    &:hover {
+        text-decoration: none;
+        background: rgba($gray-50, 0.9);
+    }
+}

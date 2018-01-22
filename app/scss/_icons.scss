@@ -20,3 +20,13 @@ svg.defs-only {
     border: none;
     overflow: hidden;
 }
+
+// Icon specific styles
+#icon-question {
+     #icon-question-background {
+        fill: $amber-900;
+     }
+     #icon-question-question-mark {
+         fill: $white;
+     }
+}
