@@ -106,59 +106,65 @@
     <!-- Tab Nav Panel (Application Specific) -->
     <!-- Extending Bootstrap's Collapse Component -->
     <section class="pane">
-        <div class="tab-nav-main">
+        <div id="tab-nav-main">
             <div class="tab transfer-information">
-                <a href="#" class="btn tab-header">
+                <a id="heading-transfer-information" class="btn tab-header" data-toggle="collapse" data-target="#form-transfer-information" aria-expanded="true" aria-controls="form-transfer-information">
                     <svg viewBox="0 0 24.8 8.6" class="icon-dotted-arrow-condensed"><use xlink:href="#icon-dotted-arrow-condensed" /></svg>
                     Transfer Information</a>
-                <div class="tab-content">
-                    <form>
-                        <div class="form-group fl-icon-left-text-above">
-                            <svg viewBox="0 0 18.5 20.5" class="icon-calendar"><use xlink:href="#icon-calendar" /></svg>
-                            <label for="academic-year">Academic Year</label>
-                            <select id="academic-year" data-placeholder="Select a year" class="chosen-select sr-only">
-                                <option value="2016 - 2017">2016 - 2017</option>
-                                <option value="2015 - 2016">2015 - 2016</option>
-                                <option value="2014 - 2015">2014 - 2015</option>
-                                <option value="2013 - 2014">2013 - 2014</option>
-                            </select>
-                        </div>
-                        <div class="fl-transfer-to-from">
-                            <svg viewBox="0 0 18.4 52.7" class="icon-dotted-arrow-condensed-vertical"><use xlink:href="#icon-dotted-arrow-condensed-vertical" /></svg>
-                            <div class="form-group">
-                                <label for="transfer-from">I have credits at</label>
-                                <select id="transfer-from" data-placeholder="Select an institution" class="chosen-select sr-only">
-                                    <option value="Allan Hancock College">Allan Hancock College</option>
-                                    <option value="CSU Sacramento">CSU Sacramento</option>
-                                    <option value="UC Berkley">UC Berkley</option>
+                <div id="form-transfer-information" class="tab-content collapse show" aria-labelledby="heading-transfer-information" data-parent="#tab-nav-main">
+                    <div class="inner">
+                        <form>
+                            <div class="form-group fl-icon-left-text-above">
+                                <svg viewBox="0 0 18.5 20.5" class="icon-calendar"><use xlink:href="#icon-calendar" /></svg>
+                                <label for="academic-year">Academic Year</label>
+                                <select id="academic-year" data-placeholder="Select a year" class="chosen-select sr-only">
+                                    <option value="2016 - 2017">2016 - 2017</option>
+                                    <option value="2015 - 2016">2015 - 2016</option>
+                                    <option value="2014 - 2015">2014 - 2015</option>
+                                    <option value="2013 - 2014">2013 - 2014</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="transfer-to">I want to transfer to</label>
-                                <select id="transfer-to" data-placeholder="Select an institution" class="chosen-select sr-only">
-                                    <option value="Allan Hancock College">Allan Hancock College</option>
-                                    <option value="CSU Sacramento">CSU Sacramento</option>
-                                    <option value="UC Berkley">UC Berkley</option>
-                                </select>
+                            <div class="fl-transfer-to-from">
+                                <svg viewBox="0 0 18.4 52.7" class="icon-dotted-arrow-condensed-vertical"><use xlink:href="#icon-dotted-arrow-condensed-vertical" /></svg>
+                                <div class="form-group">
+                                    <label for="transfer-from">I have credits at</label>
+                                    <select id="transfer-from" data-placeholder="Select an institution" class="chosen-select sr-only">
+                                        <option value="Allan Hancock College">Allan Hancock College</option>
+                                        <option value="CSU Sacramento">CSU Sacramento</option>
+                                        <option value="UC Berkley">UC Berkley</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transfer-to">I want to transfer to</label>
+                                    <select id="transfer-to" data-placeholder="Select an institution" class="chosen-select sr-only">
+                                        <option value="Allan Hancock College">Allan Hancock College</option>
+                                        <option value="CSU Sacramento">CSU Sacramento</option>
+                                        <option value="UC Berkley">UC Berkley</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="tab explore-majors">
-                <a href="#" class="btn tab-header">
+                <a id="heading-explore-majors" class="btn tab-header collapsed" data-toggle="collapse" data-target="#form-explore-majors" aria-expanded="false" aria-controls="form-explore-majors">
                     <svg viewBox="0 0 16.2 14.8" class="icon-heart-outline"><use xlink:href="#icon-heart-outline" /></svg>
                     Explore Majors</a>
-                <div class="tab-content">
-                    <span class="text-muted">// Form</span>
+                <div id="form-explore-majors" class="tab-content collapse" aria-labelledby="heading-explore-majors" data-parent="#tab-nav-main">
+                    <div class="inner">
+                        <span class="text-muted">// Form</span>
+                    </div>
                 </div>
             </div>
             <div class="tab compare-courses">
-                <a href="#" class="btn tab-header">
+                <a id="heading-compare-courses" class="btn tab-header collapsed" data-toggle="collapse" data-target="#form-compare-courses" aria-expanded="false" aria-controls="form-compare-courses">
                     <svg viewBox="0 0 16.2 16.2" class="icon-compare"><use xlink:href="#icon-compare" /></svg>
                     Compare Courses</a>
-                <div class="tab-content">
-                    <span class="text-muted">// Form</span>
+                <div id="form-compare-courses" class="tab-content collapse" aria-labelledby="heading-compare-courses" data-parent="#tab-nav-main">
+                    <div class="inner">
+                        <span class="text-muted">// Form</span>
+                    </div>
                 </div>
             </div>
             <div class="tab pinboard">

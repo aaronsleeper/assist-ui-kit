@@ -3,7 +3,7 @@ Tab nav main
 *Application specific 
 ------------------------------ */
 
-.tab-nav-main {
+#tab-nav-main {
     color: $white;
     background: linear-gradient(180deg, $purple-800, $purple-600 30%, $blue-a400);
     .tab-header {
@@ -12,6 +12,7 @@ Tab nav main
         color: inherit;
         text-align: left;
         font-weight: 300;
+        cursor: pointer;
         svg {
             @extend .mr-2;
             width: 0.8em;
@@ -34,14 +35,25 @@ Tab nav main
         fill: currentColor;
     }
     .tab-content {
-        @extend .mx-2,
-                .p-3;
+        @extend .mx-2;
         color: $gray-800;
         background-color: rgba($white, 0.94);
+        overflow: visible;
+        @include transition-duration($duration-entry-short);
+        @include transition-easing($easing-accel);
         clip-path: polygon(0% 0%, 2.5em 0%, 3em 0.5em, 3.5em 0%, 100% 0%, 100% 100%, 0% 100%);
+        .inner {
+            @extend .p-3;
+        }
         svg {
             width: 1em;
             height: auto;
+        }
+        &.collapsing {
+            opacity: 0;
+            @include transition-duration($duration-exit-short);
+            @include transition-easing($easing-decel);
+            clip-path: initial;
         }
     }
     .transfer-information {

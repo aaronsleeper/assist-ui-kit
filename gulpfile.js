@@ -39,7 +39,8 @@ gulp.task('pack-vendor-js', function () {
 // Compile custom js into JS & auto-inject into browsers
 gulp.task('pack-js', function () {
     return gulp.src([
-        'app/scripts/dropdown-select.js',
+        'app/scripts/chosen-select.js',
+        'app/scripts/collapse.js',
         'app/scripts/tooltips.js',
         'app/scripts/loader.js',
         'app/scripts/radio-icon.js',

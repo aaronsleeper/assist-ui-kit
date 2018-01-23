@@ -3874,7 +3874,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-1 {
   margin-top: 0.25rem !important; }
 
-.mr-1, .dropdown-menu a.selected:before, .link-list-group a:first-child:before, .tab-nav-main .transfer-information .tab-header svg,
+.mr-1, .dropdown-menu a.selected:before, .link-list-group a:first-child:before, #tab-nav-main .transfer-information .tab-header svg,
 .mx-1 {
   margin-right: 0.25rem !important; }
 
@@ -3896,10 +3896,10 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .mr-2, .card .card-footer .btn, .card .card-footer .top-btn, .card .card-footer
 .bottom-btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .input-group svg[class^='icon-']:first-child, .pane-footer .pane-btns .btn, .pane-footer .pane-btns .top-btn, .pane-footer .pane-btns
-.bottom-btn, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a, .tab-nav-main .tab-header svg,
+.bottom-btn, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a, #tab-nav-main .tab-header svg,
 .mx-2,
-.tab-nav-main .tab-header,
-.tab-nav-main .tab-content {
+#tab-nav-main .tab-header,
+#tab-nav-main .tab-content {
   margin-right: 0.5rem !important; }
 
 .mb-2,
@@ -3908,8 +3908,8 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .ml-2,
 .mx-2,
-.tab-nav-main .tab-header,
-.tab-nav-main .tab-content {
+#tab-nav-main .tab-header,
+#tab-nav-main .tab-content {
   margin-left: 0.5rem !important; }
 
 .m-3 {
@@ -4026,7 +4026,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .px-2 {
   padding-left: 0.5rem !important; }
 
-.p-3, .tab-nav-main .tab-content {
+.p-3, #tab-nav-main .tab-content .inner {
   padding: 1rem !important; }
 
 .pt-3,
@@ -5751,6 +5751,7 @@ to avoid specificity issues.
     padding-right: 3rem;
     background-color: transparent; }
   .chosen-container .chosen-drop {
+    display: none;
     border-color: #CFD8DC;
     background-image: linear-gradient(180deg, rgba(176, 190, 197, 0.42), rgba(236, 239, 241, 0) 0.5rem); }
 
@@ -5890,6 +5891,9 @@ to avoid specificity issues.
 
 /* @end */
 /* @group Active  */
+.chosen-container-active .chosen-drop {
+  display: block; }
+
 /* @end */
 /* @group Disabled Support */
 /* @end */
@@ -6244,36 +6248,57 @@ svg.defs-only {
 Tab nav main
 *Application specific 
 ------------------------------ */
-.tab-nav-main {
+#tab-nav-main {
   color: #FFFFFF;
   background: linear-gradient(180deg, #6A1B9A, #8E24AA 30%, #2979FF); }
-  .tab-nav-main .tab-header {
+  #tab-nav-main .tab-header {
     display: block;
     color: inherit;
     text-align: left;
-    font-weight: 300; }
-    .tab-nav-main .tab-header svg {
+    font-weight: 300;
+    cursor: pointer; }
+    #tab-nav-main .tab-header svg {
       width: 0.8em;
       height: auto;
       fill: #FFFFFF; }
-      .tab-nav-main .tab-header svg.icon-dotted-arrow {
+      #tab-nav-main .tab-header svg.icon-dotted-arrow {
         stroke-width: 2; }
-    .tab-nav-main .tab-header .badge {
+    #tab-nav-main .tab-header .badge {
       background-color: rgba(55, 71, 79, 0.42);
       color: #FFFFFF; }
-    .tab-nav-main .tab-header .caption {
+    #tab-nav-main .tab-header .caption {
       display: block;
       font-size: 0.875rem; }
-  .tab-nav-main svg {
+  #tab-nav-main svg {
     fill: currentColor; }
-  .tab-nav-main .tab-content {
+  #tab-nav-main .tab-content {
     color: #37474F;
     background-color: rgba(255, 255, 255, 0.94);
+    overflow: visible;
+    -webkit-transition-duration: 0.149s;
+    -moz-transition-duration: 0.149s;
+    -o-transition-duration: 0.149s;
+    transition-duration: 0.149s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     clip-path: polygon(0% 0%, 2.5em 0%, 3em 0.5em, 3.5em 0%, 100% 0%, 100% 100%, 0% 100%); }
-    .tab-nav-main .tab-content svg {
+    #tab-nav-main .tab-content svg {
       width: 1em;
       height: auto; }
-  .tab-nav-main .transfer-information .tab-header svg {
+    #tab-nav-main .tab-content.collapsing {
+      opacity: 0;
+      -webkit-transition-duration: 0.129s;
+      -moz-transition-duration: 0.129s;
+      -o-transition-duration: 0.129s;
+      transition-duration: 0.129s;
+      -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+      clip-path: initial; }
+  #tab-nav-main .transfer-information .tab-header svg {
     width: 1.5em;
     align-self: center; }
 
