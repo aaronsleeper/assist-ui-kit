@@ -4037,7 +4037,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .px-3 {
   padding-right: 1rem !important; }
 
-.pb-3,
+.pb-3, #tab-nav-main .tab-content,
 .py-3 {
   padding-bottom: 1rem !important; }
 
@@ -6272,6 +6272,8 @@ Tab nav main
   #tab-nav-main svg {
     fill: currentColor; }
   #tab-nav-main .tab-content {
+    position: relative;
+    margin-top: 0.5em;
     color: #37474F;
     background-color: rgba(255, 255, 255, 0.94);
     overflow: visible;
@@ -6283,7 +6285,20 @@ Tab nav main
     -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
-    clip-path: polygon(0% 0%, 2.5em 0%, 3em 0.5em, 3.5em 0%, 100% 0%, 100% 100%, 0% 100%); }
+    /* Moved the clip-path to a pseudo element as it was cutting off dropdowns
+        similar to overflow:hidden; the pseudo element is then positioned absolutely above the
+        container while the container is pushed down by the height of the pseudo element
+        -AS */ }
+    #tab-nav-main .tab-content:before {
+      content: '';
+      position: absolute;
+      top: -0.5em;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 0.5em;
+      background-color: rgba(255, 255, 255, 0.94);
+      clip-path: polygon(0% 0%, 2.5em 0%, 3em 0.5em, 3.5em 0%, 100% 0%, 100% 100%, 0% 100%); }
     #tab-nav-main .tab-content svg {
       width: 1em;
       height: auto; }
@@ -6301,6 +6316,11 @@ Tab nav main
   #tab-nav-main .transfer-information .tab-header svg {
     width: 1.5em;
     align-self: center; }
+
+.application-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: minmax(min-content, 25%) 1fr; }
 
 [class*="fl-"] {
   display: grid;

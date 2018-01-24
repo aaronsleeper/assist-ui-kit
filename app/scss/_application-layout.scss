@@ -1,0 +1,12 @@
+
+.application-wrapper {
+    display: grid;
+    grid-gap: $spacer;
+    grid-template-columns: minmax(min-content, 25%) 1fr;
+    > [class^='panel-'] {
+
+    }
+    .panel-nav {
+        
+    }
+}
