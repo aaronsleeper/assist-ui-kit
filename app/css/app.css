@@ -3898,7 +3898,6 @@ a.bg-dark:focus, a.bg-dark:hover {
 .bottom-btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .input-group svg[class^='icon-']:first-child, .pane-footer .pane-btns .btn, .pane-footer .pane-btns .top-btn, .pane-footer .pane-btns
 .bottom-btn, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a, #tab-nav-main .tab-header svg,
 .mx-2,
-#tab-nav-main .tab-header,
 #tab-nav-main .tab-content {
   margin-right: 0.5rem !important; }
 
@@ -3908,14 +3907,13 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .ml-2,
 .mx-2,
-#tab-nav-main .tab-header,
 #tab-nav-main .tab-content {
   margin-left: 0.5rem !important; }
 
 .m-3 {
   margin: 1rem !important; }
 
-.mt-3, .dropdown-menu .section-title,
+.mt-3, .dropdown-menu .section-title, .application-wrapper .panel-nav .credits .text-muted,
 .my-3 {
   margin-top: 1rem !important; }
 
@@ -3927,7 +3925,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-3 {
   margin-bottom: 1rem !important; }
 
-.ml-3,
+.ml-3, .application-wrapper .panel-nav .nav .btn-help,
 .mx-3 {
   margin-left: 1rem !important; }
 
@@ -4030,7 +4028,9 @@ a.bg-dark:focus, a.bg-dark:hover {
   padding: 1rem !important; }
 
 .pt-3,
-.py-3 {
+.py-3,
+#tab-nav-main .tab-header,
+.application-wrapper .panel-nav .credits {
   padding-top: 1rem !important; }
 
 .pr-3,
@@ -4038,7 +4038,9 @@ a.bg-dark:focus, a.bg-dark:hover {
   padding-right: 1rem !important; }
 
 .pb-3, #tab-nav-main .tab-content,
-.py-3 {
+.py-3,
+#tab-nav-main .tab-header,
+.application-wrapper .panel-nav .credits {
   padding-bottom: 1rem !important; }
 
 .pl-3, .dropdown-menu a.selected, .dropdown-menu + .caption,
@@ -4049,19 +4051,25 @@ a.bg-dark:focus, a.bg-dark:hover {
   padding: 1.5rem !important; }
 
 .pt-4,
-.py-4 {
+.py-4,
+.application-wrapper .panel-nav .logo,
+.application-wrapper .panel-results {
   padding-top: 1.5rem !important; }
 
-.pr-4,
-.px-4 {
+.pr-4, .application-wrapper,
+.px-4,
+#tab-nav-main .tab-header {
   padding-right: 1.5rem !important; }
 
 .pb-4,
-.py-4 {
+.py-4,
+.application-wrapper .panel-nav .logo,
+.application-wrapper .panel-results {
   padding-bottom: 1.5rem !important; }
 
-.pl-4, .chosen-container .chosen-results li, .link-list-group a:first-child,
-.px-4 {
+.pl-4, .chosen-container .chosen-results li, .link-list-group a:first-child, .application-wrapper .panel-nav .credits,
+.px-4,
+#tab-nav-main .tab-header {
   padding-left: 1.5rem !important; }
 
 .p-5 {
@@ -5972,21 +5980,23 @@ svg.defs-only {
     fill: #FF6F00; }
 
 .logo-lockup {
+  --unit: 1rem;
   font-size: 85.625%;
   display: grid;
   width: auto;
   grid-template-columns: auto auto;
-  grid-gap: 1em;
+  grid-gap: var(--unit);
   justify-content: start; }
   .logo-lockup .assist-logo {
-    height: 6.1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em; }
+    height: calc(var(--unit) * 3.9375);
+    padding-top: calc(var(--unit) * 0.5);
+    padding-bottom: calc(var(--unit) * 0.5); }
   .logo-lockup .caption {
     display: flex;
     align-items: flex-end;
-    padding-bottom: 0.25em;
-    padding-left: 1em;
+    padding-bottom: calc(var(--unit) * 0.25);
+    padding-left: var(--unit);
+    font-size: calc(var(--unit) * 0.75);
     border-left: 1px solid rgba(120, 144, 156, 0.42); }
 
 .pane {
@@ -6237,7 +6247,8 @@ svg.defs-only {
 .inline-block-list a {
   display: inline-block;
   height: 2em;
-  width: auto; }
+  width: auto;
+  max-width: 33%; }
 
 .inline-block-list svg {
   width: auto;
@@ -6256,7 +6267,14 @@ Tab nav main
     color: inherit;
     text-align: left;
     font-weight: 300;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.21);
     cursor: pointer; }
+    #tab-nav-main .tab-header[aria-expanded='true'], #tab-nav-main .tab-header:last-child {
+      border-color: transparent; }
+    #tab-nav-main .tab-header:hover {
+      background-color: rgba(255, 255, 255, 0.105); }
     #tab-nav-main .tab-header svg {
       width: 0.8em;
       height: auto;
@@ -6322,8 +6340,29 @@ Tab nav main
 
 .application-wrapper {
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: minmax(360px, 25%) 1fr; }
+  grid-gap: 2rem;
+  grid-template-columns: minmax(360px, 25%) 1fr;
+  align-items: start;
+  justify-content: space-between;
+  background-image: linear-gradient(90deg, #E3F2FD, #FFFFFF); }
+  .application-wrapper .panel-nav .logo {
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to right, #7B1FA2 8px, transparent 8px);
+    background-repeat: repeat-x; }
+  .application-wrapper .panel-nav .nav {
+    background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
+    background-repeat: repeat-x; }
+  .application-wrapper .panel-nav .credits {
+    background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
+    background-repeat: repeat-x; }
+    .application-wrapper .panel-nav .credits .text-muted {
+      color: #455A64;
+      font-size: 0.875rem; }
+      .application-wrapper .panel-nav .credits .text-muted a {
+        color: #455A64; }
+        .application-wrapper .panel-nav .credits .text-muted a:hover {
+          color: #37474F; }
 
 [class*="fl-"] {
   display: grid;

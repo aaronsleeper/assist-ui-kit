@@ -3,6 +3,7 @@
         display: inline-block;
         height: 2em;
         width: auto;
+        max-width: 33%;
         @extend .mr-2;
     }
     svg {

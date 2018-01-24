@@ -9,22 +9,24 @@
 
 // Logo Lockup
 .logo-lockup {
+    --unit: $spacer;
     font-size: $small-font-size;
     display: grid;
     width: auto;
     grid-template-columns: auto auto;
-    grid-gap: 1em;
+    grid-gap: var(--unit);
     justify-content: start;
     .assist-logo {
-        height: 6.1em;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
+        height: calc(var(--unit) * 3.9375); // 63px
+        padding-top: calc(var(--unit) * 0.5);
+        padding-bottom: calc(var(--unit) * 0.5);
     }
     .caption{
         display: flex;
         align-items: flex-end;
-        padding-bottom: 0.25em;
-        padding-left: 1em;
+        padding-bottom: calc(var(--unit) * 0.25);
+        padding-left: var(--unit);
+        font-size: calc(var(--unit) * 0.75);
         border-left: 1px solid $hr-border-color;
     }
 }

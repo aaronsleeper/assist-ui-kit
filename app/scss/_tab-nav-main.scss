@@ -8,11 +8,22 @@ Tab nav main
     background: linear-gradient(180deg, $purple-800, $purple-600 30%, $blue-a400);
     .tab-header {
         display: block;
-        @extend .mx-2;
+        @extend .px-4, 
+                .py-3;
         color: inherit;
         text-align: left;
         font-weight: 300;
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: rgba($white, 0.21);
         cursor: pointer;
+        &[aria-expanded='true'], 
+        &:last-child {
+            border-color: transparent;
+        }
+        &:hover {
+            background-color: rgba($white, 0.105);
+        }
         svg {
             @extend .mr-2;
             width: 0.8em;
