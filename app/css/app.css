@@ -6257,22 +6257,29 @@ svg.defs-only {
 
 /* ------------------------------
 Tab nav main
-*Application specific 
+*Application specific
 ------------------------------ */
 #tab-nav-main {
   color: #FFFFFF;
   background: linear-gradient(180deg, #6A1B9A, #8E24AA 30%, #2979FF); }
   #tab-nav-main .tab-header {
+    position: relative;
     display: block;
     color: inherit;
     text-align: left;
     font-weight: 300;
-    border-width: 0px 0px 1px 0px;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.21);
     cursor: pointer; }
-    #tab-nav-main .tab-header[aria-expanded='true'], #tab-nav-main .tab-header:last-child {
-      border-color: transparent; }
+    #tab-nav-main .tab-header:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0)); }
+    #tab-nav-main .tab-header[aria-expanded='true']:after, #tab-nav-main .tab-header:last-child:after {
+      background: transparent none; }
     #tab-nav-main .tab-header:hover {
       background-color: rgba(255, 255, 255, 0.105); }
     #tab-nav-main .tab-header svg {
