@@ -6320,7 +6320,7 @@ Tab nav main
     #tab-nav-main .tab-content:before {
       content: '';
       position: absolute;
-      top: calc((var(--t-height) * -1) + 0.5px);
+      top: calc(var(--t-height) * -1);
       left: 0;
       display: block;
       width: 100%;
@@ -6355,7 +6355,7 @@ Tab nav main
   .application-wrapper .panel-nav .logo {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(to right, #7B1FA2 8px, transparent 8px);
+    background-image: linear-gradient(to right, #6A1B9A 8px, transparent 8px);
     background-repeat: repeat-x; }
   .application-wrapper .panel-nav .nav {
     background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);

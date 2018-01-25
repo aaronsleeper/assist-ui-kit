@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
             @extend .py-4;
-            @include gradient-x ($purple-700, transparent, 8px, 8px);
+            @include gradient-x ($purple-800, transparent, 8px, 8px);
         }
         .nav {
             @include gradient-x ($blue-a400, transparent, 8px, 8px);

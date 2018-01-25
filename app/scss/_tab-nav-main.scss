@@ -75,7 +75,9 @@ Tab nav main
             position: absolute;
             // added the 0.5px to get rid of a gap that appeared when i put the element into a smaller column
             // if the line reappears, try removing the 0.5px below.
-            top: calc((var(--t-height) * -1) + 0.5px);
+            // top: calc((var(--t-height) * -1) + 0.5px);
+            // it disappeared, so i'm leaving the solution above for now
+            top: calc(var(--t-height) * -1);
             left: 0;
             display: block;
             width: 100%;
