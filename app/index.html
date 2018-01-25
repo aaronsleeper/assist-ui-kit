@@ -515,14 +515,136 @@
                 <p class="text-muted">&copy; 2018 | <a href="#">Terms &amp; Conditions</a></p>
             </div>
         </section>
-        <section class="panel-results">
-            <div class="pane">
-                results
+        <section class="panel-disciplines">
+            <form class="fl-department-list-control">
+                <div class="form-group fl-icon-left-text-below">
+                    <svg viewBox="0 0 18 18" class="icon-search">
+                        <use xlink:href="#icon-search" />
+                    </svg>
+                    <label for="department-search" class="sr-only">Find a Department</label>
+                    <input type="text" id="department-search" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Department
+                        </label>
+                        <label class="btn">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> Prefix
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group fl-icon-left-text-below">
+                    <svg viewBox="0 0 18 18" preserveAspectRatio="none" class="icon-checkbox-checked">
+                        <use xlink:href="#icon-checkbox-checked" />
+                    </svg>
+                    <select data-placeholder="Select a Course List" class="chosen-select sr-only">
+                        <optgroup label="Transferable Courses">
+                            <option value="CSU Transferable Courses">CSU Transferable Courses</option>
+                            <option value="UC Transferable Courses">UC Transferable Courses</option>
+                            <option value="UC Transfer Admission Eligible Courses">UC Transfer Admission Eligible Courses</option>
+                        </optgroup>
+                        <optgroup label="General Education/Breadth Areas">
+                            <option value="IGETC Approved Courses">IGETC Approved Courses</option>
+                            <option value="CSUGE Approved Courses">CSUGE Approved Courses</option>
+                            <option value="CSUAI Approved Courses">CSUAI Approved Courses</option>
+                        </optgroup>
+                    </select>
+                    <span class="caption">at Allan Hancock College</span>
+                </div>
+            </form>
+            <div class="list-container">
+                <div class="scrollbar-hider">
+                    <ul class="link-list-group">
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>All</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Accounting</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Administration of Justice</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Agribusiness</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>American Sign Language</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Anthropology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Architecture</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Art</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Astronomy</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Athletic Training</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Auto Body Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Automotive Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Biology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Business</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Chemistry</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Computer Business Information Systems</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Computer Business Office Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Computer Electronics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Computer Science</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Cooperative Work Experience</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Culinary Arts</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Dance</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Drama</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Early Childhood Studies</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Economics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Education</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Electronics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Emergency Medical Services</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Engineering</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Engineering Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>English</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Entrepreneurship</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Environmental Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Family and Consumer Science</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Film</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Fire Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Food Science and Nutrition</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>French</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Geography</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Geology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Global Studies</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Graphics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Health Education</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>History</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Honors</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Human Services</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Humanities</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Independent Projects</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Italian</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Leadership</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Learning Skills</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Library Skills</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Machine Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Mathematics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Multimedia Arts and Communication</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Music</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Nursing</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Paralegal Studies</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Personal Development</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Philosophy</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Photography</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Physical Education</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Physical Education Intercollegiate Athletics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Physical Science</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Physics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Political Science</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Psychology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Reading</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Real Estate</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Recreation</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Science, Technology, Engineering and Mathematics</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Sociology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Space</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Spanish</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Speech Communication</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Theatre Arts</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Welding Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                        <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Wildland Fire Technology</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
+                    </ul>
+                </div>
+                <div class="selection-hidden above">
+                    <a href="#">viewing <strong>Anthropology</strong></a>
+                </div>
             </div>
         </section>
     </div>
     <!-- End Main Page Layout -->
 
+    <hr>
 
     <!-- Form Examples -->
     <div class="pane">
@@ -545,64 +667,14 @@
 
     <hr>
 
-
-    <hr>
-
-    <!-- Department List Filter Controls -->
-    <section class="pane">
-        <form class="fl-department-list-control">
-            <div class="form-group fl-icon-left-text-below">
-                <svg viewBox="0 0 18 18" class="icon-search"><use xlink:href="#icon-search" /></svg>
-                <label for="department-search" class="sr-only">Find a Department</label>
-                <input type="text" id="department-search" class="form-control" />
-            </div>
-            <div class="form-group">
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                    <label class="btn active">
-                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Department
-                    </label>
-                    <label class="btn">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> Prefix
-                    </label>
-                </div>
-            </div>
-            <div class="form-group fl-icon-left-text-below">
-                <svg viewBox="0 0 18 18" preserveAspectRatio="none" class="icon-checkbox-checked"><use xlink:href="#icon-checkbox-checked" /></svg>
-                <select data-placeholder="Select a Course List" class="chosen-select sr-only">
-                    <optgroup label="Transferable Courses">
-                        <option value="CSU Transferable Courses">CSU Transferable Courses</option>
-                        <option value="UC Transferable Courses">UC Transferable Courses</option>
-                        <option value="UC Transfer Admission Eligible Courses">UC Transfer Admission Eligible Courses</option>
-                    </optgroup>
-                    <optgroup label="General Education/Breadth Areas">
-                        <option value="IGETC Approved Courses">IGETC Approved Courses</option>
-                        <option value="CSUGE Approved Courses">CSUGE Approved Courses</option>
-                        <option value="CSUAI Approved Courses">CSUAI Approved Courses</option>
-                    </optgroup>
-                </select>
-                <span class="caption">at Allan Hancock College</span>
-            </div>
-        </form>
-    </section>
-
-    <hr>
-
     <!-- Link List Group -->
     <section class="pane">
         <h3>List Group</h3>
         <h4>Links &amp; Buttons</h4>
-        <a href="#" class="top-btn">viewing <strong>Anthropology</strong></a>
         <ul class="link-list-group">
-            <li>
-                <a href="#">
-                    <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>
+            <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>
                     View All
-                </a>
-                <a href="#" class="pin">
-                    <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg>
-                    Pin
-                </a>
-            </li>
+                </a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
             <li>
                 <a href="#" data-initial="A">
                     <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>
@@ -674,7 +746,6 @@
                 </a>
             </li>
         </ul>
-        <a href="#" class="bottom-btn">viewing <strong>Anthropology</strong></a>
     </section>
 
     <hr>

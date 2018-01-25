@@ -1,16 +1,25 @@
-
+body {
+    background-image: linear-gradient(90deg, $blue-50, $white);
+}
 .application-wrapper {
     @extend .pr-4;
     display: grid;
+    width: 100vw;
+    height: 100vh;
     grid-gap: ($spacer * 2);
     grid-template-columns: minmax(360px, 25%) 1fr;
     align-items: start;
     justify-content: space-between;
-    background-image: linear-gradient(90deg, $blue-50, $white);
+    overflow: hidden;
+    @include gradient-x ($blue-a400, transparent, 8px, 8px);
     > [class^='panel-'] {
 
     }
     .panel-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: stretch;
         .logo {
             display: flex;
             justify-content: center;
@@ -24,8 +33,9 @@
             }
         }
         .credits {
+            align-self: flex-end;
             @extend .pl-4,
-                    .py-3;
+                    .my-5;
             @include gradient-x ($blue-a400, transparent, 8px, 8px);
             .text-muted {
                 @extend .mt-3;
@@ -40,7 +50,39 @@
             }
         }
     }
-    .panel-results {
-        @extend .py-4;
+    .panel-disciplines {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        @extend .pane,
+                .p-0;
+        .fl-department-list-control {
+            padding: $pane-padding-y $pane-padding-x;
+            box-shadow: 0 0.25rem 2rem 0 rgba($gray-500, 0.42);
+        }
+        .list-container {
+            position: relative;
+            display: flex;
+            flex-grow: 1;
+            flex: 1;
+            flex-direction: column;
+            height: 100%;
+            padding: 0;
+            overflow: hidden;
+            .scrollbar-hider {
+                overflow-y: scroll;
+                overflow-x: hidden;
+                outline: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: -50px;
+                bottom: 0;
+                height: 100%;
+            }
+            .link-list-group {
+                width: calc(100% - 50px);
+            }
+        }
     }
 }

@@ -816,26 +816,20 @@ select.form-control:focus::-ms-value, .chosen-container select.chosen-choices:fo
   border-width: 1px 0; }
   .form-control-plaintext.form-control-sm, .input-group-sm > .form-control-plaintext.form-control, .chosen-container .input-group-sm > .form-control-plaintext.chosen-choices, .chosen-container-single .input-group-sm > .form-control-plaintext.chosen-single, .chosen-container-single .chosen-search .input-group-sm > input.form-control-plaintext[type="text"],
   .input-group-sm > .form-control-plaintext.input-group-addon,
-  .input-group-sm > .input-group-btn > .form-control-plaintext.btn,
-  .input-group-sm > .input-group-btn > .form-control-plaintext.top-btn,
-  .input-group-sm > .input-group-btn >
-  .form-control-plaintext.bottom-btn, .link-list-group
+  .input-group-sm > .input-group-btn > .form-control-plaintext.btn, .selection-hidden
+  .input-group-sm > .input-group-btn > a.form-control-plaintext, .link-list-group
   .input-group-sm > .input-group-btn > a.form-control-plaintext, .form-control-plaintext.form-control-lg, .input-group-lg > .form-control-plaintext.form-control, .chosen-container .input-group-lg > .form-control-plaintext.chosen-choices, .chosen-container-single .input-group-lg > .form-control-plaintext.chosen-single, .chosen-container-single .chosen-search .input-group-lg > input.form-control-plaintext[type="text"],
   .input-group-lg > .form-control-plaintext.input-group-addon,
-  .input-group-lg > .input-group-btn > .form-control-plaintext.btn,
-  .input-group-lg > .input-group-btn > .form-control-plaintext.top-btn,
-  .input-group-lg > .input-group-btn >
-  .form-control-plaintext.bottom-btn, .link-list-group
+  .input-group-lg > .input-group-btn > .form-control-plaintext.btn, .selection-hidden
+  .input-group-lg > .input-group-btn > a.form-control-plaintext, .link-list-group
   .input-group-lg > .input-group-btn > a.form-control-plaintext {
     padding-right: 0;
     padding-left: 0; }
 
 .form-control-sm, .input-group-sm > .form-control, .chosen-container .input-group-sm > .chosen-choices, .chosen-container-single .input-group-sm > .chosen-single, .chosen-container-single .chosen-search .input-group-sm > input[type="text"],
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn,
-.input-group-sm > .input-group-btn > .top-btn,
-.input-group-sm > .input-group-btn >
-.bottom-btn, .link-list-group
+.input-group-sm > .input-group-btn > .btn, .selection-hidden
+.input-group-sm > .input-group-btn > a, .link-list-group
 .input-group-sm > .input-group-btn > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -844,18 +838,13 @@ select.form-control:focus::-ms-value, .chosen-container select.chosen-choices:fo
 
 select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.form-control:not([size]):not([multiple]), .chosen-container .input-group-sm > select.chosen-choices:not([size]):not([multiple]), .chosen-container-single .input-group-sm > select.chosen-single:not([size]):not([multiple]),
 .input-group-sm > select.input-group-addon:not([size]):not([multiple]),
-.input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-btn > select.top-btn:not([size]):not([multiple]),
-.input-group-sm > .input-group-btn >
-select.bottom-btn:not([size]):not([multiple]) {
+.input-group-sm > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: calc(1.55875rem + 2px); }
 
 .form-control-lg, .input-group-lg > .form-control, .chosen-container .input-group-lg > .chosen-choices, .chosen-container-single .input-group-lg > .chosen-single, .chosen-container-single .chosen-search .input-group-lg > input[type="text"],
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn,
-.input-group-lg > .input-group-btn > .top-btn,
-.input-group-lg > .input-group-btn >
-.bottom-btn, .link-list-group
+.input-group-lg > .input-group-btn > .btn, .selection-hidden
+.input-group-lg > .input-group-btn > a, .link-list-group
 .input-group-lg > .input-group-btn > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
@@ -864,10 +853,7 @@ select.bottom-btn:not([size]):not([multiple]) {
 
 select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.form-control:not([size]):not([multiple]), .chosen-container .input-group-lg > select.chosen-choices:not([size]):not([multiple]), .chosen-container-single .input-group-lg > select.chosen-single:not([size]):not([multiple]),
 .input-group-lg > select.input-group-addon:not([size]):not([multiple]),
-.input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-btn > select.top-btn:not([size]):not([multiple]),
-.input-group-lg > .input-group-btn >
-select.bottom-btn:not([size]):not([multiple]) {
+.input-group-lg > .input-group-btn > select.btn:not([size]):not([multiple]) {
   height: calc(3.3rem + 2px); }
 
 .form-group, .chosen-container {
@@ -1084,8 +1070,7 @@ select.bottom-btn:not([size]):not([multiple]) {
     .form-inline .has-feedback .form-control-feedback {
       top: 0; } }
 
-.btn, .top-btn,
-.bottom-btn, .link-list-group a {
+.btn, .selection-hidden a, .link-list-group a {
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -1098,60 +1083,40 @@ select.bottom-btn:not([size]):not([multiple]) {
   line-height: 1.42;
   border-radius: 0.125rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
-  .btn:focus, .top-btn:focus,
-  .bottom-btn:focus, .link-list-group a:focus, .btn:hover, .top-btn:hover,
-  .bottom-btn:hover, .link-list-group a:hover {
+  .btn:focus, .selection-hidden a:focus, .link-list-group a:focus, .btn:hover, .selection-hidden a:hover, .link-list-group a:hover {
     text-decoration: none; }
-  .btn:focus, .top-btn:focus,
-  .bottom-btn:focus, .link-list-group a:focus, .btn.focus, .focus.top-btn,
-  .focus.bottom-btn, .link-list-group a.focus {
+  .btn:focus, .selection-hidden a:focus, .link-list-group a:focus, .btn.focus, .selection-hidden a.focus, .link-list-group a.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(123, 31, 162, 0.21); }
-  .btn.disabled, .disabled.top-btn,
-  .disabled.bottom-btn, .link-list-group a.disabled, .btn:disabled, .top-btn:disabled,
-  .bottom-btn:disabled, .link-list-group a:disabled {
+  .btn.disabled, .selection-hidden a.disabled, .link-list-group a.disabled, .btn:disabled, .selection-hidden a:disabled, .link-list-group a:disabled {
     opacity: .65; }
-  .btn:not([disabled]):not(.disabled):active, .top-btn:not([disabled]):not(.disabled):active,
-  .bottom-btn:not([disabled]):not(.disabled):active, .link-list-group a:not([disabled]):not(.disabled):active, .btn:not([disabled]):not(.disabled).active, .top-btn:not([disabled]):not(.disabled).active,
-  .bottom-btn:not([disabled]):not(.disabled).active, .link-list-group a:not([disabled]):not(.disabled).active {
+  .btn:not([disabled]):not(.disabled):active, .selection-hidden a:not([disabled]):not(.disabled):active, .link-list-group a:not([disabled]):not(.disabled):active, .btn:not([disabled]):not(.disabled).active, .selection-hidden a:not([disabled]):not(.disabled).active, .link-list-group a:not([disabled]):not(.disabled).active {
     background-image: none; }
 
-a.btn.disabled, a.disabled.top-btn,
-a.disabled.bottom-btn, .link-list-group a.disabled,
+a.btn.disabled, .selection-hidden a.disabled, .link-list-group a.disabled,
 fieldset[disabled] a.btn,
-fieldset[disabled] a.top-btn,
-fieldset[disabled]
-a.bottom-btn,
+fieldset[disabled] .selection-hidden a, .selection-hidden
+fieldset[disabled] a,
 fieldset[disabled] .link-list-group a, .link-list-group
 fieldset[disabled] a {
   pointer-events: none; }
 
-.btn-primary, .top-btn,
-.bottom-btn {
+.btn-primary, .selection-hidden a {
   color: #fff;
   background-color: #7B1FA2;
   border-color: #7B1FA2; }
-  .btn-primary:hover, .top-btn:hover,
-  .bottom-btn:hover {
+  .btn-primary:hover, .selection-hidden a:hover {
     color: #fff;
     background-color: #631982;
     border-color: #5a1777; }
-  .btn-primary:focus, .top-btn:focus,
-  .bottom-btn:focus, .btn-primary.focus, .focus.top-btn,
-  .focus.bottom-btn {
+  .btn-primary:focus, .selection-hidden a:focus, .btn-primary.focus, .selection-hidden a.focus {
     box-shadow: 0 0 0 0.2rem rgba(123, 31, 162, 0.5); }
-  .btn-primary.disabled, .disabled.top-btn,
-  .disabled.bottom-btn, .btn-primary:disabled, .top-btn:disabled,
-  .bottom-btn:disabled {
+  .btn-primary.disabled, .selection-hidden a.disabled, .btn-primary:disabled, .selection-hidden a:disabled {
     background-color: #7B1FA2;
     border-color: #7B1FA2; }
-  .btn-primary:not([disabled]):not(.disabled):active, .top-btn:not([disabled]):not(.disabled):active,
-  .bottom-btn:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active, .top-btn:not([disabled]):not(.disabled).active,
-  .bottom-btn:not([disabled]):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle,
-  .show > .dropdown-toggle.top-btn,
-  .show >
-  .dropdown-toggle.bottom-btn {
+  .btn-primary:not([disabled]):not(.disabled):active, .selection-hidden a:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active, .selection-hidden a:not([disabled]):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle, .selection-hidden
+  .show > a.dropdown-toggle {
     color: #fff;
     background-color: #5a1777;
     border-color: #52156c;
@@ -1480,15 +1445,13 @@ fieldset[disabled] a {
   .btn-link:disabled, .btn-link.disabled {
     color: #546E7A; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .top-btn, .btn-group-lg >
-.bottom-btn, .link-list-group .btn-group-lg > a {
+.btn-lg, .btn-group-lg > .btn, .selection-hidden .btn-group-lg > a, .link-list-group .btn-group-lg > a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.84;
   border-radius: 0.25rem; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .top-btn, .btn-group-sm >
-.bottom-btn, .link-list-group .btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, .selection-hidden .btn-group-sm > a, .link-list-group .btn-group-sm > a {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.21;
@@ -1631,110 +1594,67 @@ tbody.collapse.show {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .top-btn, .btn-group >
-  .bottom-btn, .link-list-group .btn-group > a,
-  .btn-group-vertical > .btn,
-  .btn-group-vertical > .top-btn,
-  .btn-group-vertical >
-  .bottom-btn, .link-list-group
+  .btn-group > .btn, .selection-hidden .btn-group > a, .link-list-group .btn-group > a,
+  .btn-group-vertical > .btn, .selection-hidden
+  .btn-group-vertical > a, .link-list-group
   .btn-group-vertical > a {
     position: relative;
     flex: 0 1 auto; }
-    .btn-group > .btn:hover, .btn-group > .top-btn:hover, .btn-group >
-    .bottom-btn:hover, .link-list-group .btn-group > a:hover,
-    .btn-group-vertical > .btn:hover,
-    .btn-group-vertical > .top-btn:hover,
-    .btn-group-vertical >
-    .bottom-btn:hover, .link-list-group
+    .btn-group > .btn:hover, .selection-hidden .btn-group > a:hover, .link-list-group .btn-group > a:hover,
+    .btn-group-vertical > .btn:hover, .selection-hidden
+    .btn-group-vertical > a:hover, .link-list-group
     .btn-group-vertical > a:hover {
       z-index: 2; }
-    .btn-group > .btn:focus, .btn-group > .top-btn:focus, .btn-group >
-    .bottom-btn:focus, .link-list-group .btn-group > a:focus, .btn-group > .btn:active, .btn-group > .top-btn:active, .btn-group >
-    .bottom-btn:active, .link-list-group .btn-group > a:active, .btn-group > .btn.active, .btn-group > .active.top-btn, .btn-group >
-    .active.bottom-btn, .link-list-group .btn-group > a.active,
-    .btn-group-vertical > .btn:focus,
-    .btn-group-vertical > .top-btn:focus,
-    .btn-group-vertical >
-    .bottom-btn:focus, .link-list-group
+    .btn-group > .btn:focus, .selection-hidden .btn-group > a:focus, .link-list-group .btn-group > a:focus, .btn-group > .btn:active, .selection-hidden .btn-group > a:active, .link-list-group .btn-group > a:active, .btn-group > .btn.active, .selection-hidden .btn-group > a.active, .link-list-group .btn-group > a.active,
+    .btn-group-vertical > .btn:focus, .selection-hidden
+    .btn-group-vertical > a:focus, .link-list-group
     .btn-group-vertical > a:focus,
-    .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .top-btn:active,
-    .btn-group-vertical >
-    .bottom-btn:active, .link-list-group
+    .btn-group-vertical > .btn:active, .selection-hidden
+    .btn-group-vertical > a:active, .link-list-group
     .btn-group-vertical > a:active,
-    .btn-group-vertical > .btn.active,
-    .btn-group-vertical > .active.top-btn,
-    .btn-group-vertical >
-    .active.bottom-btn, .link-list-group
+    .btn-group-vertical > .btn.active, .selection-hidden
+    .btn-group-vertical > a.active, .link-list-group
     .btn-group-vertical > a.active {
       z-index: 2; }
-  .btn-group .btn + .btn, .btn-group .top-btn + .btn, .btn-group
-  .bottom-btn + .btn, .btn-group .link-list-group a + .btn, .link-list-group .btn-group a + .btn, .btn-group .btn + .top-btn, .btn-group .top-btn + .top-btn, .btn-group
-  .bottom-btn + .top-btn, .btn-group .link-list-group a + .top-btn, .link-list-group .btn-group a + .top-btn, .btn-group .btn +
-  .bottom-btn, .btn-group .top-btn +
-  .bottom-btn, .btn-group
-  .bottom-btn +
-  .bottom-btn, .btn-group .link-list-group a +
-  .bottom-btn, .link-list-group .btn-group a +
-  .bottom-btn, .btn-group .link-list-group .btn + a, .link-list-group .btn-group .btn + a, .btn-group .link-list-group .top-btn + a, .link-list-group .btn-group .top-btn + a, .btn-group .link-list-group
-  .bottom-btn + a, .link-list-group .btn-group
-  .bottom-btn + a, .btn-group .link-list-group a + a, .link-list-group .btn-group a + a,
+  .btn-group .btn + .btn, .btn-group .selection-hidden a + .btn, .selection-hidden .btn-group a + .btn, .btn-group .link-list-group a + .btn, .link-list-group .btn-group a + .btn, .btn-group .selection-hidden .btn + a, .selection-hidden .btn-group .btn + a, .btn-group .selection-hidden a + a, .selection-hidden .btn-group a + a, .btn-group .link-list-group .selection-hidden a + a, .selection-hidden .link-list-group .btn-group a + a, .btn-group .link-list-group .btn + a, .link-list-group .btn-group .btn + a, .btn-group .selection-hidden .link-list-group a + a, .link-list-group .btn-group .selection-hidden a + a, .selection-hidden .btn-group .link-list-group a + a, .link-list-group .selection-hidden .btn-group a + a, .btn-group .link-list-group a + a, .link-list-group .btn-group a + a,
   .btn-group .btn + .btn-group,
-  .btn-group .top-btn + .btn-group,
-  .btn-group
-  .bottom-btn + .btn-group,
+  .btn-group .selection-hidden a + .btn-group, .selection-hidden
+  .btn-group a + .btn-group,
   .btn-group .link-list-group a + .btn-group, .link-list-group
   .btn-group a + .btn-group,
   .btn-group .btn-group + .btn,
-  .btn-group .btn-group + .top-btn,
-  .btn-group .btn-group +
-  .bottom-btn,
+  .btn-group .selection-hidden .btn-group + a, .selection-hidden
+  .btn-group .btn-group + a,
   .btn-group .link-list-group .btn-group + a, .link-list-group
   .btn-group .btn-group + a,
   .btn-group .btn-group + .btn-group,
   .btn-group-vertical .btn + .btn,
-  .btn-group-vertical .top-btn + .btn,
-  .btn-group-vertical
-  .bottom-btn + .btn,
+  .btn-group-vertical .selection-hidden a + .btn, .selection-hidden
+  .btn-group-vertical a + .btn,
   .btn-group-vertical .link-list-group a + .btn, .link-list-group
   .btn-group-vertical a + .btn,
-  .btn-group-vertical .btn + .top-btn,
-  .btn-group-vertical .top-btn + .top-btn,
-  .btn-group-vertical
-  .bottom-btn + .top-btn,
-  .btn-group-vertical .link-list-group a + .top-btn, .link-list-group
-  .btn-group-vertical a + .top-btn,
-  .btn-group-vertical .btn +
-  .bottom-btn,
-  .btn-group-vertical .top-btn +
-  .bottom-btn,
-  .btn-group-vertical
-  .bottom-btn +
-  .bottom-btn,
-  .btn-group-vertical .link-list-group a +
-  .bottom-btn, .link-list-group
-  .btn-group-vertical a +
-  .bottom-btn,
+  .btn-group-vertical .selection-hidden .btn + a, .selection-hidden
+  .btn-group-vertical .btn + a,
+  .btn-group-vertical .selection-hidden a + a, .selection-hidden
+  .btn-group-vertical a + a,
+  .btn-group-vertical .link-list-group .selection-hidden a + a, .selection-hidden .link-list-group
+  .btn-group-vertical a + a,
   .btn-group-vertical .link-list-group .btn + a, .link-list-group
   .btn-group-vertical .btn + a,
-  .btn-group-vertical .link-list-group .top-btn + a, .link-list-group
-  .btn-group-vertical .top-btn + a,
-  .btn-group-vertical .link-list-group
-  .bottom-btn + a, .link-list-group
-  .btn-group-vertical
-  .bottom-btn + a,
+  .btn-group-vertical .selection-hidden .link-list-group a + a, .link-list-group
+  .btn-group-vertical .selection-hidden a + a, .selection-hidden
+  .btn-group-vertical .link-list-group a + a, .link-list-group .selection-hidden
+  .btn-group-vertical a + a,
   .btn-group-vertical .link-list-group a + a, .link-list-group
   .btn-group-vertical a + a,
   .btn-group-vertical .btn + .btn-group,
-  .btn-group-vertical .top-btn + .btn-group,
-  .btn-group-vertical
-  .bottom-btn + .btn-group,
+  .btn-group-vertical .selection-hidden a + .btn-group, .selection-hidden
+  .btn-group-vertical a + .btn-group,
   .btn-group-vertical .link-list-group a + .btn-group, .link-list-group
   .btn-group-vertical a + .btn-group,
   .btn-group-vertical .btn-group + .btn,
-  .btn-group-vertical .btn-group + .top-btn,
-  .btn-group-vertical .btn-group +
-  .bottom-btn,
+  .btn-group-vertical .selection-hidden .btn-group + a, .selection-hidden
+  .btn-group-vertical .btn-group + a,
   .btn-group-vertical .link-list-group .btn-group + a, .link-list-group
   .btn-group-vertical .btn-group + a,
   .btn-group-vertical .btn-group + .btn-group {
@@ -1747,20 +1667,16 @@ tbody.collapse.show {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .top-btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group >
-.bottom-btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .link-list-group .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .selection-hidden .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .link-list-group .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .btn-group > .top-btn:first-child, .btn-group >
-.bottom-btn:first-child, .link-list-group .btn-group > a:first-child {
+.btn-group > .btn:first-child, .selection-hidden .btn-group > a:first-child, .link-list-group .btn-group > a:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .top-btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group >
-  .bottom-btn:first-child:not(:last-child):not(.dropdown-toggle), .link-list-group .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .selection-hidden .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .link-list-group .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .top-btn:last-child:not(:first-child), .btn-group >
-.bottom-btn:last-child:not(:first-child), .link-list-group .btn-group > a:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .selection-hidden .btn-group > a:last-child:not(:first-child), .link-list-group .btn-group > a:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -1768,36 +1684,29 @@ tbody.collapse.show {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .top-btn, .btn-group > .btn-group:not(:first-child):not(:last-child) >
-.bottom-btn, .link-list-group .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .selection-hidden .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .link-list-group .btn-group > .btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .top-btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) >
-.bottom-btn:last-child, .link-list-group .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .selection-hidden .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .link-list-group .btn-group > .btn-group:first-child:not(:last-child) > a:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .top-btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) >
-.bottom-btn:first-child, .link-list-group .btn-group > .btn-group:last-child:not(:first-child) > a:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .selection-hidden .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .link-list-group .btn-group > .btn-group:last-child:not(:first-child) > a:first-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn + .dropdown-toggle-split, .top-btn + .dropdown-toggle-split,
-.bottom-btn + .dropdown-toggle-split, .link-list-group a + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .selection-hidden a + .dropdown-toggle-split, .link-list-group a + .dropdown-toggle-split {
   padding-right: 0.5625rem;
   padding-left: 0.5625rem; }
-  .btn + .dropdown-toggle-split::after, .top-btn + .dropdown-toggle-split::after,
-  .bottom-btn + .dropdown-toggle-split::after, .link-list-group a + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .selection-hidden a + .dropdown-toggle-split::after, .link-list-group a + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .top-btn + .dropdown-toggle-split, .btn-group-sm >
-.bottom-btn + .dropdown-toggle-split, .link-list-group .btn-group-sm > a + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .selection-hidden .btn-group-sm > a + .dropdown-toggle-split, .link-list-group .btn-group-sm > a + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .top-btn + .dropdown-toggle-split, .btn-group-lg >
-.bottom-btn + .dropdown-toggle-split, .link-list-group .btn-group-lg > a + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .selection-hidden .btn-group-lg > a + .dropdown-toggle-split, .link-list-group .btn-group-lg > a + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -1805,72 +1714,46 @@ tbody.collapse.show {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center; }
-  .btn-group-vertical .btn, .btn-group-vertical .top-btn, .btn-group-vertical
-  .bottom-btn, .btn-group-vertical .link-list-group a, .link-list-group .btn-group-vertical a,
+  .btn-group-vertical .btn, .btn-group-vertical .selection-hidden a, .selection-hidden .btn-group-vertical a, .btn-group-vertical .link-list-group a, .link-list-group .btn-group-vertical a,
   .btn-group-vertical .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn + .btn, .btn-group-vertical > .top-btn + .btn, .btn-group-vertical >
-  .bottom-btn + .btn, .link-list-group .btn-group-vertical > a + .btn, .btn-group-vertical > .btn + .top-btn, .btn-group-vertical > .top-btn + .top-btn, .btn-group-vertical >
-  .bottom-btn + .top-btn, .link-list-group .btn-group-vertical > a + .top-btn, .btn-group-vertical > .btn +
-  .bottom-btn, .btn-group-vertical > .top-btn +
-  .bottom-btn, .btn-group-vertical >
-  .bottom-btn +
-  .bottom-btn, .link-list-group .btn-group-vertical > a +
-  .bottom-btn, .link-list-group .btn-group-vertical > .btn + a, .link-list-group .btn-group-vertical > .top-btn + a, .link-list-group .btn-group-vertical >
-  .bottom-btn + a, .link-list-group .btn-group-vertical > a + a,
-  .btn-group-vertical > .btn + .btn-group,
-  .btn-group-vertical > .top-btn + .btn-group,
-  .btn-group-vertical >
-  .bottom-btn + .btn-group, .link-list-group
+  .btn-group-vertical > .btn + .btn, .selection-hidden .btn-group-vertical > a + .btn, .link-list-group .btn-group-vertical > a + .btn, .selection-hidden .btn-group-vertical > .btn + a, .selection-hidden .btn-group-vertical > a + a, .link-list-group .btn-group-vertical > .btn + a, .selection-hidden .link-list-group .btn-group-vertical > a + a, .link-list-group .selection-hidden .btn-group-vertical > a + a, .link-list-group .btn-group-vertical > a + a,
+  .btn-group-vertical > .btn + .btn-group, .selection-hidden
+  .btn-group-vertical > a + .btn-group, .link-list-group
   .btn-group-vertical > a + .btn-group,
-  .btn-group-vertical > .btn-group + .btn,
-  .btn-group-vertical > .btn-group + .top-btn,
-  .btn-group-vertical > .btn-group +
-  .bottom-btn, .link-list-group
+  .btn-group-vertical > .btn-group + .btn, .selection-hidden
+  .btn-group-vertical > .btn-group + a, .link-list-group
   .btn-group-vertical > .btn-group + a,
   .btn-group-vertical > .btn-group + .btn-group {
     margin-top: -1px;
     margin-left: 0; }
-  .btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .top-btn:not(:first-child):not(:last-child), .btn-group-vertical >
-  .bottom-btn:not(:first-child):not(:last-child), .link-list-group .btn-group-vertical > a:not(:first-child):not(:last-child) {
+  .btn-group-vertical > .btn:not(:first-child):not(:last-child), .selection-hidden .btn-group-vertical > a:not(:first-child):not(:last-child), .link-list-group .btn-group-vertical > a:not(:first-child):not(:last-child) {
     border-radius: 0; }
-  .btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .top-btn:first-child:not(:last-child), .btn-group-vertical >
-  .bottom-btn:first-child:not(:last-child), .link-list-group .btn-group-vertical > a:first-child:not(:last-child) {
+  .btn-group-vertical > .btn:first-child:not(:last-child), .selection-hidden .btn-group-vertical > a:first-child:not(:last-child), .link-list-group .btn-group-vertical > a:first-child:not(:last-child) {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .top-btn:last-child:not(:first-child), .btn-group-vertical >
-  .bottom-btn:last-child:not(:first-child), .link-list-group .btn-group-vertical > a:last-child:not(:first-child) {
+  .btn-group-vertical > .btn:last-child:not(:first-child), .selection-hidden .btn-group-vertical > a:last-child:not(:first-child), .link-list-group .btn-group-vertical > a:last-child:not(:first-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .top-btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) >
-  .bottom-btn, .link-list-group .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
+  .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .selection-hidden .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .link-list-group .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
     border-radius: 0; }
-  .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .top-btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) >
-  .bottom-btn:last-child, .link-list-group .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
+  .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .selection-hidden .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .link-list-group .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child,
   .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .top-btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) >
-  .bottom-btn:first-child, .link-list-group .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child {
+  .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .selection-hidden .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .link-list-group .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .top-btn input[type="radio"], [data-toggle="buttons"] >
-.bottom-btn input[type="radio"], .link-list-group [data-toggle="buttons"] > a input[type="radio"],
-[data-toggle="buttons"] > .btn input[type="checkbox"],
-[data-toggle="buttons"] > .top-btn input[type="checkbox"],
-[data-toggle="buttons"] >
-.bottom-btn input[type="checkbox"], .link-list-group
+[data-toggle="buttons"] > .btn input[type="radio"], .selection-hidden [data-toggle="buttons"] > a input[type="radio"], .link-list-group [data-toggle="buttons"] > a input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="checkbox"], .selection-hidden
+[data-toggle="buttons"] > a input[type="checkbox"], .link-list-group
 [data-toggle="buttons"] > a input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .top-btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group >
-.bottom-btn input[type="radio"], .link-list-group
+[data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .selection-hidden
+[data-toggle="buttons"] > .btn-group > a input[type="radio"], .link-list-group
 [data-toggle="buttons"] > .btn-group > a input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .top-btn input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group >
-.bottom-btn input[type="checkbox"], .link-list-group
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .selection-hidden
+[data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .link-list-group
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -1929,20 +1812,16 @@ tbody.collapse.show {
   border-radius: 0.125rem; }
   .input-group-addon.form-control-sm, .chosen-container .input-group-sm > .input-group-addon.chosen-choices, .chosen-container-single .input-group-sm > .input-group-addon.chosen-single, .chosen-container-single .chosen-search .input-group-sm > input.input-group-addon[type="text"],
   .input-group-sm > .input-group-addon,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn,
-  .input-group-sm > .input-group-btn > .input-group-addon.top-btn,
-  .input-group-sm > .input-group-btn >
-  .input-group-addon.bottom-btn, .link-list-group
+  .input-group-sm > .input-group-btn > .input-group-addon.btn, .selection-hidden
+  .input-group-sm > .input-group-btn > a.input-group-addon, .link-list-group
   .input-group-sm > .input-group-btn > a.input-group-addon {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
     border-radius: 0.063rem; }
   .input-group-addon.form-control-lg, .chosen-container .input-group-lg > .input-group-addon.chosen-choices, .chosen-container-single .input-group-lg > .input-group-addon.chosen-single, .chosen-container-single .chosen-search .input-group-lg > input.input-group-addon[type="text"],
   .input-group-lg > .input-group-addon,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn,
-  .input-group-lg > .input-group-btn > .input-group-addon.top-btn,
-  .input-group-lg > .input-group-btn >
-  .input-group-addon.bottom-btn, .link-list-group
+  .input-group-lg > .input-group-btn > .input-group-addon.btn, .selection-hidden
+  .input-group-lg > .input-group-btn > a.input-group-addon, .link-list-group
   .input-group-lg > .input-group-btn > a.input-group-addon {
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
@@ -1953,26 +1832,18 @@ tbody.collapse.show {
 
 .input-group .form-control:not(:last-child), .input-group .chosen-container .chosen-choices:not(:last-child), .chosen-container .input-group .chosen-choices:not(:last-child), .input-group .chosen-container-single .chosen-single:not(:last-child), .chosen-container-single .input-group .chosen-single:not(:last-child), .input-group .chosen-container-single .chosen-search input[type="text"]:not(:last-child), .chosen-container-single .chosen-search .input-group input[type="text"]:not(:last-child),
 .input-group-addon:not(:last-child),
-.input-group-btn:not(:last-child) > .btn,
-.input-group-btn:not(:last-child) > .top-btn,
-.input-group-btn:not(:last-child) >
-.bottom-btn, .link-list-group
+.input-group-btn:not(:last-child) > .btn, .selection-hidden
+.input-group-btn:not(:last-child) > a, .link-list-group
 .input-group-btn:not(:last-child) > a,
-.input-group-btn:not(:last-child) > .btn-group > .btn,
-.input-group-btn:not(:last-child) > .btn-group > .top-btn,
-.input-group-btn:not(:last-child) > .btn-group >
-.bottom-btn, .link-list-group
+.input-group-btn:not(:last-child) > .btn-group > .btn, .selection-hidden
+.input-group-btn:not(:last-child) > .btn-group > a, .link-list-group
 .input-group-btn:not(:last-child) > .btn-group > a,
 .input-group-btn:not(:last-child) > .dropdown-toggle,
-.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) > .top-btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) >
-.bottom-btn:not(:last-child):not(.dropdown-toggle), .link-list-group
+.input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .selection-hidden
+.input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle), .link-list-group
 .input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn,
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .top-btn,
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) >
-.bottom-btn, .link-list-group
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .selection-hidden
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > a, .link-list-group
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > a {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
@@ -1982,26 +1853,18 @@ tbody.collapse.show {
 
 .input-group .form-control:not(:first-child), .input-group .chosen-container .chosen-choices:not(:first-child), .chosen-container .input-group .chosen-choices:not(:first-child), .input-group .chosen-container-single .chosen-single:not(:first-child), .chosen-container-single .input-group .chosen-single:not(:first-child), .input-group .chosen-container-single .chosen-search input[type="text"]:not(:first-child), .chosen-container-single .chosen-search .input-group input[type="text"]:not(:first-child),
 .input-group-addon:not(:first-child),
-.input-group-btn:not(:first-child) > .btn,
-.input-group-btn:not(:first-child) > .top-btn,
-.input-group-btn:not(:first-child) >
-.bottom-btn, .link-list-group
+.input-group-btn:not(:first-child) > .btn, .selection-hidden
+.input-group-btn:not(:first-child) > a, .link-list-group
 .input-group-btn:not(:first-child) > a,
-.input-group-btn:not(:first-child) > .btn-group > .btn,
-.input-group-btn:not(:first-child) > .btn-group > .top-btn,
-.input-group-btn:not(:first-child) > .btn-group >
-.bottom-btn, .link-list-group
+.input-group-btn:not(:first-child) > .btn-group > .btn, .selection-hidden
+.input-group-btn:not(:first-child) > .btn-group > a, .link-list-group
 .input-group-btn:not(:first-child) > .btn-group > a,
 .input-group-btn:not(:first-child) > .dropdown-toggle,
-.input-group-btn:not(:last-child) > .btn:not(:first-child),
-.input-group-btn:not(:last-child) > .top-btn:not(:first-child),
-.input-group-btn:not(:last-child) >
-.bottom-btn:not(:first-child), .link-list-group
+.input-group-btn:not(:last-child) > .btn:not(:first-child), .selection-hidden
+.input-group-btn:not(:last-child) > a:not(:first-child), .link-list-group
 .input-group-btn:not(:last-child) > a:not(:first-child),
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn,
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .top-btn,
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) >
-.bottom-btn, .link-list-group
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .selection-hidden
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > a, .link-list-group
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > a {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -2014,51 +1877,25 @@ tbody.collapse.show {
   align-items: stretch;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .input-group-btn > .top-btn, .input-group-btn >
-  .bottom-btn, .link-list-group .input-group-btn > a {
+  .input-group-btn > .btn, .selection-hidden .input-group-btn > a, .link-list-group .input-group-btn > a {
     position: relative; }
-    .input-group-btn > .btn + .btn, .input-group-btn > .top-btn + .btn, .input-group-btn >
-    .bottom-btn + .btn, .link-list-group .input-group-btn > a + .btn, .input-group-btn > .btn + .top-btn, .input-group-btn > .top-btn + .top-btn, .input-group-btn >
-    .bottom-btn + .top-btn, .link-list-group .input-group-btn > a + .top-btn, .input-group-btn > .btn +
-    .bottom-btn, .input-group-btn > .top-btn +
-    .bottom-btn, .input-group-btn >
-    .bottom-btn +
-    .bottom-btn, .link-list-group .input-group-btn > a +
-    .bottom-btn, .link-list-group .input-group-btn > .btn + a, .link-list-group .input-group-btn > .top-btn + a, .link-list-group .input-group-btn >
-    .bottom-btn + a, .link-list-group .input-group-btn > a + a {
+    .input-group-btn > .btn + .btn, .selection-hidden .input-group-btn > a + .btn, .link-list-group .input-group-btn > a + .btn, .selection-hidden .input-group-btn > .btn + a, .selection-hidden .input-group-btn > a + a, .link-list-group .input-group-btn > .btn + a, .selection-hidden .link-list-group .input-group-btn > a + a, .link-list-group .selection-hidden .input-group-btn > a + a, .link-list-group .input-group-btn > a + a {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .input-group-btn > .top-btn:focus, .input-group-btn >
-    .bottom-btn:focus, .link-list-group .input-group-btn > a:focus, .input-group-btn > .btn:active, .input-group-btn > .top-btn:active, .input-group-btn >
-    .bottom-btn:active, .link-list-group .input-group-btn > a:active, .input-group-btn > .btn:hover, .input-group-btn > .top-btn:hover, .input-group-btn >
-    .bottom-btn:hover, .link-list-group .input-group-btn > a:hover {
+    .input-group-btn > .btn:focus, .selection-hidden .input-group-btn > a:focus, .link-list-group .input-group-btn > a:focus, .input-group-btn > .btn:active, .selection-hidden .input-group-btn > a:active, .link-list-group .input-group-btn > a:active, .input-group-btn > .btn:hover, .selection-hidden .input-group-btn > a:hover, .link-list-group .input-group-btn > a:hover {
       z-index: 3; }
-  .input-group-btn:first-child > .btn + .btn, .input-group-btn:first-child > .top-btn + .btn, .input-group-btn:first-child >
-  .bottom-btn + .btn, .link-list-group .input-group-btn:first-child > a + .btn, .input-group-btn:first-child > .btn + .top-btn, .input-group-btn:first-child > .top-btn + .top-btn, .input-group-btn:first-child >
-  .bottom-btn + .top-btn, .link-list-group .input-group-btn:first-child > a + .top-btn, .input-group-btn:first-child > .btn +
-  .bottom-btn, .input-group-btn:first-child > .top-btn +
-  .bottom-btn, .input-group-btn:first-child >
-  .bottom-btn +
-  .bottom-btn, .link-list-group .input-group-btn:first-child > a +
-  .bottom-btn, .link-list-group .input-group-btn:first-child > .btn + a, .link-list-group .input-group-btn:first-child > .top-btn + a, .link-list-group .input-group-btn:first-child >
-  .bottom-btn + a, .link-list-group .input-group-btn:first-child > a + a {
+  .input-group-btn:first-child > .btn + .btn, .selection-hidden .input-group-btn:first-child > a + .btn, .link-list-group .input-group-btn:first-child > a + .btn, .selection-hidden .input-group-btn:first-child > .btn + a, .selection-hidden .input-group-btn:first-child > a + a, .link-list-group .input-group-btn:first-child > .btn + a, .selection-hidden .link-list-group .input-group-btn:first-child > a + a, .link-list-group .selection-hidden .input-group-btn:first-child > a + a, .link-list-group .input-group-btn:first-child > a + a {
     margin-left: 0; }
-  .input-group-btn:not(:last-child) > .btn, .input-group-btn:not(:last-child) > .top-btn, .input-group-btn:not(:last-child) >
-  .bottom-btn, .link-list-group .input-group-btn:not(:last-child) > a,
+  .input-group-btn:not(:last-child) > .btn, .selection-hidden .input-group-btn:not(:last-child) > a, .link-list-group .input-group-btn:not(:last-child) > a,
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .input-group-btn:not(:first-child) > .top-btn, .input-group-btn:not(:first-child) >
-  .bottom-btn, .link-list-group .input-group-btn:not(:first-child) > a,
+  .input-group-btn:not(:first-child) > .btn, .selection-hidden .input-group-btn:not(:first-child) > a, .link-list-group .input-group-btn:not(:first-child) > a,
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: 0; }
-    .input-group-btn:not(:first-child) > .btn:first-child, .input-group-btn:not(:first-child) > .top-btn:first-child, .input-group-btn:not(:first-child) >
-    .bottom-btn:first-child, .link-list-group .input-group-btn:not(:first-child) > a:first-child,
+    .input-group-btn:not(:first-child) > .btn:first-child, .selection-hidden .input-group-btn:not(:first-child) > a:first-child, .link-list-group .input-group-btn:not(:first-child) > a:first-child,
     .input-group-btn:not(:first-child) > .btn-group:first-child {
       margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .input-group-btn:not(:first-child) > .top-btn:focus, .input-group-btn:not(:first-child) >
-    .bottom-btn:focus, .link-list-group .input-group-btn:not(:first-child) > a:focus, .input-group-btn:not(:first-child) > .btn:active, .input-group-btn:not(:first-child) > .top-btn:active, .input-group-btn:not(:first-child) >
-    .bottom-btn:active, .link-list-group .input-group-btn:not(:first-child) > a:active, .input-group-btn:not(:first-child) > .btn:hover, .input-group-btn:not(:first-child) > .top-btn:hover, .input-group-btn:not(:first-child) >
-    .bottom-btn:hover, .link-list-group .input-group-btn:not(:first-child) > a:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .selection-hidden .input-group-btn:not(:first-child) > a:focus, .link-list-group .input-group-btn:not(:first-child) > a:focus, .input-group-btn:not(:first-child) > .btn:active, .selection-hidden .input-group-btn:not(:first-child) > a:active, .link-list-group .input-group-btn:not(:first-child) > a:active, .input-group-btn:not(:first-child) > .btn:hover, .selection-hidden .input-group-btn:not(:first-child) > a:hover, .link-list-group .input-group-btn:not(:first-child) > a:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -2383,8 +2220,7 @@ tbody.collapse.show {
   .badge:empty {
     display: none; }
 
-.btn .badge, .top-btn .badge,
-.bottom-btn .badge, .link-list-group a .badge {
+.btn .badge, .selection-hidden a .badge, .link-list-group a .badge {
   position: relative;
   top: -1px; }
 
@@ -3856,9 +3692,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .mx-0 {
   margin-right: 0 !important; }
 
-.mb-0, .dropdown-menu .section-title, .fl-icon-left-text-below > .chosen-container, .fl-icon-left-text-above > .chosen-container, .fl-icon-left-text-above > label, .fl-department-list-control > .form-group, .fl-department-list-control > .chosen-container, .fl-department-list-control > .form-group .btn, .fl-department-list-control > .chosen-container .btn, .fl-department-list-control > .form-group .top-btn, .fl-department-list-control > .chosen-container .top-btn, .fl-department-list-control > .form-group
-.bottom-btn, .fl-department-list-control > .chosen-container
-.bottom-btn, .fl-department-list-control > .form-group .link-list-group a, .link-list-group .fl-department-list-control > .form-group a, .fl-department-list-control > .chosen-container .link-list-group a, .link-list-group .fl-department-list-control > .chosen-container a, .fl-transfer-to-from .form-group, .fl-transfer-to-from .chosen-container,
+.mb-0, .dropdown-menu .section-title, .fl-icon-left-text-below > .chosen-container, .fl-icon-left-text-above > .chosen-container, .fl-icon-left-text-above > label, .fl-department-list-control > .form-group, .fl-department-list-control > .chosen-container, .fl-department-list-control > .form-group .btn, .fl-department-list-control > .chosen-container .btn, .fl-department-list-control > .form-group .selection-hidden a, .selection-hidden .fl-department-list-control > .form-group a, .fl-department-list-control > .chosen-container .selection-hidden a, .selection-hidden .fl-department-list-control > .chosen-container a, .fl-department-list-control > .form-group .link-list-group a, .link-list-group .fl-department-list-control > .form-group a, .fl-department-list-control > .chosen-container .link-list-group a, .link-list-group .fl-department-list-control > .chosen-container a, .fl-transfer-to-from .form-group, .fl-transfer-to-from .chosen-container,
 .my-0 {
   margin-bottom: 0 !important; }
 
@@ -3869,8 +3703,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .m-1 {
   margin: 0.25rem !important; }
 
-.mt-1, .card .card-header .btn, .card .card-header .top-btn, .card .card-header
-.bottom-btn, .card .card-header .link-list-group a, .link-list-group .card .card-header a,
+.mt-1, .card .card-header .btn, .card .card-header .selection-hidden a, .selection-hidden .card .card-header a, .card .card-header .link-list-group a, .link-list-group .card .card-header a,
 .my-1 {
   margin-top: 0.25rem !important; }
 
@@ -3882,8 +3715,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-1 {
   margin-bottom: 0.25rem !important; }
 
-.ml-1, .top-btn strong,
-.bottom-btn strong,
+.ml-1, .selection-hidden a strong,
 .mx-1 {
   margin-left: 0.25rem !important; }
 
@@ -3894,9 +3726,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .my-2 {
   margin-top: 0.5rem !important; }
 
-.mr-2, .card .card-footer .btn, .card .card-footer .top-btn, .card .card-footer
-.bottom-btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .input-group svg[class^='icon-']:first-child, .pane-footer .pane-btns .btn, .pane-footer .pane-btns .top-btn, .pane-footer .pane-btns
-.bottom-btn, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a, #tab-nav-main .tab-header svg,
+.mr-2, .card .card-footer .btn, .card .card-footer .selection-hidden a, .selection-hidden .card .card-footer a, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .input-group svg[class^='icon-']:first-child, .pane-footer .pane-btns .btn, .pane-footer .pane-btns .selection-hidden a, .selection-hidden .pane-footer .pane-btns a, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a, #tab-nav-main .tab-header svg,
 .mx-2,
 #tab-nav-main .tab-content {
   margin-right: 0.5rem !important; }
@@ -3952,7 +3782,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 3rem !important; }
 
 .mt-5,
-.my-5 {
+.my-5,
+.application-wrapper .panel-nav .credits {
   margin-top: 3rem !important; }
 
 .mr-5,
@@ -3960,14 +3791,15 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-right: 3rem !important; }
 
 .mb-5,
-.my-5 {
+.my-5,
+.application-wrapper .panel-nav .credits {
   margin-bottom: 3rem !important; }
 
 .ml-5,
 .mx-5 {
   margin-left: 3rem !important; }
 
-.p-0 {
+.p-0, .application-wrapper .panel-disciplines {
   padding: 0 !important; }
 
 .pt-0,
@@ -4029,8 +3861,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .pt-3,
 .py-3,
-#tab-nav-main .tab-header,
-.application-wrapper .panel-nav .credits {
+#tab-nav-main .tab-header {
   padding-top: 1rem !important; }
 
 .pr-3,
@@ -4039,8 +3870,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .pb-3, #tab-nav-main .tab-content,
 .py-3,
-#tab-nav-main .tab-header,
-.application-wrapper .panel-nav .credits {
+#tab-nav-main .tab-header {
   padding-bottom: 1rem !important; }
 
 .pl-3, .dropdown-menu a.selected, .dropdown-menu + .caption,
@@ -4052,8 +3882,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .pt-4,
 .py-4,
-.application-wrapper .panel-nav .logo,
-.application-wrapper .panel-results {
+.application-wrapper .panel-nav .logo {
   padding-top: 1.5rem !important; }
 
 .pr-4, .application-wrapper,
@@ -4063,8 +3892,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 
 .pb-4,
 .py-4,
-.application-wrapper .panel-nav .logo,
-.application-wrapper .panel-results {
+.application-wrapper .panel-nav .logo {
   padding-bottom: 1.5rem !important; }
 
 .pl-4, .chosen-container .chosen-results li, .link-list-group a:first-child, .application-wrapper .panel-nav .credits,
@@ -5122,8 +4950,7 @@ h6 #loader:before, .h6 small, .card .card-body span small, .dropdown-menu + .cap
   background: linear-gradient(135deg, #6A1B9A, #8E24AA 30%, #2979FF);
   background-repeat: no-repeat; }
 
-.btn[class*="grad-"], [class*="grad-"].top-btn,
-[class*="grad-"].bottom-btn, .link-list-group a[class*="grad-"] {
+.btn[class*="grad-"], .selection-hidden a[class*="grad-"], .link-list-group a[class*="grad-"] {
   background-size: 200%;
   background-position: 2% 2%;
   -webkit-transition-property: background-position;
@@ -5139,9 +4966,7 @@ h6 #loader:before, .h6 small, .card .card-body span small, .dropdown-menu + .cap
   -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
-  .btn[class*="grad-"]:hover, [class*="grad-"].top-btn:hover,
-  [class*="grad-"].bottom-btn:hover, .link-list-group a[class*="grad-"]:hover, .btn[class*="grad-"]:focus, [class*="grad-"].top-btn:focus,
-  [class*="grad-"].bottom-btn:focus, .link-list-group a[class*="grad-"]:focus {
+  .btn[class*="grad-"]:hover, .selection-hidden a[class*="grad-"]:hover, .link-list-group a[class*="grad-"]:hover, .btn[class*="grad-"]:focus, .selection-hidden a[class*="grad-"]:focus, .link-list-group a[class*="grad-"]:focus {
     background-position: 98% 2%;
     -webkit-transition-duration: 0.225s;
     -moz-transition-duration: 0.225s;
@@ -5155,19 +4980,14 @@ h6 #loader:before, .h6 small, .card .card-body span small, .dropdown-menu + .cap
 button:hover {
   cursor: pointer; }
 
-.btn.btn-primary, .top-btn,
-.bottom-btn, .link-list-group a.btn-primary, .link-list-group a.top-btn, .link-list-group
-a.bottom-btn, .btn.btn-default, .btn-default.top-btn,
-.btn-default.bottom-btn, .link-list-group a.btn-default {
+.btn.btn-primary, .selection-hidden a, .link-list-group a.btn-primary, .btn.btn-default, .selection-hidden a.btn-default, .link-list-group a.btn-default {
   border-color: transparent; }
 
-.btn, .top-btn,
-.bottom-btn, .link-list-group a {
+.btn, .selection-hidden a, .link-list-group a {
   display: flex;
   align-items: center;
   justify-content: flex-start; }
-  .btn svg[class*="icon-"], .top-btn svg[class*="icon-"],
-  .bottom-btn svg[class*="icon-"], .link-list-group a svg[class*="icon-"] {
+  .btn svg[class*="icon-"], .selection-hidden a svg[class*="icon-"], .link-list-group a svg[class*="icon-"] {
     -webkit-transition-property: height;
     -moz-transition-property: height;
     -o-transition-property: height;
@@ -5182,9 +5002,7 @@ a.bottom-btn, .btn.btn-default, .btn-default.top-btn,
     -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transform-origin: 50% 50%; }
-  .btn:hover svg[class*="icon-"], .top-btn:hover svg[class*="icon-"],
-  .bottom-btn:hover svg[class*="icon-"], .link-list-group a:hover svg[class*="icon-"], .btn:focus svg[class*="icon-"], .top-btn:focus svg[class*="icon-"],
-  .bottom-btn:focus svg[class*="icon-"], .link-list-group a:focus svg[class*="icon-"] {
+  .btn:hover svg[class*="icon-"], .selection-hidden a:hover svg[class*="icon-"], .link-list-group a:hover svg[class*="icon-"], .btn:focus svg[class*="icon-"], .selection-hidden a:focus svg[class*="icon-"], .link-list-group a:focus svg[class*="icon-"] {
     height: 1em;
     -webkit-transition-duration: 0.225s;
     -moz-transition-duration: 0.225s;
@@ -5195,49 +5013,49 @@ a.bottom-btn, .btn.btn-default, .btn-default.top-btn,
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .top-btn, .btn-group-sm >
-.bottom-btn, .link-list-group .btn-group-sm > a {
+.btn-sm, .btn-group-sm > .btn, .selection-hidden .btn-group-sm > a, .link-list-group .btn-group-sm > a {
   border-radius: 0.125rem; }
 
 .img-btn {
   padding: 0; }
 
-p .btn, p .top-btn, p
-.bottom-btn, p .link-list-group a, .link-list-group p a {
+p .btn, p .selection-hidden a, .selection-hidden p a, p .link-list-group a, .link-list-group p a {
   display: inline;
   padding: 0.15em 0.5em; }
 
-.top-btn,
-.bottom-btn {
-  position: fixed;
-  left: 50%;
-  font-size: 0.875rem;
-  font-weight: 300;
-  transform: translateX(-50%);
-  border-radius: 0.25rem;
-  box-shadow: 0 0.25rem 1rem 0 rgba(96, 125, 139, 0.84); }
-  .top-btn strong,
-  .bottom-btn strong {
-    font-weight: 700; }
-
-.top-btn {
-  top: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+.selection-hidden {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
   z-index: 1; }
-
-.bottom-btn {
-  bottom: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  z-index: 1; }
+  .selection-hidden a {
+    font-size: 0.875rem;
+    font-weight: 300;
+    justify-content: center;
+    border-radius: 0.25rem; }
+    .selection-hidden a strong {
+      font-weight: 700; }
+  .selection-hidden.above {
+    top: 0;
+    background-image: linear-gradient(180deg, rgba(96, 125, 139, 0.21), rgba(96, 125, 139, 0) 8px); }
+    .selection-hidden.above a {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0; }
+  .selection-hidden.below {
+    bottom: 0;
+    background-image: linear-gradient(0deg, rgba(96, 125, 139, 0.21), rgba(96, 125, 139, 0) 8px); }
+    .selection-hidden.below a {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0; }
 
 .btn-help {
   display: inline-block;
   color: #37474F; }
   .btn-help:hover {
     text-decoration: none;
-    background: rgba(236, 239, 241, 0.9); }
+    background: rgba(255, 255, 255, 0.42); }
 
 .card {
   position: relative;
@@ -5266,8 +5084,7 @@ p .btn, p .top-btn, p
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: start; }
-    .card .card-body .btn, .card .card-body .top-btn, .card .card-body
-    .bottom-btn, .card .card-body .link-list-group a, .link-list-group .card .card-body a {
+    .card .card-body .btn, .card .card-body .selection-hidden a, .selection-hidden .card .card-body a, .card .card-body .link-list-group a, .link-list-group .card .card-body a {
       grid-column: -2 / -1;
       grid-row: 1 / 2; }
     .card .card-body span {
@@ -5281,12 +5098,10 @@ p .btn, p .top-btn, p
       font-weight: 300; }
     .card .card-body .institution {
       font-weight: 700; }
-  .card .card-footer .btn, .card .card-footer .top-btn, .card .card-footer
-  .bottom-btn, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a {
+  .card .card-footer .btn, .card .card-footer .selection-hidden a, .selection-hidden .card .card-footer a, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.5); }
-    .card .card-footer .btn:hover, .card .card-footer .top-btn:hover, .card .card-footer
-    .bottom-btn:hover, .card .card-footer .link-list-group a:hover, .link-list-group .card .card-footer a:hover {
+    .card .card-footer .btn:hover, .card .card-footer .selection-hidden a:hover, .selection-hidden .card .card-footer a:hover, .card .card-footer .link-list-group a:hover, .link-list-group .card .card-footer a:hover {
       background-color: white; }
   .card .remove-card svg[class^="icon-"] {
     margin-right: 0; }
@@ -5338,23 +5153,19 @@ p .btn, p .top-btn, p
 .btn-group {
   display: flex;
   width: 100%; }
-  .btn-group .btn, .btn-group .top-btn, .btn-group
-  .bottom-btn, .btn-group .link-list-group a, .link-list-group .btn-group a {
+  .btn-group .btn, .btn-group .selection-hidden a, .selection-hidden .btn-group a, .btn-group .link-list-group a, .link-list-group .btn-group a {
     flex-grow: 1;
     background-color: #FFFFFF;
     color: #455A64;
     justify-content: center;
     border-color: rgba(96, 125, 139, 0.42); }
-    .btn-group .btn:hover, .btn-group .top-btn:hover, .btn-group
-    .bottom-btn:hover, .btn-group .link-list-group a:hover, .link-list-group .btn-group a:hover {
+    .btn-group .btn:hover, .btn-group .selection-hidden a:hover, .selection-hidden .btn-group a:hover, .btn-group .link-list-group a:hover, .link-list-group .btn-group a:hover {
       background-color: #ECEFF1;
       cursor: pointer; }
-  .btn-group .btn.active, .btn-group .active.top-btn, .btn-group
-  .active.bottom-btn, .btn-group .link-list-group a.active, .link-list-group .btn-group a.active,
+  .btn-group .btn.active, .btn-group .selection-hidden a.active, .selection-hidden .btn-group a.active, .btn-group .link-list-group a.active, .link-list-group .btn-group a.active,
   .btn-group .btn.active:hover,
-  .btn-group .active.top-btn:hover,
-  .btn-group
-  .active.bottom-btn:hover,
+  .btn-group .selection-hidden a.active:hover, .selection-hidden
+  .btn-group a.active:hover,
   .btn-group .link-list-group a.active:hover, .link-list-group
   .btn-group a.active:hover {
     background-color: #7B1FA2;
@@ -5999,7 +5810,7 @@ svg.defs-only {
     font-size: calc(var(--unit) * 0.75);
     border-left: 1px solid rgba(120, 144, 156, 0.42); }
 
-.pane {
+.pane, .application-wrapper .panel-disciplines {
   position: relative;
   padding: 3rem 2rem;
   background-color: rgba(255, 255, 255, 0.94);
@@ -6345,31 +6156,72 @@ Tab nav main
     width: 1.5em;
     align-self: center; }
 
+body {
+  background-image: linear-gradient(90deg, #E3F2FD, #FFFFFF); }
+
 .application-wrapper {
   display: grid;
+  width: 100vw;
+  height: 100vh;
   grid-gap: 2rem;
   grid-template-columns: minmax(360px, 25%) 1fr;
   align-items: start;
   justify-content: space-between;
-  background-image: linear-gradient(90deg, #E3F2FD, #FFFFFF); }
-  .application-wrapper .panel-nav .logo {
+  overflow: hidden;
+  background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
+  background-repeat: repeat-x; }
+  .application-wrapper .panel-nav {
     display: flex;
-    justify-content: center;
-    background-image: linear-gradient(to right, #6A1B9A 8px, transparent 8px);
-    background-repeat: repeat-x; }
-  .application-wrapper .panel-nav .nav {
-    background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
-    background-repeat: repeat-x; }
-  .application-wrapper .panel-nav .credits {
-    background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
-    background-repeat: repeat-x; }
-    .application-wrapper .panel-nav .credits .text-muted {
-      color: #455A64;
-      font-size: 0.875rem; }
-      .application-wrapper .panel-nav .credits .text-muted a {
-        color: #455A64; }
-        .application-wrapper .panel-nav .credits .text-muted a:hover {
-          color: #37474F; }
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: stretch; }
+    .application-wrapper .panel-nav .logo {
+      display: flex;
+      justify-content: center;
+      background-image: linear-gradient(to right, #6A1B9A 8px, transparent 8px);
+      background-repeat: repeat-x; }
+    .application-wrapper .panel-nav .nav {
+      background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
+      background-repeat: repeat-x; }
+    .application-wrapper .panel-nav .credits {
+      align-self: flex-end;
+      background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
+      background-repeat: repeat-x; }
+      .application-wrapper .panel-nav .credits .text-muted {
+        color: #455A64;
+        font-size: 0.875rem; }
+        .application-wrapper .panel-nav .credits .text-muted a {
+          color: #455A64; }
+          .application-wrapper .panel-nav .credits .text-muted a:hover {
+            color: #37474F; }
+  .application-wrapper .panel-disciplines {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch; }
+    .application-wrapper .panel-disciplines .fl-department-list-control {
+      padding: 3rem 2rem;
+      box-shadow: 0 0.25rem 2rem 0 rgba(96, 125, 139, 0.42); }
+    .application-wrapper .panel-disciplines .list-container {
+      position: relative;
+      display: flex;
+      flex-grow: 1;
+      flex: 1;
+      flex-direction: column;
+      height: 100%;
+      padding: 0;
+      overflow: hidden; }
+      .application-wrapper .panel-disciplines .list-container .scrollbar-hider {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        outline: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -50px;
+        bottom: 0;
+        height: 100%; }
+      .application-wrapper .panel-disciplines .list-container .link-list-group {
+        width: calc(100% - 50px); }
 
 [class*="fl-"] {
   display: grid;
