@@ -5025,11 +5025,26 @@ p .btn, p .selection-hidden a, .selection-hidden p a, p .link-list-group a, .lin
 
 .selection-hidden {
   position: absolute;
+  top: -100%;
   left: 0;
   display: flex;
   width: 100%;
   justify-content: center;
-  z-index: 1; }
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  will-change: opacity;
+  -webkit-transition-duration: 0.195s;
+  -moz-transition-duration: 0.195s;
+  -o-transition-duration: 0.195s;
+  transition-duration: 0.195s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -moz-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  -o-transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
   .selection-hidden a {
     font-size: 0.875rem;
     font-weight: 300;
@@ -5037,13 +5052,25 @@ p .btn, p .selection-hidden a, .selection-hidden p a, p .link-list-group a, .lin
     border-radius: 0.25rem; }
     .selection-hidden a strong {
       font-weight: 700; }
+  .selection-hidden.above, .selection-hidden.below {
+    opacity: 1;
+    -webkit-transition-duration: 0.225s;
+    -moz-transition-duration: 0.225s;
+    -o-transition-duration: 0.225s;
+    transition-duration: 0.225s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1); }
   .selection-hidden.above {
     top: 0;
+    bottom: auto;
     background-image: linear-gradient(180deg, rgba(96, 125, 139, 0.21), rgba(96, 125, 139, 0) 8px); }
     .selection-hidden.above a {
       border-top-right-radius: 0;
       border-top-left-radius: 0; }
   .selection-hidden.below {
+    top: auto;
     bottom: 0;
     background-image: linear-gradient(0deg, rgba(96, 125, 139, 0.21), rgba(96, 125, 139, 0) 8px); }
     .selection-hidden.below a {
