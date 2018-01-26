@@ -7,14 +7,11 @@ body {
     width: 100vw;
     height: 100vh;
     grid-gap: ($spacer * 2);
-    grid-template-columns: minmax(360px, 25%) 1fr;
+    grid-template-columns: 2fr 3fr 5fr;
     align-items: start;
     justify-content: space-between;
     overflow: hidden;
     @include gradient-x ($blue-a400, transparent, 8px, 8px);
-    > [class^='panel-'] {
-
-    }
     .panel-nav {
         display: flex;
         flex-direction: column;
@@ -58,7 +55,6 @@ body {
                 .p-0;
         .fl-department-list-control {
             padding: $pane-padding-y $pane-padding-x;
-            box-shadow: 0 0.25rem 2rem 0 rgba($gray-500, 0.42);
         }
         .list-container {
             position: relative;
@@ -83,6 +79,16 @@ body {
             .link-list-group {
                 width: calc(100% - 50px);
             }
+        }
+    }
+    .panel-results {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        @extend .pane,
+                .p-0;
+        .pane-head {
+            padding: $pane-padding-y $pane-padding-x;
         }
     }
 }

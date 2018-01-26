@@ -3799,7 +3799,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 .mx-5 {
   margin-left: 3rem !important; }
 
-.p-0, .application-wrapper .panel-disciplines {
+.p-0, .application-wrapper .panel-disciplines, .application-wrapper .panel-results {
   padding: 0 !important; }
 
 .pt-0,
@@ -5851,7 +5851,7 @@ svg.defs-only {
     font-size: calc(var(--unit) * 0.75);
     border-left: 1px solid rgba(120, 144, 156, 0.42); }
 
-.pane, .application-wrapper .panel-disciplines {
+.pane, .application-wrapper .panel-disciplines, .application-wrapper .panel-results {
   position: relative;
   padding: 3rem 2rem;
   background-color: rgba(255, 255, 255, 0.94);
@@ -6205,7 +6205,7 @@ body {
   width: 100vw;
   height: 100vh;
   grid-gap: 2rem;
-  grid-template-columns: minmax(360px, 25%) 1fr;
+  grid-template-columns: 2fr 3fr 5fr;
   align-items: start;
   justify-content: space-between;
   overflow: hidden;
@@ -6240,8 +6240,7 @@ body {
     flex-direction: column;
     align-self: stretch; }
     .application-wrapper .panel-disciplines .fl-department-list-control {
-      padding: 3rem 2rem;
-      box-shadow: 0 0.25rem 2rem 0 rgba(96, 125, 139, 0.42); }
+      padding: 3rem 2rem; }
     .application-wrapper .panel-disciplines .list-container {
       position: relative;
       display: flex;
@@ -6263,6 +6262,12 @@ body {
         height: 100%; }
       .application-wrapper .panel-disciplines .list-container .link-list-group {
         width: calc(100% - 50px); }
+  .application-wrapper .panel-results {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch; }
+    .application-wrapper .panel-results .pane-head {
+      padding: 3rem 2rem; }
 
 [class*="fl-"] {
   display: grid;
