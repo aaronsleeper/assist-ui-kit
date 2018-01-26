@@ -521,8 +521,8 @@
                     <svg viewBox="0 0 18 18" class="icon-search">
                         <use xlink:href="#icon-search" />
                     </svg>
-                    <label for="department-search" class="sr-only">Find a Department</label>
-                    <input type="text" id="department-search" class="form-control" />
+                    <label for="discipline-search" class="sr-only">Find a Discipline</label>
+                    <input type="text" id="discipline-search" class="form-control" onkeyup="filterInstitutions()" />
                 </div>
                 <div class="form-group">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -555,7 +555,7 @@
             </form>
             <div class="list-container">
                 <div class="scrollbar-hider">
-                    <ul class="link-list-group">
+                    <ul id="discipline-list" class="link-list-group">
                         <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>All</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
                         <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Accounting</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>
                         <li> <a href="#"> <svg viewBox="0 0 15 15" class="icon-radio"><use xlink:href="#icon-radio-empty" /></svg>Administration of Justice</a> <a href="#" class="pin"> <svg viewBox="0 0 510 510" class="icon-pin"><use xlink:href="#icon-pin" /></svg> Pin </a> </li>

@@ -5787,6 +5787,20 @@ to avoid specificity issues.
     font-size: 0.875rem;
     font-weight: 300; }
 
+/* ------------------------------
+Adding custom styles
+-AS 1/2018
+------------------------------ */
+mark,
+.mark {
+  display: inline-block;
+  padding: 0 0.1875rem;
+  background-color: #f3e5f5;
+  color: #263238;
+  font-weight: 500;
+  text-decoration: none;
+  overflow: visible; }
+
 svg[class^="icon-"] {
   display: inline-block;
   fill: currentColor;

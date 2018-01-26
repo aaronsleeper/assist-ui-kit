@@ -30,7 +30,8 @@ gulp.task('pack-vendor-js', function () {
         'node_modules/popper.js/dist/umd/popper.min.js',
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/chosen-npm/public/chosen.jquery.min.js',
-        'node_modules/lottie-web/build/player/lottie.js'
+        'node_modules/lottie-web/build/player/lottie.js',
+        'node_modules/mark.js/dist/jquery.mark.min.js'
     ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('app/js'));
@@ -43,6 +44,7 @@ gulp.task('pack-js', function () {
         'app/scripts/collapse.js',
         'app/scripts/tooltips.js',
         'app/scripts/loader.js',
+        'app/scripts/list-filter.js',
         'app/scripts/radio-icon.js',
         'app/scripts/scripts.js'
     ])
