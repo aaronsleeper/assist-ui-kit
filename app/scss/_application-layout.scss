@@ -12,6 +12,9 @@ body {
     justify-content: space-between;
     overflow: hidden;
     @include gradient-x ($blue-a400, transparent, 8px, 8px);
+    > [class^='panel-'] {
+        overflow: hidden;
+    }
     .panel-nav {
         display: flex;
         flex-direction: column;
@@ -54,31 +57,7 @@ body {
         @extend .pane,
                 .p-0;
         .fl-department-list-control {
-            padding: $pane-padding-y $pane-padding-x;
-        }
-        .list-container {
-            position: relative;
-            display: flex;
-            flex-grow: 1;
-            flex: 1;
-            flex-direction: column;
-            height: 100%;
-            padding: 0;
-            overflow: hidden;
-            .scrollbar-hider {
-                overflow-y: scroll;
-                overflow-x: hidden;
-                outline: none;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: -50px;
-                bottom: 0;
-                height: 100%;
-            }
-            .link-list-group {
-                width: calc(100% - 50px);
-            }
+            @extend .pane-head;
         }
     }
     .panel-results {
@@ -87,8 +66,29 @@ body {
         align-self: stretch;
         @extend .pane,
                 .p-0;
-        .pane-head {
-            padding: $pane-padding-y $pane-padding-x;
+    }
+    .list-container {
+        position: relative;
+        display: flex;
+        flex-grow: 1;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        .scrollbar-hider {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            outline: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: -50px;
+            bottom: 0;
+            height: 100%;
+        }
+        .link-list-group {
+            width: calc(100% - 50px);
         }
     }
 }

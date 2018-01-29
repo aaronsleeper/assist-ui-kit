@@ -17,8 +17,8 @@
 .pane-head {
     display: grid;
     grid-template-columns: auto auto;
+    padding: $pane-padding-y $pane-padding-x;
     .pane-title {
-        padding-bottom: $spacer;
         > span { display: block; }
         .list-type { @extend h4; font-weight: 400; line-height: 1em; }
         .department { 
