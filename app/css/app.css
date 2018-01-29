@@ -3723,7 +3723,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 0.5rem !important; }
 
 .mt-2, .btn-help, .input-group svg[class^='icon-']:first-child, .chosen-container .chosen-results li.group-result,
-.my-2 {
+.my-2,
+.application-wrapper .panel-nav .credits {
   margin-top: 0.5rem !important; }
 
 .mr-2, .card .card-footer .btn, .card .card-footer .selection-hidden a, .selection-hidden .card .card-footer a, .card .card-footer .link-list-group a, .link-list-group .card .card-footer a, .input-group svg[class^='icon-']:first-child, .pane-footer .pane-btns .btn, .pane-footer .pane-btns .selection-hidden a, .selection-hidden .pane-footer .pane-btns a, .pane-footer .pane-btns .link-list-group a, .link-list-group .pane-footer .pane-btns a, .link-list-group svg, .inline-block-list a, #tab-nav-main .tab-header svg,
@@ -3732,7 +3733,8 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-right: 0.5rem !important; }
 
 .mb-2,
-.my-2 {
+.my-2,
+.application-wrapper .panel-nav .credits {
   margin-bottom: 0.5rem !important; }
 
 .ml-2,
@@ -3782,8 +3784,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin: 3rem !important; }
 
 .mt-5,
-.my-5,
-.application-wrapper .panel-nav .credits {
+.my-5 {
   margin-top: 3rem !important; }
 
 .mr-5,
@@ -3791,8 +3792,7 @@ a.bg-dark:focus, a.bg-dark:hover {
   margin-right: 3rem !important; }
 
 .mb-5,
-.my-5,
-.application-wrapper .panel-nav .credits {
+.my-5 {
   margin-bottom: 3rem !important; }
 
 .ml-5,
@@ -3840,16 +3840,18 @@ a.bg-dark:focus, a.bg-dark:hover {
 .p-2 {
   padding: 0.5rem !important; }
 
-.pt-2, .chosen-container .chosen-drop,
-.py-2 {
+.pt-2,
+.py-2,
+.chosen-container .chosen-drop {
   padding-top: 0.5rem !important; }
 
 .pr-2,
 .px-2 {
   padding-right: 0.5rem !important; }
 
-.pb-2, .chosen-container .chosen-drop,
-.py-2 {
+.pb-2,
+.py-2,
+.chosen-container .chosen-drop {
   padding-bottom: 0.5rem !important; }
 
 .pl-2,
@@ -4952,6 +4954,9 @@ h6 #loader:before, .h6 small, .card .card-body span small, .dropdown-menu + .cap
   font-weight: 300;
   color: #607D8B; }
 
+label {
+  font-weight: 300; }
+
 .grad-purple-blue {
   background-image: linear-gradient(to right, #6A1B9A, #8E24AA 30%, #2979FF);
   background-repeat: no-repeat;
@@ -5568,17 +5573,6 @@ our custom SASS will be in _chosen-overrides.scss
 /* @end */
 /* ------------------------------
 
-Chosen's Rendered Markup
--Map
-
-div.chosen-container
-    ul.chosen-choices
-        li.search-field
-            input.default
-    div.chosen-drop
-        ul.chosen-result
-            li.active-result
-
 Chosen's SCSS file structure used as a base
 to avoid specificity issues.
 
@@ -5602,12 +5596,18 @@ to avoid specificity issues.
     border-radius: 0.125rem;
     cursor: pointer; }
   .chosen-container.chosen-container-single .chosen-single {
-    padding-right: 3rem;
+    padding-right: 2.5rem;
     background-color: transparent; }
   .chosen-container .chosen-drop {
     display: none;
     border-color: #CFD8DC;
     background-image: linear-gradient(180deg, rgba(176, 190, 197, 0.42), rgba(236, 239, 241, 0) 0.5rem); }
+  .chosen-container a span,
+  .chosen-container.chosen-container-single .chosen-single span {
+    white-space: normal; }
+  .chosen-container .search-choice,
+  .chosen-container .chosen-single {
+    font-weight: 300; }
 
 /* @end */
 /* @group Single Chosen */
@@ -6205,36 +6205,41 @@ Tab nav main
     align-self: center; }
 
 body {
-  background-image: linear-gradient(90deg, #E3F2FD, #FFFFFF); }
+  background-image: linear-gradient(0deg, #E3F2FD, #FFFFFF); }
 
 .application-wrapper {
   display: grid;
   width: 100vw;
   height: 100vh;
   grid-gap: 2rem;
-  grid-template-columns: 2fr 3fr 5fr;
+  grid-template-columns: minmax(320px, 2fr) minmax(380px, 3fr) minmax(440px, 5fr);
   align-items: start;
   justify-content: space-between;
-  overflow: hidden;
-  background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
-  background-repeat: repeat-x; }
+  background-image: linear-gradient(0deg, #E3F2FD, #FFFFFF); }
+  @media (max-width: 1199px) {
+    .application-wrapper {
+      display: block;
+      height: auto; } }
   .application-wrapper > [class^='panel-'] {
     overflow: hidden; }
   .application-wrapper .panel-nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-self: stretch; }
+    align-self: stretch;
+    background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
+    background-repeat: repeat-x; }
     .application-wrapper .panel-nav .logo {
       display: flex;
       justify-content: center;
+      flex: none;
       background-image: linear-gradient(to right, #6A1B9A 8px, transparent 8px);
       background-repeat: repeat-x; }
     .application-wrapper .panel-nav .nav {
+      flex-grow: 1;
       background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
       background-repeat: repeat-x; }
     .application-wrapper .panel-nav .credits {
-      align-self: flex-end;
       background-image: linear-gradient(to right, #2979FF 8px, transparent 8px);
       background-repeat: repeat-x; }
       .application-wrapper .panel-nav .credits .text-muted {
@@ -6271,8 +6276,11 @@ body {
       right: -50px;
       bottom: 0;
       height: 100%; }
-    .application-wrapper .list-container .link-list-group {
-      width: calc(100% - 50px); }
+      @media (max-width: 1199px) {
+        .application-wrapper .list-container .scrollbar-hider {
+          position: relative; } }
+    .application-wrapper .list-container > * {
+      width: 100%; }
 
 [class*="fl-"] {
   display: grid;

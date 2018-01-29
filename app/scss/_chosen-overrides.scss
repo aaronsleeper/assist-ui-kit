@@ -1,16 +1,5 @@
 /* ------------------------------
 
-Chosen's Rendered Markup
--Map
-
-div.chosen-container
-    ul.chosen-choices
-        li.search-field
-            input.default
-    div.chosen-drop
-        ul.chosen-result
-            li.active-result
-
 Chosen's SCSS file structure used as a base
 to avoid specificity issues.
 
@@ -42,19 +31,25 @@ to avoid specificity issues.
         cursor: pointer;
     }
     &.chosen-container-single .chosen-single {
-        padding-right: 3rem; // make sure tags don't overlap arrow
+        padding-right: 2.5rem; // make sure tags don't overlap arrow
         background-color: transparent;
     }
     .chosen-drop {
         display: none;
-        @extend .pt-2, .pb-2;
+        @extend .py-2;
         border-color: $gray-100;
         background-image: linear-gradient(180deg, rgba($gray-200, 0.42), rgba($gray-50, 0) 0.5rem);
     }
     &.chosen-with-drop .chosen-drop {}
-    a {}
+    a,
+    &.chosen-container-single .chosen-single {
+        span {
+            white-space: normal;
+        }
+    }
     .search-choice,
     .chosen-single {
+        font-weight: 300;
         .group-name {
             &:after {}
         }

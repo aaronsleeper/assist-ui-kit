@@ -26,3 +26,7 @@ h3, .h3,
 h4, .h4, 
 h5, .h5, 
 h6, .h6 { small, .small { font-weight: 300; color: $gray-500; } }
+
+label {
+    font-weight: 300;
+}
