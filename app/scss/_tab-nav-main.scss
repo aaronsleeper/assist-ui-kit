@@ -15,7 +15,7 @@ Tab nav main
         text-align : left;
         font-weight: 300;
         cursor     : pointer;
-        &          : after {
+        &:after {
             content   : '';
             position  : absolute;
             bottom    : 0;
@@ -27,7 +27,7 @@ Tab nav main
         }
         &[aria-expanded='true'],
         &:last-child {
-            &: after { background: transparent none; }
+            &:after { background: transparent none; }
         }
         &:hover {
             background-color: rgba($white, 0.105);

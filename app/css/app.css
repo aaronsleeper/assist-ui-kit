@@ -6173,7 +6173,7 @@ Tab nav main
     -o-transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
     /* Moved the clip-path to a pseudo element as it was cutting off dropdowns
-        similar to overflow:hidden; the pseudo element is then positioned absolutely above the
+        similar to overflow: hidden; the pseudo element is then positioned absolutely above the
         container while the container is pushed down by the height of the pseudo element
         -AS */ }
     #tab-nav-main .tab-content:before {

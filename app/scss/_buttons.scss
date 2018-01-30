@@ -23,8 +23,8 @@ button:hover {
         @include transition-easing($easing-decel);
         transform-origin: 50% 50%;
     }
-    &: hover,
-    &: focus {
+    &:hover,
+    &:focus {
         svg[class*="icon-"] {
             height: 1em;
             @include transition-duration($duration-entry);
@@ -102,7 +102,7 @@ p .btn {
     @extend .mt-2;
     display: inline-block;
     color  : $gray-800;
-    &      : hover {
+    &:hover {
         text-decoration: none;
         background     : rgba($white, 0.42);
     }
