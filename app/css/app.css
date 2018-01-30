@@ -6289,8 +6289,8 @@ body {
       @media (max-width: 1199px) {
         .application-wrapper .list-container .scrollbar-hider {
           position: relative; } }
-    .application-wrapper .list-container > * {
-      width: 100%; }
+      .application-wrapper .list-container .scrollbar-hider > * {
+        width: calc(100% - 50px); }
 
 [class*="fl-"] {
   display: grid;

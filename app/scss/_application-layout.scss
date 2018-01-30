@@ -104,9 +104,9 @@ body {
             @include media-breakpoint-down(lg) {
                 position: relative;
             }
-        }
-        > * {
-            width: 100%;
+            > * {
+                width: calc(100% - 50px);
+            }
         }
     }
 }
