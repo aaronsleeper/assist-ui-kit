@@ -1,7 +1,14 @@
 var gulp = require('gulp');
+var multiDest = require('gulp-multi-dest');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
+
+// destOption - required var for multiDest
+// https://www.npmjs.com/package/gulp-multi-dest
+var destOptions = {
+    mode: 0755
+};
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'pack-vendor-js', 'pack-js'], function () {
@@ -19,7 +26,9 @@ gulp.task('serve', ['sass', 'pack-vendor-js', 'pack-js'], function () {
 gulp.task('sass', function () {
     return gulp.src('app/scss/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('app/css'))
+        // open to a better way to link these code bases. hit me up -AS
+        // sorry for the absolute path relative to my machine
+        .pipe(multiDest(['app/css', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/css']))
         .pipe(browserSync.stream());
 });
 
@@ -34,7 +43,7 @@ gulp.task('pack-vendor-js', function () {
         'node_modules/mark.js/dist/jquery.mark.min.js'
     ])
         .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('app/js'));
+        .pipe(multiDest(['app/js', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/js']));
 });
 
 // Compile custom js into JS & auto-inject into browsers
@@ -49,7 +58,7 @@ gulp.task('pack-js', function () {
         'app/scripts/scripts.js'
     ])
         .pipe(concat('app.js'))
-        .pipe(gulp.dest('app/js'))
+        .pipe(multiDest(['app/js', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/js']))
         .pipe(browserSync.stream());
 });
 
