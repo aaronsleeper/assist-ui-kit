@@ -1,14 +1,14 @@
 #icon-radio-empty {
     #circle-outer {
-        fill: transparent;
-        stroke: $gray-800;
+        fill        : transparent;
+        stroke      : $gray-800;
         stroke-width: 2;
     }
 }
 #icon-radio {
     #circle-outer {
-        stroke: $blue-700;
-        fill: transparent;
+        stroke      : $blue-700;
+        fill        : transparent;
         stroke-width: 2;
     }
     #circle-inner {
