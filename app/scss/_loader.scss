@@ -16,11 +16,14 @@
     overflow: hidden;
     svg {
         position: relative;
-        z-index: $z-index-loader-svg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         // i hate doing this but the script inlines the width attr o_O
         width: 20rem !important;
         height: auto !important;
         max-width: 75%;
+        z-index: $z-index-loader-svg;
     }
     path {
         stroke-dasharray: 0.1em 0.3em;
@@ -47,9 +50,30 @@
     &:after {
         content: '';
         position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
         display: block;
+        width: 1vw;
+        height: 1vw;
+        border-radius: 50%;
         background-color: rgba($white, 0.84);
         z-index: $z-index-loader-svg-after;
+        animation-name: grow-size;
+        @include transition-property(width, height);
+        animation-duration: $duration-exit;
+        animation-timing-function: $easing-decel;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes grow-size {
+    0% {
+        width: 1vw;
+        height: 1vw;
+    }
+    100% {
+        width: 120vw;
+        height: 120vw;
     }
 }

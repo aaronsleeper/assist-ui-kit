@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
 var multiDest = require('gulp-multi-dest');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
@@ -25,7 +27,13 @@ gulp.task('serve', ['sass', 'pack-vendor-js', 'pack-js'], function () {
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
     return gulp.src('app/scss/*.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(sourcemaps.write('.'))
         // open to a better way to link these code bases. hit me up -AS
         // sorry for the absolute path relative to my machine
         .pipe(multiDest(['app/css', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/css']))
