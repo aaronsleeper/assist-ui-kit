@@ -1,19 +1,20 @@
 .is-loading {
     position: relative;
-    #loader ~ * {
+    .loader ~ * {
         -webkit-filter: blur(0.15rem);
         filter: blur(0.15rem);
     }
 }
 
-#loader {
+.loader {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    svg { 
+    overflow: hidden;
+    svg {
         position: relative;
         z-index: $z-index-loader-svg;
         // i hate doing this but the script inlines the width attr o_O

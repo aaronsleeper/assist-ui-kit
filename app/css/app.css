@@ -368,7 +368,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, .pane-head .pane-title .list-type, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type, .pane-head .pane-title .department, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
+.h1, .h2, .h3, .h4, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title, .h6, .card .card-body span, .dropdown-menu + .caption, .loader:before {
   margin-bottom: 0.5rem;
   font-family: inherit;
   font-weight: 700;
@@ -390,7 +390,7 @@ h4, .pane-head .pane-title .list-type, .application-wrapper .panel-disciplines .
 h5, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title {
   font-size: 1.2125rem; }
 
-h6, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
+h6, .h6, .card .card-body span, .dropdown-menu + .caption, .loader:before {
   font-size: 1rem; }
 
 .lead {
@@ -427,7 +427,7 @@ small,
 .small,
 .card .card-body .academic-year,
 .card .card-body .list-type,
-#loader:before {
+.loader:before {
   font-size: 85.625%;
   font-weight: 400; }
 
@@ -4820,33 +4820,33 @@ h4, .pane-head .pane-title .list-type, .application-wrapper .panel-disciplines .
 h5, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title {
   font-weight: 400; }
 
-h6, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
+h6, .h6, .card .card-body span, .dropdown-menu + .caption, .loader:before {
   font-weight: 300; }
 
 h4, .pane-head .pane-title .list-type, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type, .pane-head .pane-title .department, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department, .h4,
 h5, .h5, .chosen-container .chosen-results li.group-result, .dropdown-menu .section-title,
-h6, .h6, .card .card-body span, .dropdown-menu + .caption, #loader:before {
+h6, .h6, .card .card-body span, .dropdown-menu + .caption, .loader:before {
   color: #37474F; }
 
 h1 small, h1 .small, h1 .card .card-body .academic-year, .card .card-body h1 .academic-year, h1
 .card .card-body .list-type,
-.card .card-body h1 .list-type, h1 #loader:before, .h1 small, .h1 .small, .h1 .card .card-body .academic-year, .card .card-body .h1 .academic-year, .h1
+.card .card-body h1 .list-type, h1 .loader:before, .h1 small, .h1 .small, .h1 .card .card-body .academic-year, .card .card-body .h1 .academic-year, .h1
 .card .card-body .list-type,
-.card .card-body .h1 .list-type, .h1 #loader:before {
+.card .card-body .h1 .list-type, .h1 .loader:before {
   font-size: 2.8625rem; }
 
 h2 small, h2 .small, h2 .card .card-body .academic-year, .card .card-body h2 .academic-year, h2
 .card .card-body .list-type,
-.card .card-body h2 .list-type, h2 #loader:before, .h2 small, .h2 .small, .h2 .card .card-body .academic-year, .card .card-body .h2 .academic-year, .h2
+.card .card-body h2 .list-type, h2 .loader:before, .h2 small, .h2 .small, .h2 .card .card-body .academic-year, .card .card-body .h2 .academic-year, .h2
 .card .card-body .list-type,
-.card .card-body .h2 .list-type, .h2 #loader:before {
+.card .card-body .h2 .list-type, .h2 .loader:before {
   font-size: 2.01875rem; }
 
 h3 small, h3 .small, h3 .card .card-body .academic-year, .card .card-body h3 .academic-year, h3
 .card .card-body .list-type,
-.card .card-body h3 .list-type, h3 #loader:before, .h3 small, .h3 .small, .h3 .card .card-body .academic-year, .card .card-body .h3 .academic-year, .h3
+.card .card-body h3 .list-type, h3 .loader:before, .h3 small, .h3 .small, .h3 .card .card-body .academic-year, .card .card-body .h3 .academic-year, .h3
 .card .card-body .list-type,
-.card .card-body .h3 .list-type, .h3 #loader:before {
+.card .card-body .h3 .list-type, .h3 .loader:before {
   font-size: 1.41875rem; }
 
 h4 small, .pane-head .pane-title .list-type small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type small, .pane-head .pane-title .department small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department small, h4 .small, .pane-head .pane-title .list-type .small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type .small, .pane-head .pane-title .department .small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .small, h4 .card .card-body .academic-year, .card .card-body h4 .academic-year, .pane-head .pane-title .list-type .card .card-body .academic-year, .card .card-body .pane-head .pane-title .list-type .academic-year, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type .card .card-body .academic-year, .card .card-body .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type .academic-year, .pane-head .pane-title .department .card .card-body .academic-year, .card .card-body .pane-head .pane-title .department .academic-year, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .card .card-body .academic-year, .card .card-body .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .academic-year, h4
@@ -4859,27 +4859,27 @@ h4 small, .pane-head .pane-title .list-type small, .application-wrapper .panel-d
 .card .card-body .list-type,
 .card .card-body .pane-head .pane-title .department .list-type, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department
 .card .card-body .list-type,
-.card .card-body .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .list-type, h4 #loader:before, .pane-head .pane-title .list-type #loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type #loader:before, .pane-head .pane-title .department #loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department #loader:before, .h4 small, .h4 .small, .h4 .card .card-body .academic-year, .card .card-body .h4 .academic-year, .h4
+.card .card-body .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .list-type, h4 .loader:before, .pane-head .pane-title .list-type .loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type .loader:before, .pane-head .pane-title .department .loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .loader:before, .h4 small, .h4 .small, .h4 .card .card-body .academic-year, .card .card-body .h4 .academic-year, .h4
 .card .card-body .list-type,
-.card .card-body .h4 .list-type, .h4 #loader:before {
+.card .card-body .h4 .list-type, .h4 .loader:before {
   font-size: 1.2125rem; }
 
 h5 small, h5 .small, h5 .card .card-body .academic-year, .card .card-body h5 .academic-year, h5
 .card .card-body .list-type,
-.card .card-body h5 .list-type, h5 #loader:before, .h5 small, .chosen-container .chosen-results li.group-result small, .dropdown-menu .section-title small, .h5 .small, .chosen-container .chosen-results li.group-result .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .chosen-container .chosen-results li.group-result .card .card-body .academic-year, .card .card-body .chosen-container .chosen-results li.group-result .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
+.card .card-body h5 .list-type, h5 .loader:before, .h5 small, .chosen-container .chosen-results li.group-result small, .dropdown-menu .section-title small, .h5 .small, .chosen-container .chosen-results li.group-result .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .chosen-container .chosen-results li.group-result .card .card-body .academic-year, .card .card-body .chosen-container .chosen-results li.group-result .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
 .card .card-body .list-type,
 .card .card-body .h5 .list-type, .chosen-container .chosen-results li.group-result
 .card .card-body .list-type,
 .card .card-body .chosen-container .chosen-results li.group-result .list-type, .dropdown-menu .section-title
 .card .card-body .list-type,
-.card .card-body .dropdown-menu .section-title .list-type, .h5 #loader:before, .chosen-container .chosen-results li.group-result #loader:before, .dropdown-menu .section-title #loader:before {
+.card .card-body .dropdown-menu .section-title .list-type, .h5 .loader:before, .chosen-container .chosen-results li.group-result .loader:before, .dropdown-menu .section-title .loader:before {
   font-size: 1rem; }
 
 h1 small, h1 .small, h1 .card .card-body .academic-year, .card .card-body h1 .academic-year, h1
 .card .card-body .list-type,
-.card .card-body h1 .list-type, h1 #loader:before, .h1 small, .h1 .small, .h1 .card .card-body .academic-year, .card .card-body .h1 .academic-year, .h1
+.card .card-body h1 .list-type, h1 .loader:before, .h1 small, .h1 .small, .h1 .card .card-body .academic-year, .card .card-body .h1 .academic-year, .h1
 .card .card-body .list-type,
-.card .card-body .h1 .list-type, .h1 #loader:before,
+.card .card-body .h1 .list-type, .h1 .loader:before,
 h2 small,
 h2 .small,
 h2 .card .card-body .academic-year, .card .card-body
@@ -4888,9 +4888,9 @@ h2
 .card .card-body .list-type,
 .card .card-body
 h2 .list-type,
-h2 #loader:before, .h2 small, .h2 .small, .h2 .card .card-body .academic-year, .card .card-body .h2 .academic-year, .h2
+h2 .loader:before, .h2 small, .h2 .small, .h2 .card .card-body .academic-year, .card .card-body .h2 .academic-year, .h2
 .card .card-body .list-type,
-.card .card-body .h2 .list-type, .h2 #loader:before,
+.card .card-body .h2 .list-type, .h2 .loader:before,
 h3 small,
 h3 .small,
 h3 .card .card-body .academic-year, .card .card-body
@@ -4899,9 +4899,9 @@ h3
 .card .card-body .list-type,
 .card .card-body
 h3 .list-type,
-h3 #loader:before, .h3 small, .h3 .small, .h3 .card .card-body .academic-year, .card .card-body .h3 .academic-year, .h3
+h3 .loader:before, .h3 small, .h3 .small, .h3 .card .card-body .academic-year, .card .card-body .h3 .academic-year, .h3
 .card .card-body .list-type,
-.card .card-body .h3 .list-type, .h3 #loader:before,
+.card .card-body .h3 .list-type, .h3 .loader:before,
 h4 small, .pane-head .pane-title .list-type small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type small, .pane-head .pane-title .department small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department small,
 h4 .small, .pane-head .pane-title .list-type .small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type .small, .pane-head .pane-title .department .small, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .small,
 h4 .card .card-body .academic-year, .card .card-body
@@ -4918,9 +4918,9 @@ h4 .list-type, .pane-head .pane-title .list-type
 .card .card-body .pane-head .pane-title .department .list-type, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department
 .card .card-body .list-type,
 .card .card-body .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .list-type,
-h4 #loader:before, .pane-head .pane-title .list-type #loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type #loader:before, .pane-head .pane-title .department #loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department #loader:before, .h4 small, .h4 .small, .h4 .card .card-body .academic-year, .card .card-body .h4 .academic-year, .h4
+h4 .loader:before, .pane-head .pane-title .list-type .loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .list-type .loader:before, .pane-head .pane-title .department .loader:before, .application-wrapper .panel-disciplines .fl-department-list-control .pane-title .department .loader:before, .h4 small, .h4 .small, .h4 .card .card-body .academic-year, .card .card-body .h4 .academic-year, .h4
 .card .card-body .list-type,
-.card .card-body .h4 .list-type, .h4 #loader:before,
+.card .card-body .h4 .list-type, .h4 .loader:before,
 h5 small,
 h5 .small,
 h5 .card .card-body .academic-year, .card .card-body
@@ -4929,13 +4929,13 @@ h5
 .card .card-body .list-type,
 .card .card-body
 h5 .list-type,
-h5 #loader:before, .h5 small, .chosen-container .chosen-results li.group-result small, .dropdown-menu .section-title small, .h5 .small, .chosen-container .chosen-results li.group-result .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .chosen-container .chosen-results li.group-result .card .card-body .academic-year, .card .card-body .chosen-container .chosen-results li.group-result .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
+h5 .loader:before, .h5 small, .chosen-container .chosen-results li.group-result small, .dropdown-menu .section-title small, .h5 .small, .chosen-container .chosen-results li.group-result .small, .dropdown-menu .section-title .small, .h5 .card .card-body .academic-year, .card .card-body .h5 .academic-year, .chosen-container .chosen-results li.group-result .card .card-body .academic-year, .card .card-body .chosen-container .chosen-results li.group-result .academic-year, .dropdown-menu .section-title .card .card-body .academic-year, .card .card-body .dropdown-menu .section-title .academic-year, .h5
 .card .card-body .list-type,
 .card .card-body .h5 .list-type, .chosen-container .chosen-results li.group-result
 .card .card-body .list-type,
 .card .card-body .chosen-container .chosen-results li.group-result .list-type, .dropdown-menu .section-title
 .card .card-body .list-type,
-.card .card-body .dropdown-menu .section-title .list-type, .h5 #loader:before, .chosen-container .chosen-results li.group-result #loader:before, .dropdown-menu .section-title #loader:before,
+.card .card-body .dropdown-menu .section-title .list-type, .h5 .loader:before, .chosen-container .chosen-results li.group-result .loader:before, .dropdown-menu .section-title .loader:before,
 h6 small,
 h6 .small,
 h6 .card .card-body .academic-year, .card .card-body
@@ -4944,13 +4944,13 @@ h6
 .card .card-body .list-type,
 .card .card-body
 h6 .list-type,
-h6 #loader:before, .h6 small, .card .card-body span small, .dropdown-menu + .caption small, #loader:before small, .h6 .small, .card .card-body span .small, .dropdown-menu + .caption .small, #loader:before .small, .h6 .card .card-body .academic-year, .card .card-body .h6 .academic-year, .card .card-body span .academic-year, .dropdown-menu + .caption .card .card-body .academic-year, .card .card-body .dropdown-menu + .caption .academic-year, #loader:before .card .card-body .academic-year, .card .card-body #loader:before .academic-year, .h6
+h6 .loader:before, .h6 small, .card .card-body span small, .dropdown-menu + .caption small, .loader:before small, .h6 .small, .card .card-body span .small, .dropdown-menu + .caption .small, .loader:before .small, .h6 .card .card-body .academic-year, .card .card-body .h6 .academic-year, .card .card-body span .academic-year, .dropdown-menu + .caption .card .card-body .academic-year, .card .card-body .dropdown-menu + .caption .academic-year, .loader:before .card .card-body .academic-year, .card .card-body .loader:before .academic-year, .h6
 .card .card-body .list-type,
 .card .card-body .h6 .list-type, .card .card-body span .list-type, .dropdown-menu + .caption
 .card .card-body .list-type,
-.card .card-body .dropdown-menu + .caption .list-type, #loader:before
+.card .card-body .dropdown-menu + .caption .list-type, .loader:before
 .card .card-body .list-type,
-.card .card-body #loader:before .list-type, .h6 #loader:before, .card .card-body span #loader:before, .dropdown-menu + .caption #loader:before, #loader:before #loader:before {
+.card .card-body .loader:before .list-type, .h6 .loader:before, .card .card-body span .loader:before, .dropdown-menu + .caption .loader:before, .loader:before .loader:before {
   font-weight: 300;
   color: #607D8B; }
 
@@ -5910,11 +5910,11 @@ svg.defs-only {
 
 .is-loading {
   position: relative; }
-  .is-loading #loader ~ * {
+  .is-loading .loader ~ * {
     -webkit-filter: blur(0.15rem);
     filter: blur(0.15rem); }
 
-#loader {
+.loader {
   position: absolute;
   top: 0;
   right: 0;
@@ -5923,28 +5923,29 @@ svg.defs-only {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  #loader svg {
+  justify-content: center;
+  overflow: hidden; }
+  .loader svg {
     position: relative;
     z-index: 2;
     width: 20rem !important;
     height: auto !important;
     max-width: 75%; }
-  #loader path {
+  .loader path {
     stroke-dasharray: 0.1em 0.3em;
     stroke-linecap: square;
     stroke: #FFC107; }
-  #loader g g:nth-child(1) path {
+  .loader g g:nth-child(1) path {
     stroke: #FF6F00; }
-  #loader g g:nth-child(2) path {
+  .loader g g:nth-child(2) path {
     stroke: #FFA000; }
-  #loader g g:nth-child(3) path {
+  .loader g g:nth-child(3) path {
     stroke: #FFC107; }
-  #loader g g:nth-child(4) path {
+  .loader g g:nth-child(4) path {
     stroke: #FFD54F; }
-  #loader g g:nth-child(5) path {
+  .loader g g:nth-child(5) path {
     stroke: #FFECB3; }
-  #loader:before {
+  .loader:before {
     content: 'loading';
     position: absolute;
     display: block;
@@ -5953,7 +5954,7 @@ svg.defs-only {
     margin-top: 2rem;
     color: #607D8B;
     z-index: 2; }
-  #loader:after {
+  .loader:after {
     content: '';
     position: absolute;
     top: 0;
