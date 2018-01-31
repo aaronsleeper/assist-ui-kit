@@ -8,6 +8,7 @@
     "bootstrap": "^4.0.0-beta.2",
     "browser-sync": "^2.21.0",
     "chosen-npm": "^1.4.2",
+    "css-loader": "^0.28.9",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
@@ -17,7 +18,10 @@
     "jquery": "^3.2.1",
     "lottie-web": "^5.1.1",
     "mark.js": "^8.11.1",
-    "popper.js": "^1.12.9"
+    "node-sass": "^4.7.2",
+    "popper.js": "^1.12.9",
+    "sass-loader": "^6.0.6",
+    "webpack": "^3.10.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
