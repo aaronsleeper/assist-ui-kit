@@ -6600,7 +6600,7 @@ svg.defs-only {
       box-shadow: none; }
     .link-list-group a.pin {
       position: relative;
-      right: -20px;
+      right: -1rem;
       color: #FFFFFF;
       background-color: #2196F3;
       opacity: 0;
