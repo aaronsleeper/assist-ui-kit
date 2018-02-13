@@ -26,48 +26,63 @@ gulp.task('serve', ['sass', 'pack-vendor-js', 'pack-js'], function () {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function () {
-    return gulp.src('app/scss/*.scss')
+    return (gulp
+        .src("app/scss/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
+            browsers: ["last 2 versions"],
             cascade: false
-        }))
-        .pipe(sourcemaps.write('.'))
-        // open to a better way to link these code bases. hit me up -AS
+          }))
+        .pipe(sourcemaps.write("."))
+        // open to a better way to link these related code bases. hit me up -AS
         // sorry for the absolute path relative to my machine
-        .pipe(multiDest(['app/css', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/css']))
-        .pipe(browserSync.stream());
+        .pipe(multiDest([
+            "app/css",
+            "/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/css",
+            "/Users/aaronsleeper/Desktop/Work/UCOP/Assist/temp-site/AssistTransferability/src/assets/css"
+          ]))
+        .pipe(browserSync.stream()) );
 });
 
 // Compile vendor js
 gulp.task('pack-vendor-js', function () {
-    return gulp.src([
-        'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/popper.js/dist/umd/popper.min.js',
-        'node_modules/bootstrap/dist/js/bootstrap.min.js',
-        'node_modules/chosen-npm/public/chosen.jquery.min.js',
-        'node_modules/lottie-web/build/player/lottie.js',
-        'node_modules/mark.js/dist/jquery.mark.min.js'
-    ])
-        .pipe(concat('vendor.js'))
-        .pipe(multiDest(['app/js', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/js']));
+    return gulp
+      .src([
+        "node_modules/jquery/dist/jquery.min.js",
+        "node_modules/popper.js/dist/umd/popper.min.js",
+        "node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "node_modules/chosen-npm/public/chosen.jquery.min.js",
+        "node_modules/lottie-web/build/player/lottie.js",
+        "node_modules/mark.js/dist/jquery.mark.min.js"
+      ])
+      .pipe(concat("vendor.js"))
+      .pipe(multiDest([
+          "app/js",
+          "/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/js",
+          "/Users/aaronsleeper/Desktop/Work/UCOP/Assist/temp-site/AssistTransferability/src/assets/js"
+        ]));
 });
 
 // Compile custom js into JS & auto-inject into browsers
 gulp.task('pack-js', function () {
-    return gulp.src([
-        'app/scripts/chosen-select.js',
-        'app/scripts/collapse.js',
-        'app/scripts/tooltips.js',
-        'app/scripts/loader.js',
-        'app/scripts/list-filter.js',
-        'app/scripts/radio-icon.js',
-        'app/scripts/scripts.js'
-    ])
-        .pipe(concat('app.js'))
-        .pipe(multiDest(['app/js', '/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/js']))
-        .pipe(browserSync.stream());
+    return gulp
+      .src([
+        "app/scripts/chosen-select.js",
+        "app/scripts/collapse.js",
+        "app/scripts/tooltips.js",
+        "app/scripts/loader.js",
+        "app/scripts/list-filter.js",
+        "app/scripts/radio-icon.js",
+        "app/scripts/scripts.js"
+      ])
+      .pipe(concat("app.js"))
+      .pipe(multiDest([
+          "app/js",
+          "/Users/aaronsleeper/Desktop/Work/UCOP/Assist/assistng/Content/themes/assist-ui-kit/js",
+          "/Users/aaronsleeper/Desktop/Work/UCOP/Assist/temp-site/AssistTransferability/src/assets/js"
+        ]))
+      .pipe(browserSync.stream());
 });
 
 gulp.task('default', ['serve']);
